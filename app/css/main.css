@@ -636,6 +636,36 @@ textarea:active {
           transform: scale(0.9);
 }
 
+@-webkit-keyframes mouse-spin {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes mouse-spin {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  80% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
 .banner {
   min-height: 80vh;
   display: -webkit-box;
@@ -771,74 +801,25 @@ textarea:active {
           transform: translateY(10px);
 }
 
-@-webkit-keyframes mouse-spin {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  40% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  80% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-    -lang {
-      -link {
-        font-family: "SFUIText-Bold";
-        :nth-child(1) {
-          position: relative;
-          margin-right: 20px;
-          ::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background-color: #fff;
-            right: -12px;
-            top: 0;
-          }
-        }
-        .active {
-          color: #FFD542;
-        }
-      }
-    }
-  }
+.banner__bot-lang-link {
+  font-family: "SFUIText-Bold";
 }
 
-@keyframes mouse-spin {
-  0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  40% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-  80% {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
-    -lang {
-      -link {
-        font-family: "SFUIText-Bold";
-        :nth-child(1) {
-          position: relative;
-          margin-right: 20px;
-          ::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background-color: #fff;
-            right: -12px;
-            top: 0;
-          }
-        }
-        .active {
-          color: #FFD542;
-        }
-      }
-    }
-  }
+.banner__bot-lang-link:nth-child(1) {
+  position: relative;
+  margin-right: 20px;
+}
+
+.banner__bot-lang-link:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: #fff;
+  right: -12px;
+  top: 0;
+}
+
+.banner__bot-lang-link.active {
+  color: #FFD542;
 }

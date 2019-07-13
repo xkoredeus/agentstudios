@@ -385,6 +385,13 @@ textarea:active
 		&:hover
 			opacity: .7
 			transform: scale(.9)
+@keyframes mouse-spin
+	0%
+		transform: translateY(0px)
+	40%
+		transform: translateY(10px)
+	80%
+		transform: translateY(-5px)
 .banner
 	min-height: 80vh
 	display: flex
@@ -452,14 +459,6 @@ textarea:active
 				animation: mouse-spin linear 2s infinite
 			&:hover
 				transform: translateY(10px)
-
-@keyframes mouse-spin
-	0%
-		transform: translateY(0px)
-	40%
-		transform: translateY(10px)
-	80%
-		transform: translateY(-5px)
 		&-lang
 			&-link
 				font-family: $sbold
