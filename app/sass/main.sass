@@ -1,0 +1,478 @@
+@import "../fonts/fonts.css"
+
+$yel: #FFD542
+$dark: #1E1E1E
+$gray: #4D4D4D
+$tr: transparent
+$sreg: 'SFUIText-Regular'
+$smed: 'SFUIText-Medium'
+$ssem: 'SFUIText-Semibold'
+$shev: 'SFUIText-Heavy'
+$sbold: 'SFUIText-Bold'
+
+$abold: 'AkzidenzGroteskPro-BoldEx'
+@mixin ct
+	background-position: 50% 50%
+	background-size: contain
+	background-repeat: no-repeat
+@mixin cv
+	background-position: 50% 50%
+	background-size: cover
+	background-repeat: no-repeat
+@mixin ovl
+	content: ''
+	position: absolute
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+body
+	scroll-behavior: smooth
+	background-color: #fff
+	font-family: $sreg
+	color: #fff
+	font-size: 14px
+	line-height: 1.4
+	position: relative
+	-webkit-font-smoothing: antialiased
+*,
+*:after,
+*:before
+	transition: .3s all ease
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, span::selection, div::selection, img::selection, mark::selection, ul::selection, li::selection
+	color            : $dark
+	background-color : $yel
+::selection
+	color            : $dark
+	background-color : $yel
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active, .btn, .btn:after, select:focus, select:active
+	text-decoration: none
+	outline: none
+	transition: all 0.4s ease
+	cursor: pointer
+a
+	color: #fff
+	&:hover
+		color: $yel
+button
+	border: transparent
+	background: none
+option
+	color: #2D2A2B
+textarea
+	resize:none
+input,
+textarea,
+select
+	color: $gray
+	font-family: $sreg
+	font-size: 14px
+	padding: 11px 27px
+	background: none
+input,
+select
+	border: none
+	border-bottom: 1px solid #000
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder
+	color: #2D2A2B
+input:focus,
+textarea:focus,
+input:active,
+textarea:active
+	background: none
+	color: #2D2A2B
+	border-radius: 3px
+	box-shadow: 0px 0px 0px 1px $yel
+	outline: none
+.sr
+	font-family: $sreg
+.sm
+	font-family: $smed
+.ss
+	font-family: $ssem
+.sh
+	font-family: $shev
+.sb
+	font-family: $sbold
+.ab
+	font-family: $abold
+.shd,
+	box-shadow: 0px 12px 28px -13px rgba(0,0,0,0.64)
+	&:hover
+		box-shadow: 0px 16px 32px -9px rgba(0,0,0,0.69)
+.wt
+	color: #fff !important
+.bl
+	color: #000 !important
+.dot
+	text-decoration: underline
+	text-decoration-style: dotted
+.und
+	text-decoration: underline
+.btn
+	font-size: 16px
+	font-family: $shev
+	text-align: center
+	padding: 11px 27px
+	color: #000
+	background-color: $yel
+	position: relative
+	display: inline-block
+	border-radius: 3px
+	border: 1px solid $tr
+	outline: none
+	overflow: hidden
+	span
+		transition: all .1s ease-in-out
+		tran
+		position: relative
+	&::before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: #fff
+		transform: scaleX(0)
+		transform-origin: right
+		transition: transform .5s ease-in-out
+	&:hover
+		color: #000
+		border-color: rgba(0, 0, 0, 0.2)
+		span
+		&::before
+			transform: scaleX(1)
+			transform-origin: left
+	&_subm
+		// min-width: 190x
+		input[type="submit"]
+			font-size: 16px
+			font-family: $shev
+			color: #000
+			background: none
+			padding: 0
+			border: none
+			margin: 0
+			position: relative
+		&.btn_transp
+			border: none
+			background-color: #F3F3F3
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2)
+			&:hover
+				background-color: #ccc
+			input[type="submit"]
+				color: #000
+.list
+	&_circle
+		list-style-type: none
+		padding-left: 0
+		li
+			padding-left: 25px
+			position: relative
+			&
+				margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				width: 8px
+				height: 8px
+				background-color: $yel
+				left: 0
+				top: 8px
+				border-radius: 50%
+.popup__container
+	padding: 40px
+	background-color: transparent
+	.fancybox-close-small
+		top: 40px
+		right: 40px
+		color: #000
+	.popup__wrp
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+		position: relative
+		&::before
+			z-index: 1
+			content: ''
+			position: absolute
+			height: 110%
+			width: 110%
+			top: -5%
+			right: -5%
+			bottom: -5%
+			left: -5%
+			z-index: 1
+			background: #fff
+			opacity: .7
+	.popup_call__wrp
+		max-width: 320px
+		.popup
+			width: 100%
+			height: 100%
+			position: relative
+			z-index: 2
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: flex-start
+			background-color: #fff
+			color: #2D2A2B
+			padding: 20px 25px 30px
+			text-align: center
+			&__ttl
+				font-family: $abold
+				text-transform: uppercase
+				font-size: 22px
+				margin-bottom: 30px
+			.form__input
+				color: $gray
+				margin-bottom: 15px
+			input.form__input::placeholder
+				color: #gray
+			.btn
+				width: 100%
+				margin-bottom: 15px
+			&__policy
+				margin-top: 15px
+				max-width: 230px
+				text-align: center
+				font-size: 12px
+				a
+					font-size: 12px 
+					color: $yel
+.owl-carousel
+	.owl-dots
+		position: absolute
+		width: 100%
+		display: flex
+		justify-content: center
+		bottom: 0
+		button.owl-dot
+			width: 13px
+			height: 13px
+			border: 2.5px solid #fff
+			border-radius: 50%
+			background-color: transparent
+			position: relative
+			// transform: scale(1)
+			&:not(:last-child)
+				margin-right: 10px
+			&.active
+				// transform: scale(.8)
+				border-color: transparent
+				background-color: #fff
+	.owl-nav
+		button.owl-prev,
+		button.owl-next
+			position: absolute
+			bottom: 50%
+			margin-bottom: -25.5px
+			border-radius: 50%
+			padding: 7px !important
+			background-color: #fff
+			img
+				width: 17px
+				height: auto
+		button.owl-prev:hover,
+		button.owl-next:hover
+			background-color: yellow
+			transform: scale(.9)
+		button.owl-prev.disabled,
+		button.owl-next.disabled,
+		button.owl-prev.disabled:hover,
+		button.owl-next.disabled:hover
+			opacity: 0
+			cursor: default
+			
+		button.owl-prev
+			left: -36px
+		button.owl-next
+			right: -36px
+.section
+	&_inner
+		padding: 60px 0
+	&__ttl
+		font-size: 36px
+		font-family: $abold
+		letter-spacing: 1px
+		margin-bottom: 35px
+		text-align: center
+		text-transform: uppercase
+.input__wrp
+	position: relative
+	border-radius: 4px
+	background-color: #fff
+	input,
+	select
+		width: 100%
+		padding-left: 35px
+		border: none
+	&::before
+		content: ''
+		position: absolute
+		left: 10px
+		top: 50%
+		width: 16px
+		height: 16px
+		transform: translate(0,-50%)
+		@include ct
+	&_name:before
+		background-image: url(../img/icon__form-name.png)
+	&_mail:before
+		background-image: url(../img/icon__form-mes.png)
+		top: 8px
+	&_tel:before
+		background-image: url(../img/icon__form-tel.png)
+		top: 8px
+	// &:not(:last-child)
+	// 	margin-bottom: 15px
+.header
+	background-color: #202020
+	&_main
+		display: flex
+		flex-direction: column
+		align-items: space-between
+		background-color: transparent
+		background-image: url('../img/banner__bg.jpg')
+		@include cv
+		position: relative
+		&::before
+			@include ovl
+			background-color: #000
+			opacity: .6
+		.container
+			position: relative
+		&__top
+			min-height: 10vh
+	&__top
+		padding: 30px 0
+	&__logo
+		font-family: $abold
+		font-size: 22px
+	&__loc
+		font-size: 14px
+		background: linear-gradient(180deg, rgba(250, 250, 250, 0.15) 0%, rgba(250, 250, 250, 0) 100%), rgba(255, 255, 255, 0.1)
+		border: 1px solid rgba(255, 255, 255, 0.5)
+		padding-top: 8px
+		padding-bottom: 8px
+		&::before
+			background-color: $dark
+	&__sign
+		&-link
+			&:nth-child(1)
+				position: relative
+				margin-right: 30px
+				&::after
+					content: ''
+					position: absolute
+					width: 2px
+					height: 100%
+					background-color: #fff
+					right: -19px
+					top: 0
+	&__hamb
+		width: 20px
+		height: 15px
+		@include ct
+		background-image: url('../img/header__hamb.svg')
+		&:hover
+			opacity: .7
+			transform: scale(.9)
+.banner
+	min-height: 80vh
+	display: flex
+	align-items: center
+	&__offer
+		max-width: 930px
+		margin-left: auto
+		margin-right: auto
+	&__ttl
+		font-size: 37px
+		font-family: $abold
+		text-align: center
+		margin-bottom: 15px
+	&__subttl
+		font-size: 16px
+		text-align: center
+		max-width: 615px
+		margin-left: auto
+		margin-right: auto
+	&__bar
+		position: relative
+		margin-top: 40px
+		padding: 8px
+		&::before
+			@include ovl
+			background-color: rgba(27, 27, 27, 0.75)
+			border-radius: 4px
+		&>*
+			position: relative
+		&-act
+			&-link
+				&:nth-child(1)
+					position: relative
+					margin-right: 30px
+					&::after
+						content: ''
+						position: absolute
+						width: 1px
+						height: 38px
+						background-color: #fff
+						right: -19.5px
+						top: 50%
+						transform: translate(0,-50%)
+		.input__wrp
+			min-width: 295px
+			background-color: #ffffff5e
+			&::before
+				background-image: url('../img/icon_earth.png')
+			input
+				color: #fff
+			input::placeholder
+				color: #fff
+		.btn
+			min-width: 150px
+	&__bot
+		min-height: 10vh
+		padding: 15px 0
+		&-btn
+			cursor: pointer
+			span
+				font-family: $abold
+				font-size: 16px
+				margin-bottom: 15px
+			img
+				animation: mouse-spin linear 2s infinite
+			&:hover
+				transform: translateY(10px)
+
+@keyframes mouse-spin
+	0%
+		transform: translateY(0px)
+	40%
+		transform: translateY(10px)
+	80%
+		transform: translateY(-5px)
+		&-lang
+			&-link
+				font-family: $sbold
+				&:nth-child(1)
+					position: relative
+					margin-right: 20px
+					&::after
+						content: ''
+						position: absolute
+						width: 2px
+						height: 100%
+						background-color: #fff
+						right: -12px
+						top: 0
+				&.active
+					color: $yel
