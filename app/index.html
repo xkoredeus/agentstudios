@@ -22,14 +22,14 @@
 					<div class="d-flex align-items-center">
 						<div class="d-flex align-items-center mr-5">
 							<span>Your location:</span>
-							<a href="#" class="ml-2 dot ss">Moscow</a>
+							<a href="#" class="ml-2 dot ss" tooltip="change your location">Moscow</a>
 						</div>
 						<a href="#" class="btn header__loc ab wt mr-5"><span>List your location</span></a>
 						<div class="d-flex-align-items-center header__sign-wrp mr-5">
 							<a href="#" class="header__sign-link ab">Sign Up</a>
 							<a href="#" class="header__sign-link ab">Sign In</a>
 						</div>
-						<a href="#" class="header__hamb"></a>
+						<a href="#" class="header__hamb" tooltip="open menu"></a>
 					</div>
 				</div>
 			</div>
@@ -61,18 +61,18 @@
 			<div class="container">
 					<div class="d-flex align-items-center justify-content-between">
 						<div class="d-flex align-items-center">
-							<a href="#" class="banner__soc-link mr-4"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
-							<a href="#" class="banner__soc-link mr-4"><img src="img/icon__in.png" alt="icon__in.png"></a>
-							<a href="#" class="banner__soc-link mr-4"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
+							<a href="#" class="banner__soc-link mr-4" tooltip="open facebook account"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
+							<a href="#" class="banner__soc-link mr-4" tooltip="open istagram channel"><img src="img/icon__in.png" alt="icon__in.png"></a>
+							<a href="#" class="banner__soc-link mr-4" tooltip="write us in telegram"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
 						</div>
-						<a href="#popular" title="click to scroll down" class="banner__bot-btn d-flex flex-column align-items-center anchor-link">
+						<a href="#popular" tooltip="click to scroll down" class="banner__bot-btn d-flex flex-column align-items-center anchor-link">
 							<span>Popular In your city</span>
 							<img src="img/banner__arr.png" alt="banner__arr.png">
 						</a>
 						<div class="d-flex align-items-center">
 							<div class="banner__bot-lang">
 								<a href="#" class="banner__bot-lang-link active">EN</a>
-								<a href="#" class="banner__bot-lang-link ">RU</a>
+								<a href="#" class="banner__bot-lang-link" tooltip="change language">RU</a>
 							</div>
 						</div>
 					</div>
@@ -80,15 +80,495 @@
 			</div>
 		</div>
 	</header>
-	<section class="section_inner popular" id="popular" style="background-color: #000; height: 2000px">
+	<section class="section_inner pop" id="popular">
 		<div class="container">
-			<div class="section__ttl">Popular in your city</div>
-			<div>
-				ss
+			<div class="d-flex align-items-center justify-content-between">
+				<div class="section__ttl">Popular in your city</div>
+				<a href="#" class="btn btn_tr"><span>Open filter</span></a>
+			</div>
+			<div class="row">
+				<!--item-->
+				<div class="col-xl-4 col-sm-6 mb-4">
+					<div class="pop__item">
+						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
+							<div class="pop__item-rate">
+								<span>Excellent</span>
+								<span>8,6</span>
+							</div>
+						</div>
+						<div class="pop__item-info">
+							<div class="d-flex align-items-center justify-content-between mb-3">
+								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
+								<button class="pop__item-fav" tooltip="add to favorites"></button>
+							</div>
+							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
+							<div class="d-flex justify-content-between mt-4 mb-5">
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										170 м<sup>2</sup>
+									</div>
+									<div>Площадь</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										4,2
+									</div>
+									<div>Высота потолка</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										2 зала
+									</div>
+									<div>В студии</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<a href="#" class="btn"><span>от 2000₽ в час</span></a>
+								<a href="#" class="btn btn_tr btn_tr_black"><span>567 отзывов</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/item-->
+				<!--item-->
+				<div class="col-xl-4 col-sm-6 mb-4">
+					<div class="pop__item">
+						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
+							<div class="pop__item-rate">
+								<span>Excellent</span>
+								<span>8,6</span>
+							</div>
+						</div>
+						<div class="pop__item-info">
+							<div class="d-flex align-items-center justify-content-between mb-3">
+								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
+								<button class="pop__item-fav" tooltip="add to favorites"></button>
+							</div>
+							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
+							<div class="d-flex justify-content-between mt-4 mb-5">
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										170 м<sup>2</sup>
+									</div>
+									<div>Площадь</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										4,2
+									</div>
+									<div>Высота потолка</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										2 зала
+									</div>
+									<div>В студии</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<a href="#" class="btn"><span>от 2000₽ в час</span></a>
+								<a href="#" class="btn btn_tr btn_tr_black"><span>567 отзывов</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/item-->
+				<!--item-->
+				<div class="col-xl-4 col-sm-6 mb-4">
+					<div class="pop__item">
+						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
+							<div class="pop__item-rate">
+								<span>Excellent</span>
+								<span>8,6</span>
+							</div>
+						</div>
+						<div class="pop__item-info">
+							<div class="d-flex align-items-center justify-content-between mb-3">
+								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
+								<button class="pop__item-fav" tooltip="add to favorites"></button>
+							</div>
+							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
+							<div class="d-flex justify-content-between mt-4 mb-5">
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										170 м<sup>2</sup>
+									</div>
+									<div>Площадь</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										4,2
+									</div>
+									<div>Высота потолка</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										2 зала
+									</div>
+									<div>В студии</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<a href="#" class="btn"><span>от 2000₽ в час</span></a>
+								<a href="#" class="btn btn_tr btn_tr_black"><span>567 отзывов</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/item-->
+				<!--item-->
+				<div class="col-xl-4 col-sm-6 mb-4">
+					<div class="pop__item">
+						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
+							<div class="pop__item-rate">
+								<span>Excellent</span>
+								<span>8,6</span>
+							</div>
+						</div>
+						<div class="pop__item-info">
+							<div class="d-flex align-items-center justify-content-between mb-3">
+								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
+								<button class="pop__item-fav" tooltip="add to favorites"></button>
+							</div>
+							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
+							<div class="d-flex justify-content-between mt-4 mb-5">
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										170 м<sup>2</sup>
+									</div>
+									<div>Площадь</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										4,2
+									</div>
+									<div>Высота потолка</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										2 зала
+									</div>
+									<div>В студии</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<a href="#" class="btn"><span>от 2000₽ в час</span></a>
+								<a href="#" class="btn btn_tr btn_tr_black"><span>567 отзывов</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/item-->
+				<!--item-->
+				<div class="col-xl-4 col-sm-6 mb-4">
+					<div class="pop__item">
+						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
+							<div class="pop__item-rate">
+								<span>Excellent</span>
+								<span>8,6</span>
+							</div>
+						</div>
+						<div class="pop__item-info">
+							<div class="d-flex align-items-center justify-content-between mb-3">
+								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
+								<button class="pop__item-fav" tooltip="add to favorites"></button>
+							</div>
+							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
+							<div class="d-flex justify-content-between mt-4 mb-5">
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										170 м<sup>2</sup>
+									</div>
+									<div>Площадь</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										4,2
+									</div>
+									<div>Высота потолка</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										2 зала
+									</div>
+									<div>В студии</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<a href="#" class="btn"><span>от 2000₽ в час</span></a>
+								<a href="#" class="btn btn_tr btn_tr_black"><span>567 отзывов</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/item-->
+				<!--item-->
+				<div class="col-xl-4 col-sm-6 mb-4">
+					<div class="pop__item">
+						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
+							<div class="pop__item-rate">
+								<span>Excellent</span>
+								<span>8,6</span>
+							</div>
+						</div>
+						<div class="pop__item-info">
+							<div class="d-flex align-items-center justify-content-between mb-3">
+								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
+								<button class="pop__item-fav" tooltip="add to favorites"></button>
+							</div>
+							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
+							<div class="d-flex justify-content-between mt-4 mb-5">
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										170 м<sup>2</sup>
+									</div>
+									<div>Площадь</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										4,2
+									</div>
+									<div>Высота потолка</div>
+								</div>
+								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+									<div class="pop__item-char-ttl">
+										2 зала
+									</div>
+									<div>В студии</div>
+								</div>
+							</div>
+							<div class="d-flex justify-content-between align-items-center">
+								<a href="#" class="btn"><span>от 2000₽ в час</span></a>
+								<a href="#" class="btn btn_tr btn_tr_black"><span>567 отзывов</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/item-->
 			</div>
 		</div>
 	</section>
-
+	<section class="section_inner sel">
+		<div class="container">
+			<div class="d-flex align-items-center mb-5">
+				<div class="section__ttl mr-5 mb-0">Selections</div>
+				<div class="sel__in-dots owl-dots"></div>
+			</div>
+			<div class="sel__in owl-carousel">
+				<div class="sel__item">
+					<div class="row align-items-center">
+						<div class="col-xl-6 mb-4 mb-xl-0">
+							<div class="sel__img" style="background-image: url(img/pop__img.jpg)"></div>
+						</div>
+						<div class="col-xl-6">
+							<div class="sel__info">
+								<div class="sel__ttl section__subttl mb-3">Nor again is there anyone who loves or pursues</div>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+								<div class="d-flex align-items-center mt-4 mb-5">
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">$25 /</span>
+										<span>hour</span>
+									</div>
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">24</span>
+										<span>studios</span>
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<a href="#" class="btn mr-4"><span>Show selection</span></a>
+									<a href="#" class="btn btn_tr btn_tr_black sel_next"><span>Next</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sel__item">
+					<div class="row align-items-center">
+						<div class="col-xl-6 mb-4 mb-xl-0">
+							<div class="sel__img" style="background-image: url(img/pop__img.jpg)"></div>
+						</div>
+						<div class="col-xl-6">
+							<div class="sel__info">
+								<div class="sel__ttl section__subttl mb-3">Nor again is there anyone who loves or pursues</div>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+								<div class="d-flex align-items-center mt-4 mb-5">
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">$25 /</span>
+										<span>hour</span>
+									</div>
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">24</span>
+										<span>studios</span>
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<a href="#" class="btn mr-4"><span>Show selection</span></a>
+									<a href="#" class="btn btn_tr btn_tr_black sel_next"><span>Next</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sel__item">
+					<div class="row align-items-center">
+						<div class="col-xl-6 mb-4 mb-xl-0">
+							<div class="sel__img" style="background-image: url(img/pop__img.jpg)"></div>
+						</div>
+						<div class="col-xl-6">
+							<div class="sel__info">
+								<div class="sel__ttl section__subttl mb-3">Nor again is there anyone who loves or pursues</div>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+								<div class="d-flex align-items-center mt-4 mb-5">
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">$25 /</span>
+										<span>hour</span>
+									</div>
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">24</span>
+										<span>studios</span>
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<a href="#" class="btn mr-4"><span>Show selection</span></a>
+									<a href="#" class="btn btn_tr btn_tr_black sel_next"><span>Next</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sel__item">
+					<div class="row align-items-center">
+						<div class="col-xl-6 mb-4 mb-xl-0">
+							<div class="sel__img" style="background-image: url(img/pop__img.jpg)"></div>
+						</div>
+						<div class="col-xl-6">
+							<div class="sel__info">
+								<div class="sel__ttl section__subttl mb-3">Nor again is there anyone who loves or pursues</div>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+								<div class="d-flex align-items-center mt-4 mb-5">
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">$25 /</span>
+										<span>hour</span>
+									</div>
+									<div class="sel__price mr-3 mr-sm-5">
+										<span class="ab">24</span>
+										<span>studios</span>
+									</div>
+								</div>
+								<div class="d-flex align-items-center">
+									<a href="#" class="btn mr-4"><span>Show selection</span></a>
+									<a href="#" class="btn btn_tr btn_tr_black sel_next"><span>Next</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section class="section_inner let">
+		<div class="container">
+			<form class="let__in">
+				<div class="section__subttl">Be the first to know about discounts and new locations</div>
+				<p>Enter your email address and get the most relevant information from the world of filming.</p>
+				<div class="d-flex justify-content-center align-items-center mt-4">
+					<div class="input__wrp input__wrp_mail mr-3">
+						<input type="email" placeholder="Your email">
+					</div>
+					<div class="btn btn_subm">
+						<input type="submit" value="Subscribe">
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<section class="section_inner ann">
+		<div class="container">
+			<div class="d-flex align-items-center mb-5 justify-content-between">
+				<div class="d-flex align-items-center">
+					<div class="section__ttl mr-5 mb-0">Announcements</div>
+					<div class="ann__in-dots owl-dots"></div>
+				</div>
+				<div class="ann__in-counter"></div>
+			</div>
+			<div class="ann__in owl-carousel">
+				<div class="ann__item">
+					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_1.jpg);"></div>
+					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
+				</div>
+				<div class="ann__item">
+					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_2.jpg);"></div>
+					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
+				</div>
+				<div class="ann__item">
+					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_3.jpg);"></div>
+					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants. It will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
+				</div>
+				<div class="ann__item">
+					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_4.jpg);"></div>
+					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
+				</div>
+				<div class="ann__item">
+					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_1.jpg);"></div>
+					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-2">
+					<div class="d-flex flex-column mb-3 mb-xl-0">
+						<a href="#" class="footer__link mb-3">Studio search</a>
+						<a href="#" class="footer__link mb-3">Partners</a>
+						<a href="#" class="footer__link mb-3">Contacts</a>
+					</div>
+				</div>
+				<div class="col-xl-2">
+					<div class="d-flex flex-column mb-3">
+						<a href="#" class="footer__link mb-3">List your location</a>
+						<a href="#" class="footer__link mb-3">FAQ</a>
+						<a href="#" class="footer__link mb-3">Privacy Policy</a>
+					</div>
+				</div>
+				<div class="offset-xl-3"></div>
+				<div class="col-xl-4">
+					<form class="d-flex flex-column align-items-start footer__let">
+						<div class="footer__let-ttl">Be the first to know about discounts and new locations</div>
+						<div class="d-flex justify-content-center align-items-center mt-3 mb-3 mb-xl-0">
+							<div class="input__wrp input__wrp_mail mr-3">
+								<input type="email" placeholder="Your email">
+							</div>
+							<div class="btn btn_subm">
+								<input type="submit" value="Subscribe">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row mt-3 align-items-end">
+				<div class="col-xl-2">
+					<a href="#" class="footer__logo">AgentStudios</a>
+				</div>
+				<div class="col-xl-3">
+					<span class="footer__logo-descr">Studios and location international booking</span>
+				</div>
+				<div class="offset-xl-2"></div>
+				<div class="col-xl-4">
+					<span class="footer__logo-descr">Agentstudios. All right reserved 2019 ©</span>
+				</div>
+			</div>
+		</div>
+	</footer>
 	<div id="popup_call" class="popup__container" style="display:none">
 		<div  class="popup__wrp popup_call__wrp">
 			<form action="[[~[[*id]]]]" method="post" class="popup">
@@ -102,7 +582,10 @@
 				<div class="input__wrp input__wrp_mail">
 					<input type="email" class="form__input" name="popup_call__email" placeholder="E-mail">
 				</div>
-				<input type="submit" class="btn" name="popup_call__sumbit" value="Заказать">
+				
+				<div class="btn btn_subm">
+					<input type="submit" value="Search">
+				</div>
 				<div class="popup__policy">
 					Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#" class="form__policy-link">политикой конфиденциальности</a>
 				</div>

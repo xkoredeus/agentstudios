@@ -3,6 +3,7 @@
 $yel: #FFD542
 $dark: #1E1E1E
 $gray: #4D4D4D
+$lgray: #a1a1a1
 $tr: transparent
 $sreg: 'SFUIText-Regular'
 $smed: 'SFUIText-Medium'
@@ -31,7 +32,7 @@ body
 	background-color: #fff
 	font-family: $sreg
 	color: #fff
-	font-size: 14px
+	font-size: 16px
 	line-height: 1.4
 	position: relative
 	-webkit-font-smoothing: antialiased
@@ -69,7 +70,7 @@ select
 	color: $gray
 	font-family: $sreg
 	font-size: 14px
-	padding: 11px 27px
+	padding: 14px 27px
 	background: none
 input,
 select
@@ -113,6 +114,8 @@ textarea:active
 	text-decoration-style: dotted
 .und
 	text-decoration: underline
+.tac
+	text-align: center
 .btn
 	font-size: 16px
 	font-family: $shev
@@ -148,6 +151,20 @@ textarea:active
 		&::before
 			transform: scaleX(1)
 			transform-origin: left
+	&_tr
+		color: #fff
+		background-color: transparent
+		border: 1px solid #D0D0D0
+		&::before
+			background-color: $gray
+		&:hover
+			color: #fff
+		&_black
+			color: #000
+			&:hover
+				color: #000
+			&::before
+				background-color: #ccc
 	&_subm
 		// min-width: 190x
 		input[type="submit"]
@@ -167,6 +184,148 @@ textarea:active
 				background-color: #ccc
 			input[type="submit"]
 				color: #000
+/* START TOOLTIP STYLES */
+[tooltip]
+	position: relative; /* opinion 1 */
+	&>*
+		transition: .9s all ease-in-out
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after
+	text-transform: none; /* opinion 2 */
+	font-size: .9em; /* opinion 3 */
+	line-height: 1;
+	user-select: none;
+	pointer-events: none;
+	position: absolute;
+	display: none;
+	opacity: 0;
+
+[tooltip]::before
+	content: '';
+	border: 5px solid transparent; /* opinion 4 */
+	z-index: 1001; /* absurdity 1 */
+
+[tooltip]::after
+	content: attr(tooltip); /* magic! */
+	
+	/* most of the rest of this is opinion */
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	
+	/* 
+		Let the content set the size of the tooltips 
+		but this will also keep them from being obnoxious
+		*/
+	min-width: 3em;
+	max-width: 21em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 1ch 1.5ch;
+	border-radius: .3ch;
+	box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+	background: #333;
+	color: #fff;
+	z-index: 1000; /* absurdity 2 */
+
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after
+	display: block;
+
+
+/* don't show empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after
+	display: none !important;
+
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before
+	bottom: 100%;
+	border-bottom-width: 0;
+	border-top-color: #333;
+
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after
+	bottom: calc(100% + 5px);
+
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after
+	left: 50%;
+	transform: translate(-50%, -.5em);
+
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before
+	top: 100%;
+	border-top-width: 0;
+	border-bottom-color: #333;
+
+[tooltip][flow^="down"]::after
+	top: calc(100% + 5px);
+
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after
+	left: 50%;
+	transform: translate(-50%, .5em);
+
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before
+	top: 50%;
+	border-right-width: 0;
+	border-left-color: #333;
+	left: calc(0em - 5px);
+	transform: translate(-.5em, -50%);
+
+[tooltip][flow^="left"]::after
+	top: 50%;
+	right: calc(100% + 5px);
+	transform: translate(-.5em, -50%);
+
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before
+	top: 50%;
+	border-left-width: 0;
+	border-right-color: #333;
+	right: calc(0em - 5px);
+	transform: translate(.5em, -50%);
+
+[tooltip][flow^="right"]::after
+	top: 50%;
+	left: calc(100% + 5px);
+	transform: translate(.5em, -50%);
+
+
+/* KEYFRAMES */
+@keyframes tooltips-vert
+	to
+		opacity: .9;
+		transform: translate(-50%, 0);
+
+/* FX All The Things */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after
+	animation: tooltips-vert 300ms ease-out forwards;
+
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after
+	animation: tooltips-horz 300ms ease-out forwards;
+
 .list
 	&_circle
 		list-style-type: none
@@ -247,43 +406,46 @@ textarea:active
 				a
 					font-size: 12px 
 					color: $yel
+.owl-dots
+	position: relative
+	width: 100%
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	// bottom: 0
+	button.owl-dot
+		width: 10px
+		height: 10px
+		border: 2px solid #000
+		background-color: #000
+		position: relative
+		padding: 0 !important
+		// transform: scale(1)
+		&:not(:last-child)
+			margin-right: 10px
+		&.active
+			// transform: scale(.8)
+			// border-color: transparent
+			background-color: $yel
 .owl-carousel
-	.owl-dots
-		position: absolute
-		width: 100%
-		display: flex
-		justify-content: center
-		bottom: 0
-		button.owl-dot
-			width: 13px
-			height: 13px
-			border: 2.5px solid #fff
-			border-radius: 50%
-			background-color: transparent
-			position: relative
-			// transform: scale(1)
-			&:not(:last-child)
-				margin-right: 10px
-			&.active
-				// transform: scale(.8)
-				border-color: transparent
-				background-color: #fff
 	.owl-nav
 		button.owl-prev,
 		button.owl-next
 			position: absolute
-			bottom: 50%
-			margin-bottom: -25.5px
-			border-radius: 50%
-			padding: 7px !important
-			background-color: #fff
-			img
-				width: 17px
-				height: auto
+			top: 0
+			// margin-bottom: -25.5px
+			height: 100%
+			display: flex
+			align-items: center
+			padding: 0 15px !important
+			background-color: $tr
+			// img
+			// 	width: 17px
+			// 	height: auto
 		button.owl-prev:hover,
 		button.owl-next:hover
-			background-color: yellow
 			transform: scale(.9)
+			background-color: #1e1e1ea8
 		button.owl-prev.disabled,
 		button.owl-next.disabled,
 		button.owl-prev.disabled:hover,
@@ -292,9 +454,9 @@ textarea:active
 			cursor: default
 			
 		button.owl-prev
-			left: -36px
+			left: 0
 		button.owl-next
-			right: -36px
+			right: 0
 .section
 	&_inner
 		padding: 60px 0
@@ -303,8 +465,11 @@ textarea:active
 		font-family: $abold
 		letter-spacing: 1px
 		margin-bottom: 35px
-		text-align: center
-		text-transform: uppercase
+	&__subttl
+		font-size: 24px
+		font-family: $abold
+		letter-spacing: .7px
+		margin-bottom: 28px
 .input__wrp
 	position: relative
 	border-radius: 4px
@@ -326,11 +491,11 @@ textarea:active
 	&_name:before
 		background-image: url(../img/icon__form-name.png)
 	&_mail:before
-		background-image: url(../img/icon__form-mes.png)
-		top: 8px
+		background-image: url(../img/icon__mail.png)
+		// top: 8px
 	&_tel:before
 		background-image: url(../img/icon__form-tel.png)
-		top: 8px
+		// top: 8px
 	// &:not(:last-child)
 	// 	margin-bottom: 15px
 .header
@@ -341,18 +506,29 @@ textarea:active
 		align-items: space-between
 		background-color: transparent
 		background-image: url('../img/banner__bg.jpg')
+		position: relative
 		@include cv
 		position: relative
 		&::before
 			@include ovl
 			background-color: #000
 			opacity: .6
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 150px
+			bottom: 0
+			left: 0
+			background: linear-gradient(0deg, #1e1e1e 20%, #c3959500 100%);
 		.container
 			position: relative
-		&__top
-			min-height: 10vh
+			z-index: 1
+		.header__top
+			height: 10vh
 	&__top
 		padding: 30px 0
+		font-size: 14px
 	&__logo
 		font-family: $abold
 		font-size: 22px
@@ -393,7 +569,7 @@ textarea:active
 	80%
 		transform: translateY(-5px)
 .banner
-	min-height: 80vh
+	height: 77vh
 	display: flex
 	align-items: center
 	&__offer
@@ -447,7 +623,7 @@ textarea:active
 		.btn
 			min-width: 150px
 	&__bot
-		min-height: 10vh
+		height: 13vh
 		padding: 15px 0
 		&-btn
 			cursor: pointer
@@ -475,3 +651,160 @@ textarea:active
 						top: 0
 				&.active
 					color: $yel
+.pop
+	background-color: $dark
+	&__item
+		font-size: 16px
+		color: #000
+		background-color: #fff
+		border-radius: 3px
+		max-width: 420px
+		margin-left: auto
+		margin-right: auto
+		&-top
+			height: 280px
+			width: 100%
+			padding: 20px
+			@include cv
+			display: flex
+			justify-content: flex-end
+			
+		&-rate
+			border-radius: 3px
+			overflow: hidden
+			display: flex
+			height: 40px
+			span
+				display: flex
+				align-items: center
+				&:nth-child(1)
+					font-size: 12px
+					font-family: $sbold
+					text-align: center
+					color: #fff
+					padding: 8px
+					background-color: rgba(27, 27, 27, 0.75)
+				&:nth-child(2)
+					font-size: 18px
+					font-family: $abold
+					background-color: $yel
+					color: #000
+					padding: 8px
+		&-info
+				padding: 20px 15px
+		// .btn_tr
+		// 	color: #000
+		// 	&::before
+		// 		background-color: #ccc
+		&-ttl
+			color: #000
+			font-size: 24px
+			font-family: $abold
+		&-fav
+			width: 25px
+			height: 25px
+			@include ct
+			background-image: url('../img/icon__fav.png')
+			opacity: .2
+			&.active
+				opacity: 1
+			&:hover
+				transform: scale(.85)
+				opacity: 1
+		p
+			color: #4A4A4A
+		&-char
+			position: relative
+			&:not(:last-child)
+				margin-right: 30px
+				&::after
+					content: ''
+					position: absolute
+					width: 1px
+					height: 100%
+					background-color: #000
+					opacity: .1
+					right: -30px
+					top: 0
+			&-ttl
+				font-family: $abold
+				font-size: 18px
+			&>div:nth-child(2)
+				font-size: 14px
+.sel
+	color: #000
+	.owl-dots
+		position: relative
+	&__in
+		padding-left: 80px
+		padding-right: 80px
+	&__img
+		width: 100%
+		max-width: 550px
+		height: 335px
+		@include cv
+		border-radius: 3px
+	&__info
+		font-size: 16px
+	&__price
+		font-size: 18px
+		font-family: $abold
+		span
+			&:nth-child(2)
+				color: $lgray
+.let
+	font-size: 16px
+	color: #fff
+	position: relative
+	background-image: url('../img/let__bg.jpg')
+	position: relative
+	padding: 100px 0
+	@include cv
+	position: relative
+	text-align: center
+	&::before
+		@include ovl
+		background-color: #000
+		opacity: .7
+	.container
+		position: relative
+.ann
+	color: #000
+	.owl-nav button.owl-
+		&next
+			max-height: 440px
+			&:hover
+				transform: scale(1)
+		&prev
+			max-height: 440px
+			&:hover
+				transform: scale(1)
+	&__item
+		max-width: 340px
+		margin-left: auto
+		margin-right: auto
+		&-img
+			width: 100%
+			height: 440px
+			@include cv
+		&-ttl
+			color: #000
+			font-family: $abold
+			display: block
+	&__in
+		&-counter
+			font-family: $abold
+.footer
+	color: #fff
+	background-image: url('../img/footer__bg.jpg')
+	padding: 40px 0
+	&__link
+		font-family: $abold
+	&__let
+		&-ttl
+			font-family: $abold
+	&__logo
+		font-family: $abold
+		font-size: 22px
+		&-descr
+			font-size: 14px
