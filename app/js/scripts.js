@@ -73,4 +73,8 @@ $(function() {
 					top = $(id).offset().top;
 			$('body,html').animate({scrollTop: top}, 800);
 	});
+	//wow
+	$(function() {
+		new WOW().init();
+	});
 });

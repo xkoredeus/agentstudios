@@ -1007,6 +1007,7 @@ textarea:active {
 
 .pop {
   background-color: #1E1E1E;
+  overflow: hidden;
 }
 
 .pop__item {
