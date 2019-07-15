@@ -77,6 +77,10 @@ $(function() {
 					top = $(id).offset().top;
 			$('body,html').animate({scrollTop: top}, 800);
 	});
+	//hamb
+	$(".hamburger__checkbox").change(function() {
+		$('.header__menu').toggleClass('active');
+	});
 	//wow
 	$(function() {
 		new WOW().init();

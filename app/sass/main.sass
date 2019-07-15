@@ -180,129 +180,129 @@ textarea:active
 		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 /* START TOOLTIP STYLES */
 [tooltip]
-	position: relative; /* opinion 1 */
+	position: relative /* opinion 1 */
 	&>*
 		transition: .9s all ease-in-out
 /* Applies to all tooltips */
 [tooltip]::before,
 [tooltip]::after
-	text-transform: none; /* opinion 2 */
-	font-size: .9em; /* opinion 3 */
-	line-height: 1;
-	user-select: none;
-	pointer-events: none;
-	position: absolute;
-	display: none;
-	opacity: 0;
+	text-transform: none /* opinion 2 */
+	font-size: .9em /* opinion 3 */
+	line-height: 1
+	user-select: none
+	pointer-events: none
+	position: absolute
+	display: none
+	opacity: 0
 
 [tooltip]::before
-	content: '';
-	border: 5px solid transparent; /* opinion 4 */
-	z-index: 1001; /* absurdity 1 */
+	content: ''
+	border: 5px solid transparent /* opinion 4 */
+	z-index: 1001 /* absurdity 1 */
 
 [tooltip]::after
-	content: attr(tooltip); /* magic! */
+	content: attr(tooltip) /* magic! */
 	
 	/* most of the rest of this is opinion */
-	font-family: Helvetica, sans-serif;
-	text-align: center;
+	font-family: Helvetica, sans-serif
+	text-align: center
 	
 	/* 
 		Let the content set the size of the tooltips 
 		but this will also keep them from being obnoxious
 		*/
-	min-width: 3em;
-	max-width: 21em;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	padding: 1ch 1.5ch;
-	border-radius: .3ch;
-	box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
-	background: #333;
-	color: #fff;
-	z-index: 1000; /* absurdity 2 */
+	min-width: 3em
+	max-width: 21em
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	padding: 1ch 1.5ch
+	border-radius: .3ch
+	box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35)
+	background: #333
+	color: #fff
+	z-index: 1000 /* absurdity 2 */
 
 
 /* Make the tooltips respond to hover */
 [tooltip]:hover::before,
 [tooltip]:hover::after
-	display: block;
+	display: block
 
 
 /* don't show empty tooltips */
 [tooltip='']::before,
 [tooltip='']::after
-	display: none !important;
+	display: none !important
 
 
 /* FLOW: UP */
 [tooltip]:not([flow])::before,
 [tooltip][flow^="up"]::before
-	bottom: 100%;
-	border-bottom-width: 0;
-	border-top-color: #333;
+	bottom: 100%
+	border-bottom-width: 0
+	border-top-color: #333
 
 [tooltip]:not([flow])::after,
 [tooltip][flow^="up"]::after
-	bottom: calc(100% + 5px);
+	bottom: calc(100% + 5px)
 
 [tooltip]:not([flow])::before,
 [tooltip]:not([flow])::after,
 [tooltip][flow^="up"]::before,
 [tooltip][flow^="up"]::after
-	left: 50%;
-	transform: translate(-50%, -.5em);
+	left: 50%
+	transform: translate(-50%, -.5em)
 
 
 /* FLOW: DOWN */
 [tooltip][flow^="down"]::before
-	top: 100%;
-	border-top-width: 0;
-	border-bottom-color: #333;
+	top: 100%
+	border-top-width: 0
+	border-bottom-color: #333
 
 [tooltip][flow^="down"]::after
-	top: calc(100% + 5px);
+	top: calc(100% + 5px)
 
 [tooltip][flow^="down"]::before,
 [tooltip][flow^="down"]::after
-	left: 50%;
-	transform: translate(-50%, .5em);
+	left: 50%
+	transform: translate(-50%, .5em)
 
 
 /* FLOW: LEFT */
 [tooltip][flow^="left"]::before
-	top: 50%;
-	border-right-width: 0;
-	border-left-color: #333;
-	left: calc(0em - 5px);
-	transform: translate(-.5em, -50%);
+	top: 50%
+	border-right-width: 0
+	border-left-color: #333
+	left: calc(0em - 5px)
+	transform: translate(-.5em, -50%)
 
 [tooltip][flow^="left"]::after
-	top: 50%;
-	right: calc(100% + 5px);
-	transform: translate(-.5em, -50%);
+	top: 50%
+	right: calc(100% + 5px)
+	transform: translate(-.5em, -50%)
 
 
 /* FLOW: RIGHT */
 [tooltip][flow^="right"]::before
-	top: 50%;
-	border-left-width: 0;
-	border-right-color: #333;
-	right: calc(0em - 5px);
-	transform: translate(.5em, -50%);
+	top: 50%
+	border-left-width: 0
+	border-right-color: #333
+	right: calc(0em - 5px)
+	transform: translate(.5em, -50%)
 
 [tooltip][flow^="right"]::after
-	top: 50%;
-	left: calc(100% + 5px);
-	transform: translate(.5em, -50%);
+	top: 50%
+	left: calc(100% + 5px)
+	transform: translate(.5em, -50%)
 
 
 /* KEYFRAMES */
 @keyframes tooltips-vert
 	to
-		opacity: .9;
-		transform: translate(-50%, 0);
+		opacity: .9
+		transform: translate(-50%, 0)
 
 /* FX All The Things */ 
 [tooltip]:not([flow]):hover::before,
@@ -311,14 +311,14 @@ textarea:active
 [tooltip][flow^="up"]:hover::after,
 [tooltip][flow^="down"]:hover::before,
 [tooltip][flow^="down"]:hover::after
-	animation: tooltips-vert 300ms ease-out forwards;
+	animation: tooltips-vert 300ms ease-out forwards
 
 
 [tooltip][flow^="left"]:hover::before,
 [tooltip][flow^="left"]:hover::after,
 [tooltip][flow^="right"]:hover::before,
 [tooltip][flow^="right"]:hover::after
-	animation: tooltips-horz 300ms ease-out forwards;
+	animation: tooltips-horz 300ms ease-out forwards
 
 .list
 	&_circle
@@ -494,6 +494,8 @@ textarea:active
 	// 	margin-bottom: 15px
 .header
 	background-color: #202020
+	position: relative
+	overflow: hidden
 	&_main
 		display: flex
 		flex-direction: column
@@ -514,7 +516,7 @@ textarea:active
 			height: 150px
 			bottom: 0
 			left: 0
-			background: linear-gradient(0deg, #1e1e1e 20%, #c3959500 100%);
+			background: linear-gradient(0deg, #1e1e1e 20%, #c3959500 100%)
 		.container
 			position: relative
 			z-index: 1
@@ -548,14 +550,118 @@ textarea:active
 					background-color: #fff
 					right: -19px
 					top: 0
-	&__hamb
-		width: 20px
-		height: 15px
-		@include ct
-		background-image: url('../img/header__hamb.svg')
-		&:hover
-			opacity: .7
-			transform: scale(.9)
+	&__menu
+		position: fixed
+		width: 327px
+		right: -100%
+		background-color: #1B1B1B
+		height: 100%
+		padding: 110px 40px
+		z-index: 1
+		transition: .7s all cubic-bezier(0.25, 0.46, 0.45, 0.94)
+		&>*
+			position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 300%
+			height: 100%
+			background-color: #1B1B1B
+			left: 100%
+			top: 0
+		&-nav
+			display: flex
+			flex-direction: column
+			&-link
+				font-family: $abold
+				font-size: 16px
+				margin-bottom: 25px
+		&.active
+			right: 50%
+			margin-right: calc(-1350px/2)
+
+.visuallyHidden 
+	position: absolute
+	overflow: hidden
+	clip: rect(0 0 0 0)
+	height: 1px
+	width: 1px
+	margin: -1px
+	padding: 0
+	border: 0
+.hamburger
+	// margin-top: -5.5px
+	margin-bottom: 0
+	width: 30px
+	height: 15px
+	position: relative
+	cursor: pointer
+	&:hover
+		opacity: .7
+	&__wrp
+		position: fixed
+		z-index: 4
+		right: 50%
+		top: 41px
+		margin-right: calc(-1350px/2)
+
+.hamburger .bar
+	padding: 0
+	width: 30px
+	height: 4px
+	background-color: #fff
+	display: block
+	border-radius: 4px
+	transition: all 0.4s ease-in-out
+	position: absolute
+	z-index: 4
+.bar1
+	top: 0
+.bar2,
+.bar3
+	top: 5.5px
+	opacity: 0
+.bar3
+	right: 0
+
+.bar4
+	bottom: 0
+	top: 0
+
+.bar5
+	bottom: 0px
+
+.hamburger .bar
+	transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s
+
+.hamburger .bar2
+	width: 1px
+	transform: rotate(90deg)
+	left: 13.5px
+
+.hamburger .bar3 
+	width: 1px
+	left: 13.5px
+
+.hamburger__checkbox:checked + label > .hamburger > .bar2
+	left: 0px
+	width: 30px
+	transform: rotate(45deg)
+	opacity: 1
+
+.hamburger__checkbox:checked + label > .hamburger > .bar3
+	left: 0
+	width: 30px
+	transform: rotate(-45deg)
+	opacity: 1
+
+.hamburger__checkbox:checked + label > .hamburger > .bar4
+	background-color: transparent
+
+.hamburger__checkbox:checked + label > .hamburger > .bar5
+	bottom: 13.5px
+	background-color: transparent 
+
 @keyframes mouse-spin
 	0%
 		transform: translateY(0px)
@@ -563,6 +669,7 @@ textarea:active
 		transform: translateY(10px)
 	80%
 		transform: translateY(-5px)
+
 .banner
 	height: 77vh
 	display: flex
