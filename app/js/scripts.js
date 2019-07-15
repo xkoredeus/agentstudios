@@ -77,6 +77,11 @@ $(function() {
 					top = $(id).offset().top;
 			$('body,html').animate({scrollTop: top}, 800);
 	});
+	//cab link
+	$('.header__cab-top').on('click', function (e){
+		e.preventDefault();
+		$(this).parent().toggleClass('active');
+	})
 	//hamb
 	$(".hamburger__checkbox").change(function() {
 		$('.header__menu').toggleClass('active');
