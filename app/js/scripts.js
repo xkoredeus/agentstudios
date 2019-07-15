@@ -1,4 +1,8 @@
 $(function() {
+	//preloader
+	$(window).on('load', function () {
+			$('.preloader').fadeOut();
+	});
 	//selections slider
 	$('.sel__in').owlCarousel({
 		nav: true,

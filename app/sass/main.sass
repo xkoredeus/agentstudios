@@ -148,7 +148,36 @@ textarea:active
 			&:hover
 				color: #fff
 				background-color: $gray
+.preloader
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	min-height: 100vh
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	align-content: space-around
+	flex: 1 1 25%
+	background-color: $dark
+	z-index: 1000
 
+.preloader__icon
+	width: 4em
+	height: 4em
+	margin: auto
+	background-color: $yel
+	animation: rotating-plane 1.2s infinite ease-in-out
+
+@keyframes rotating-plane
+	0%
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+	50%
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+		background-color: $gray
+	100%
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 /* START TOOLTIP STYLES */
 [tooltip]
 	position: relative; /* opinion 1 */
