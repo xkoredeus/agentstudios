@@ -85,9 +85,29 @@ $(function() {
 	//hamb
 	$(".hamburger__checkbox").change(function() {
 		$('.header__menu').toggleClass('active');
+		$('.hamburger__wrp').toggleClass('active');
 	});
 	//wow
 	$(function() {
 		new WOW().init();
+	});
+	// Tooltips
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+	$("[data-toggle=popover]").popover({
+		html : true,
+		trigger: "hover focus",
+		// delay: {
+		// 		show: 100,
+		// 		hide: 100
+		// },
+		show: function () {
+				$(this).fadeIn('slow');
+		},
+		content: function() {
+			var content = $(this).attr("data-popover-content");
+			return $(content).children(".popover-body").html();
+		}
 	});
 });

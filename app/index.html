@@ -22,7 +22,7 @@
 					<div class="d-flex align-items-center">
 						<div class="d-flex align-items-center mr-5">
 							<span>Your location:</span>
-							<a href="#" class="ml-2 dot ss" tooltip="change your location">Moscow</a>
+							<a href="#" class="ml-2 dot ss" data-toggle="tooltip" title="change your location">Moscow</a>
 						</div>
 						<a href="#" class="btn header__loc ab wt mr-5">List your location</a>
 						<!--login btns-->
@@ -73,9 +73,9 @@
 			<div class="container">
 					<div class="d-flex align-items-center justify-content-between">
 						<div class="d-flex align-items-center">
-							<a href="#" class="banner__soc-link mr-4" tooltip="open facebook account"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
-							<a href="#" class="banner__soc-link mr-4" tooltip="open istagram channel"><img src="img/icon__in.png" alt="icon__in.png"></a>
-							<a href="#" class="banner__soc-link mr-4" tooltip="write us in telegram"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
+							<a href="#" class="banner__soc-link mr-4" data-toggle="tooltip" title="open facebook account"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
+							<a href="#" class="banner__soc-link mr-4" data-toggle="tooltip" title="open istagram channel"><img src="img/icon__in.png" alt="icon__in.png"></a>
+							<a href="#" class="banner__soc-link mr-4" data-toggle="tooltip" title="write us in telegram"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
 						</div>
 						<a href="#popular" tooltip="click to scroll down" class="banner__bot-btn d-flex flex-column align-items-center anchor-link wow fadeIn animated" data-wow-duration="2s" data-wow-delay="2.7s">
 							<span>Popular In your city</span>
@@ -84,7 +84,7 @@
 						<div class="d-flex align-items-center">
 							<div class="banner__bot-lang">
 								<a href="#" class="banner__bot-lang-link active">EN</a>
-								<a href="#" class="banner__bot-lang-link" tooltip="change language">RU</a>
+								<a href="#" class="banner__bot-lang-link" data-toggle="tooltip" title="change language">RU</a>
 							</div>
 						</div>
 					</div>
@@ -122,22 +122,75 @@
 		<div class="container">
 			<div class="d-flex align-items-center justify-content-between mb-5">
 				<div class="section__ttl mb-0">Popular in your city</div>
-				<a href="#" class="btn btn_tr">Open filter</a>
+				<a href="#" class="btn btn_tr d-flex align-items-center">
+					<img src="img/icon__geo_white.png" alt="icon__geo_white.png" class="mr-2">
+					<span>Open filter</span>
+				</a>
 			</div>
 			<div class="row">
 				<!--item-->
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate">
-								<span>Excellent</span>
-								<span>8,6</span>
+							<div class="pop__item-rate-wrp d-flex justify-content-end" data-popover-content="#pop-popover_1" data-toggle="popover" data-placement="bottom">
+								<div class="pop__item-rate">
+									<span>Excellent</span>
+									<span>8,6</span>
+								</div>
 							</div>
+							<!--popover cnt-->
+							<div id="pop-popover_1" style="display:none;" class="pop-popover">
+								<div class="popover-body">
+									<div class="d-flex flex-column">
+										<div class="pop-popover__item">
+											<div class="mb-1">Оборудование</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Чистота</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Администрация</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">10,0</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Соотношение цена/качество</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">8,6</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/popover cnt-->
 						</div>
 						<div class="pop__item-info">
 							<div class="d-flex align-items-center justify-content-between mb-3">
 								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
-								<button class="pop__item-fav" tooltip="add to favorites"></button>
+								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
 							<div class="d-flex justify-content-between mt-4 mb-5">
@@ -172,15 +225,65 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate">
-								<span>Excellent</span>
-								<span>8,6</span>
+							<div class="pop__item-rate-wrp d-flex justify-content-end" data-popover-content="#pop-popover_2" data-toggle="popover" data-placement="bottom">
+								<div class="pop__item-rate">
+									<span>Excellent</span>
+									<span>8,6</span>
+								</div>
 							</div>
+							<!--popover cnt-->
+							<div id="pop-popover_2" style="display:none;" class="pop-popover">
+								<div class="popover-body">
+									<div class="d-flex flex-column">
+										<div class="pop-popover__item">
+											<div class="mb-1">Оборудование</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Чистота</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Администрация</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">10,0</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Соотношение цена/качество</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">8,6</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/popover cnt-->
 						</div>
 						<div class="pop__item-info">
 							<div class="d-flex align-items-center justify-content-between mb-3">
 								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
-								<button class="pop__item-fav" tooltip="add to favorites"></button>
+								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
 							<div class="d-flex justify-content-between mt-4 mb-5">
@@ -215,15 +318,65 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate">
-								<span>Excellent</span>
-								<span>8,6</span>
+							<div class="pop__item-rate-wrp d-flex justify-content-end" data-popover-content="#pop-popover_3" data-toggle="popover" data-placement="bottom">
+								<div class="pop__item-rate">
+									<span>Excellent</span>
+									<span>8,6</span>
+								</div>
 							</div>
+							<!--popover cnt-->
+							<div id="pop-popover_3" style="display:none;" class="pop-popover">
+								<div class="popover-body">
+									<div class="d-flex flex-column">
+										<div class="pop-popover__item">
+											<div class="mb-1">Оборудование</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Чистота</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Администрация</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">10,0</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Соотношение цена/качество</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">8,6</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/popover cnt-->
 						</div>
 						<div class="pop__item-info">
 							<div class="d-flex align-items-center justify-content-between mb-3">
 								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
-								<button class="pop__item-fav" tooltip="add to favorites"></button>
+								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
 							<div class="d-flex justify-content-between mt-4 mb-5">
@@ -258,15 +411,65 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate">
-								<span>Excellent</span>
-								<span>8,6</span>
+							<div class="pop__item-rate-wrp d-flex justify-content-end" data-popover-content="#pop-popover_4" data-toggle="popover" data-placement="bottom">
+								<div class="pop__item-rate">
+									<span>Excellent</span>
+									<span>8,6</span>
+								</div>
 							</div>
+							<!--popover cnt-->
+							<div id="pop-popover_4" style="display:none;" class="pop-popover">
+								<div class="popover-body">
+									<div class="d-flex flex-column">
+										<div class="pop-popover__item">
+											<div class="mb-1">Оборудование</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Чистота</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Администрация</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">10,0</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Соотношение цена/качество</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">8,6</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/popover cnt-->
 						</div>
 						<div class="pop__item-info">
 							<div class="d-flex align-items-center justify-content-between mb-3">
 								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
-								<button class="pop__item-fav" tooltip="add to favorites"></button>
+								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
 							<div class="d-flex justify-content-between mt-4 mb-5">
@@ -301,15 +504,65 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate">
-								<span>Excellent</span>
-								<span>8,6</span>
+							<div class="pop__item-rate-wrp d-flex justify-content-end" data-popover-content="#pop-popover_5" data-toggle="popover" data-placement="bottom">
+								<div class="pop__item-rate">
+									<span>Excellent</span>
+									<span>8,6</span>
+								</div>
 							</div>
+							<!--popover cnt-->
+							<div id="pop-popover_5" style="display:none;" class="pop-popover">
+								<div class="popover-body">
+									<div class="d-flex flex-column">
+										<div class="pop-popover__item">
+											<div class="mb-1">Оборудование</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Чистота</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Администрация</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">10,0</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Соотношение цена/качество</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">8,6</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/popover cnt-->
 						</div>
 						<div class="pop__item-info">
 							<div class="d-flex align-items-center justify-content-between mb-3">
 								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
-								<button class="pop__item-fav" tooltip="add to favorites"></button>
+								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
 							<div class="d-flex justify-content-between mt-4 mb-5">
@@ -344,15 +597,65 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate">
-								<span>Excellent</span>
-								<span>8,6</span>
+							<div class="pop__item-rate-wrp d-flex justify-content-end" data-popover-content="#pop-popover_6" data-toggle="popover" data-placement="bottom">
+								<div class="pop__item-rate">
+									<span>Excellent</span>
+									<span>8,6</span>
+								</div>
 							</div>
+							<!--popover cnt-->
+							<div id="pop-popover_6" style="display:none;" class="pop-popover">
+								<div class="popover-body">
+									<div class="d-flex flex-column">
+										<div class="pop-popover__item">
+											<div class="mb-1">Оборудование</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Чистота</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">9,9</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Администрация</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">10,0</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Соотношение цена/качество</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style="width: 70%"></div>
+												</div>
+												<div class="ml-2">8,6</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--/popover cnt-->
 						</div>
 						<div class="pop__item-info">
 							<div class="d-flex align-items-center justify-content-between mb-3">
 								<a href="#" class="pop__item-ttl">Studio A6 Qwex</a>
-								<button class="pop__item-fav" tooltip="add to favorites"></button>
+								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
 							<div class="d-flex justify-content-between mt-4 mb-5">

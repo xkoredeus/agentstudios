@@ -31,6 +31,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'app/libs/jquery/jquery.min.js',
+		'app/libs/bootstrap/popper.min.js',
+		'app/libs/bootstrap/bootstrap.min.js',
 		'app/libs/fancybox/jquery.fancybox.min.js',
 		'app/libs/owl.carousel/owl.carousel.min.js',
 		'app/libs/animate/wow.min.js'
@@ -43,6 +45,7 @@ gulp.task('scripts', function() {
 gulp.task('css-libs', function() {
 	return gulp.src([
 		'app/libs/bootstrap/bootstrap.min.css',
+		'app/libs/bootstrap/tooltip.css',
 		'app/libs/fancybox/jquery.fancybox.min.css',
 		'app/libs/owl.carousel/owl.carousel.min.css',
 		'app/libs/animate/animate.min.css'
