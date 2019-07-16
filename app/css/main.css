@@ -1215,6 +1215,10 @@ textarea:active {
           transform: translateY(10px);
 }
 
+.banner__bot-lang-wrp {
+  width: 128px;
+}
+
 .banner__bot-lang-link {
   font-family: "SFUIText-Bold";
 }
