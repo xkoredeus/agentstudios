@@ -5,7 +5,7 @@ body {
   font-family: "SFUIText-Regular";
   color: #fff;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.6;
   position: relative;
   -webkit-font-smoothing: antialiased;
 }
@@ -74,6 +74,15 @@ select {
   font-size: 14px;
   padding: 14px 27px;
   background: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 input,
@@ -178,6 +187,79 @@ textarea:active {
 
 .tac {
   text-align: center;
+}
+
+.checkbox {
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+}
+
+.checkbox .checkbox__text {
+  font-size: 14px;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  width: 100%;
+  height: 20px;
+  display: block;
+}
+
+.checkbox .checkbox__text::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  background-color: #ffffff17;
+}
+
+.checkbox .checkbox__text::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  width: 14px;
+  height: 12px;
+  background-image: url("../img/icon__checkbox.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.checkbox .checkbox__text a {
+  color: #fff;
+  text-decoration: underline;
+  position: relative;
+  z-index: 2;
+}
+
+.checkbox input[type="checkbox"]:checked + .checkbox__text:after,
+.checkbox input[type="radio"]:checked + .checkbox__text:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .btn {
@@ -324,6 +406,7 @@ textarea:active {
   border-radius: 3px;
   background-color: #1b1b1bbf;
   max-width: 380px;
+  padding: 20px 18px;
   -webkit-transition: unset;
   -o-transition: unset;
   transition: unset;
@@ -331,7 +414,7 @@ textarea:active {
   -webkit-transition: .3s opacity ease-in-out;
   -o-transition: .3s opacity ease-in-out;
   transition: .3s opacity ease-in-out;
-  left: -131px !important;
+  left: -125px !important;
 }
 
 .popover-body {
@@ -400,6 +483,14 @@ textarea:active {
 
 .pop-popover__item:nth-child(4) .pop-popover__line-yel {
   width: 86%;
+}
+
+.pop-popover__item:nth-child(5) .pop-popover__line-yel {
+  width: 90%;
+}
+
+.pop-popover__item:nth-child(6) .pop-popover__line-yel {
+  width: 94%;
 }
 
 .show {
@@ -663,6 +754,10 @@ textarea:active {
   position: relative;
   border-radius: 4px;
   background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .input__wrp input,
@@ -697,6 +792,17 @@ textarea:active {
 
 .input__wrp_tel:before {
   background-image: url(../img/icon__form-tel.png);
+}
+
+.input__wrp_text {
+  border: none;
+  position: relative;
+  border-radius: 4px;
+  background-color: #1E1E1E;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header {
@@ -736,7 +842,7 @@ textarea:active {
   left: 0;
   top: 0;
   background-color: #000;
-  opacity: .6;
+  opacity: .45;
 }
 
 .header_main::after {
@@ -776,15 +882,19 @@ textarea:active {
 
 .header__loc {
   font-size: 14px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 250, 250, 0.15)), to(rgba(250, 250, 250, 0))), rgba(255, 255, 255, 0.1);
-  background: -o-linear-gradient(top, rgba(250, 250, 250, 0.15) 0%, rgba(250, 250, 250, 0) 100%), rgba(255, 255, 255, 0.1);
-  background: linear-gradient(180deg, rgba(250, 250, 250, 0.15) 0%, rgba(250, 250, 250, 0) 100%), rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 250, 250, 0.05)), to(rgba(250, 250, 250, 0)));
+  background: -o-linear-gradient(top, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%);
+  background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-right: 14px;
+  color: #fff;
+  padding-left: 14px;
 }
 
 .header__loc:hover {
+  color: #fff;
   background-color: #1E1E1E;
   border-color: #1E1E1E;
 }
@@ -853,6 +963,10 @@ textarea:active {
 
 .header__cab-link:hover {
   background-color: #1B1B1B;
+}
+
+.header__sign-link {
+  font-family: "AkzidenzGroteskPro-BoldEx";
 }
 
 .header__sign-link:nth-child(1) {
@@ -952,7 +1066,7 @@ textarea:active {
   position: absolute;
   z-index: 4;
   right: 50%;
-  top: 26px;
+  top: 3.8vh;
   margin-right: -webkit-calc(-1320px/2);
   margin-right: calc(-1320px/2);
 }
@@ -971,7 +1085,7 @@ textarea:active {
   height: 4px;
   background-color: #fff;
   display: block;
-  border-radius: 4px;
+  border-radius: 0;
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -1119,6 +1233,10 @@ textarea:active {
   padding: 8px;
 }
 
+.banner__bar-wrp {
+  position: relative;
+}
+
 .banner__bar::before {
   content: '';
   position: absolute;
@@ -1186,7 +1304,118 @@ textarea:active {
 }
 
 .banner__bar .btn {
+  font-family: "SFUIText-Heavy";
   min-width: 150px;
+}
+
+.banner-filter__top {
+  font-family: "AkzidenzGroteskPro-BoldEx";
+  font-size: 16px;
+  padding: 15px 20px;
+  text-align: center;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #252525e3;
+  position: relative;
+}
+
+.banner-filter__top-btn {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: url("../img/icon__cross.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: .6s all ease;
+  -o-transition: .6s all ease;
+  transition: .6s all ease;
+  cursor: pointer;
+}
+
+.banner-filter__top-btn:hover {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+
+.banner-filter__bot {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #2525258f;
+}
+
+.banner-filter__item {
+  padding: 12px 15px;
+  position: relative;
+  border-bottom: 1px solid #ffffff2e;
+}
+
+.banner-filter__item-ttl {
+  font-family: "AkzidenzGroteskPro-BoldEx";
+  font-size: 16px;
+  padding: 8px 15px;
+  position: relative;
+  width: 100%;
+}
+
+.banner-filter__item_left {
+  padding: 0;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.banner-filter__item_left .checkbox {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-filter__item_left .checkbox__text {
+  height: 100%;
+  padding: 12px 15px;
+}
+
+.banner-filter__item_left .checkbox__text div {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.banner-filter__item_left .checkbox__text::after {
+  display: none;
+}
+
+.banner-filter__item_left .checkbox__text::before {
+  width: 100%;
+  height: 120%;
+  border: none;
+  background-color: transparent;
+  border-radius: 0;
+  left: 0;
+  top: -3px;
+}
+
+.banner-filter__item_left .checkbox input[type="checkbox"]:checked + .checkbox__text:before,
+.banner-filter__item_left .checkbox input[type="radio"]:checked + .checkbox__text:before {
+  background-color: #FFD542;
+}
+
+.banner-filter__item_left .checkbox input[type="radio"]:checked + .checkbox__text div {
+  color: #000;
 }
 
 .banner__bot {
@@ -1216,7 +1445,7 @@ textarea:active {
 }
 
 .banner__bot-lang-wrp {
-  width: 128px;
+  width: 142px;
 }
 
 .banner__bot-lang-link {
@@ -1240,6 +1469,10 @@ textarea:active {
 
 .banner__bot-lang-link.active {
   color: #FFD542;
+}
+
+.banner__soc-link:not(:last-child) {
+  margin-right: 43px;
 }
 
 .banner__soc-link:hover img {
@@ -1359,19 +1592,23 @@ textarea:active {
   position: relative;
 }
 
-.pop__item-char:not(:last-child) {
-  margin-right: 30px;
+.pop__item-char-wrp {
+  width: 130px;
+  position: relative;
 }
 
-.pop__item-char:not(:last-child)::after {
+.pop__item-char-wrp:not(:last-child)::after {
   content: '';
   position: absolute;
   width: 1px;
-  height: 100%;
+  height: 70%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   background-color: #000;
   opacity: .1;
-  right: -30px;
-  top: 0;
+  right: 0px;
 }
 
 .pop__item-char-ttl {
@@ -1380,11 +1617,20 @@ textarea:active {
 }
 
 .pop__item-char > div:nth-child(2) {
-  font-size: 14px;
+  font-size: 13.5px;
 }
 
 .sel {
   color: #000;
+}
+
+.sel .owl-nav button.owl-prev, .sel .owl-nav button.owl-next {
+  opacity: .3;
+}
+
+.sel .owl-nav button.owl-prev:hover, .sel .owl-nav button.owl-next:hover {
+  opacity: 1;
+  background-color: transparent;
 }
 
 .sel .owl-dots {
@@ -1484,12 +1730,18 @@ textarea:active {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 20px;
 }
 
 .ann__item-ttl {
   color: #000;
   font-family: "AkzidenzGroteskPro-BoldEx";
   display: block;
+}
+
+.ann__item-descr {
+  margin-bottom: 25px;
+  line-height: 1.7;
 }
 
 .ann__in-counter {

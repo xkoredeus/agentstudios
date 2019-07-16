@@ -24,7 +24,7 @@
 							<span>Your location:</span>
 							<a href="#" class="ml-2 dot ss" data-toggle="tooltip" title="change your location">Moscow</a>
 						</div>
-						<a href="#" class="btn header__loc ab wt mr-5">List your location</a>
+						<a href="#" class="btn header__loc ab mr-5">List your location</a>
 						<!--login btns-->
 						<div class="d-none d-flex-align-items-center header__sign-wrp mr-5">
 							<a href="#" class="header__sign-link ab">Sign Up</a>
@@ -51,20 +51,119 @@
 		<div class="banner">
 			<div class="container">
 				<div class="banner__offer">
-					<div class="banner__ttl wow fadeIn animated" data-wow-duration="2s" data-wow-delay="1s">Find studios and locations for shooting</div>
-					<div class="banner__subttl wow fadeIn animated" data-wow-duration="2s" data-wow-delay="1.75s">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</div>
-					<form class="banner__bar d-flex align-items-center justify-content-between wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="1.7s">
-						<div class="input__wrp">
-							<input type="text" placeholder="Where are you shooting?">
+					<div class="banner__ttl">
+						 <!--wow fadeIn animated " data-wow-duration="2s" data-wow-delay="1s" -->
+						<!--Find studios and locations for shooting-->
+						Залить анимацию
+					</div>
+					<div class="banner__subttl">
+ <!-- wow fadeIn animated" data-wow-duration="2s" data-wow-delay="1.75s" -->
+					But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</div>
+					<form class="banner__bar-wrp">
+						 <!-- wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="1.7s" -->
+						<div class="banner__bar d-flex align-items-center justify-content-between">
+							<div class="input__wrp">
+								<input type="text" placeholder="Where are you shooting?">
+							</div>
+							<div class="d-flex aign-items-center">
+								<div class="d-flex-align-items-center banner__bar-act mr-5">
+									<a href="#" class="banner__bar-act-link">Check In</a>
+									<a href="#" class="banner__bar-act-link">Check Out</a>
+								</div>
+							</div>
+							<a href="#" class="und">Popular filters</a>
+							<input type="submit" class="btn" value="Search">
 						</div>
-						<div class="d-flex aign-items-center">
-							<div class="d-flex-align-items-center banner__bar-act mr-5">
-								<a href="#" class="banner__bar-act-link">Check In</a>
-								<a href="#" class="banner__bar-act-link">Check Out</a>
+						<!--filter-->
+						<div class="banner-filter">
+							<div class="banner-filter__top">
+								<span>Популярные фильтры</span>
+								<div class="banner-filter__top-btn"></div>
+							</div>
+							<div class="banner-filter__bot">
+								<div class="row">
+									<div class="col-xl-4">
+										<div class="banner-filter__item">
+											<div class="banner-filter__item-ttl">Подборки</div>
+										</div>
+										<div class="banner-filter__item-in">
+											<div class="banner-filter__item banner-filter__item_left">
+												<label for="filter__radio_1" class="checkbox">
+													<input type="radio" id="filter__radio_1" name="filter__radio">
+													<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
+												</label>
+											</div>
+											<div class="banner-filter__item banner-filter__item_left">
+												<label for="filter__radio_2" class="checkbox">
+													<input type="radio" id="filter__radio_2" name="filter__radio">
+													<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
+												</label>
+											</div>
+											<div class="banner-filter__item banner-filter__item_left">
+												<label for="filter__radio_3" class="checkbox">
+													<input type="radio" id="filter__radio_3" name="filter__radio">
+													<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
+												</label>
+											</div>
+											<div class="banner-filter__item banner-filter__item_left">
+												<label for="filter__radio_4" class="checkbox">
+													<input type="radio" id="filter__radio_4" name="filter__radio">
+													<span class="checkbox__text"><div>Студии до 1000 руб/час</div></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4">
+										<div class="banner-filter__item">
+											<div class="banner-filter__item-ttl">Удобства</div>
+										</div>
+										<div class="banner-filter__item-in">
+											<div class="banner-filter__item">
+												<label for="filter__checkbox_5" class="checkbox">
+													<input type="checkbox" id="filter__checkbox_5">
+													<span class="checkbox__text">Рассветная сторона (55)</span>
+												</label>
+											</div>
+											<div class="banner-filter__item">
+												<label for="filter__checkbox_6" class="checkbox">
+													<input type="checkbox" id="filter__checkbox_6">
+													<span class="checkbox__text">Закатная сторона (55)</span>
+												</label>
+											</div>
+											<div class="banner-filter__item">
+												<label for="filter__checkbox_7" class="checkbox">
+													<input type="checkbox" id="filter__checkbox_7">
+													<span class="checkbox__text">Затемнение окон (55)</span>
+												</label>
+											</div>
+											<div class="banner-filter__item">
+												<label for="filter__checkbox_8" class="checkbox">
+													<input type="checkbox" id="filter__checkbox_8">
+													<span class="checkbox__text">Циклорама (55)</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-xl-4">
+										<div class="banner-filter__item">
+											<div class="banner-filter__item-ttl">Стоимость 1 часа</div>
+											<div class="d-flex align-items-center">
+												<div>
+													<div class="input__wrp_text">
+														<input type="number" class="banner-filter__input" placeholder="0">
+													</div>
+												</div> - 
+												<div>
+													<div class="input__wrp_text">
+														<input type="number" class="banner-filter__input" placeholder="50000">
+													</div>
+												</div> ₽
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<a href="#" class="und">Popular filters</a>
-						<input type="submit" class="btn" value="Search">
 					</form>
 				</div>
 			</div>
@@ -73,9 +172,9 @@
 			<div class="container">
 					<div class="d-flex align-items-center justify-content-between">
 						<div class="d-flex align-items-center">
-							<a href="#" class="banner__soc-link mr-4" data-toggle="tooltip" title="open facebook account"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
-							<a href="#" class="banner__soc-link mr-4" data-toggle="tooltip" title="open istagram channel"><img src="img/icon__in.png" alt="icon__in.png"></a>
-							<a href="#" class="banner__soc-link mr-4" data-toggle="tooltip" title="write us in telegram"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
+							<a href="#" class="banner__soc-link" data-toggle="tooltip" title="open facebook account"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
+							<a href="#" class="banner__soc-link" data-toggle="tooltip" title="open istagram channel"><img src="img/icon__in.png" alt="icon__in.png"></a>
+							<a href="#" class="banner__soc-link" data-toggle="tooltip" title="write us in telegram"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
 						</div>
 						<a href="#popular" tooltip="click to scroll down" class="banner__bot-btn d-flex flex-column align-items-center anchor-link wow fadeIn animated" data-wow-duration="2s" data-wow-delay="2.7s">
 							<span>Popular In your city</span>
@@ -180,6 +279,26 @@
 												<div class="ml-2">8,6</div>
 											</div>
 										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Расположение</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,5</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Всего</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,7</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -191,24 +310,30 @@
 								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
-							<div class="d-flex justify-content-between mt-4 mb-5">
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										170 м<sup>2</sup>
+							<div class="d-flex mt-4 mb-5">
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											170 м<sup>2</sup>
+										</div>
+										<div>Площадь</div>
 									</div>
-									<div>Площадь</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										4,2
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											4,2
+										</div>
+										<div>Высота потолка</div>
 									</div>
-									<div>Высота потолка</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										2 зала
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											2 зала
+										</div>
+										<div>В студии</div>
 									</div>
-									<div>В студии</div>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between align-items-center pop__item-btns">
@@ -223,12 +348,12 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate" data-popover-content="#pop-popover_2" data-toggle="popover" data-placement="bottom">
+							<div class="pop__item-rate" data-popover-content="#pop-popover_1" data-toggle="popover" data-placement="bottom">
 								<span>Excellent</span>
 								<span>8,6</span>
 							</div>
 							<!--popover cnt-->
-							<div id="pop-popover_2" style="display:none;" class="pop-popover">
+							<div id="pop-popover_1" style="display:none;" class="pop-popover">
 								<div class="popover-body">
 									<div class="d-flex flex-column">
 										<div class="pop-popover__item">
@@ -236,7 +361,7 @@
 											<div class="d-flex align-items-center">
 												<div class="d-flex align-items-center pop-popover__line-wrp">
 													<div class="pop-popover__line-bg"></div>
-													<div class="pop-popover__line-yel" style="width: 70%"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
 												</div>
 												<div class="ml-2">9,9</div>
 											</div>
@@ -271,6 +396,26 @@
 												<div class="ml-2">8,6</div>
 											</div>
 										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Расположение</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,5</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Всего</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,7</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -282,24 +427,30 @@
 								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
-							<div class="d-flex justify-content-between mt-4 mb-5">
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										170 м<sup>2</sup>
+							<div class="d-flex mt-4 mb-5">
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											170 м<sup>2</sup>
+										</div>
+										<div>Площадь</div>
 									</div>
-									<div>Площадь</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										4,2
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											4,2
+										</div>
+										<div>Высота потолка</div>
 									</div>
-									<div>Высота потолка</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										2 зала
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											2 зала
+										</div>
+										<div>В студии</div>
 									</div>
-									<div>В студии</div>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between align-items-center pop__item-btns">
@@ -314,12 +465,12 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate" data-popover-content="#pop-popover_3" data-toggle="popover" data-placement="bottom">
+							<div class="pop__item-rate" data-popover-content="#pop-popover_1" data-toggle="popover" data-placement="bottom">
 								<span>Excellent</span>
 								<span>8,6</span>
 							</div>
 							<!--popover cnt-->
-							<div id="pop-popover_3" style="display:none;" class="pop-popover">
+							<div id="pop-popover_1" style="display:none;" class="pop-popover">
 								<div class="popover-body">
 									<div class="d-flex flex-column">
 										<div class="pop-popover__item">
@@ -327,7 +478,7 @@
 											<div class="d-flex align-items-center">
 												<div class="d-flex align-items-center pop-popover__line-wrp">
 													<div class="pop-popover__line-bg"></div>
-													<div class="pop-popover__line-yel" style="width: 70%"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
 												</div>
 												<div class="ml-2">9,9</div>
 											</div>
@@ -362,6 +513,26 @@
 												<div class="ml-2">8,6</div>
 											</div>
 										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Расположение</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,5</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Всего</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,7</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -373,24 +544,30 @@
 								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
-							<div class="d-flex justify-content-between mt-4 mb-5">
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										170 м<sup>2</sup>
+							<div class="d-flex mt-4 mb-5">
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											170 м<sup>2</sup>
+										</div>
+										<div>Площадь</div>
 									</div>
-									<div>Площадь</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										4,2
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											4,2
+										</div>
+										<div>Высота потолка</div>
 									</div>
-									<div>Высота потолка</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										2 зала
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											2 зала
+										</div>
+										<div>В студии</div>
 									</div>
-									<div>В студии</div>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between align-items-center pop__item-btns">
@@ -405,12 +582,12 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate" data-popover-content="#pop-popover_4" data-toggle="popover" data-placement="bottom">
+							<div class="pop__item-rate" data-popover-content="#pop-popover_1" data-toggle="popover" data-placement="bottom">
 								<span>Excellent</span>
 								<span>8,6</span>
 							</div>
 							<!--popover cnt-->
-							<div id="pop-popover_4" style="display:none;" class="pop-popover">
+							<div id="pop-popover_1" style="display:none;" class="pop-popover">
 								<div class="popover-body">
 									<div class="d-flex flex-column">
 										<div class="pop-popover__item">
@@ -418,7 +595,7 @@
 											<div class="d-flex align-items-center">
 												<div class="d-flex align-items-center pop-popover__line-wrp">
 													<div class="pop-popover__line-bg"></div>
-													<div class="pop-popover__line-yel" style="width: 70%"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
 												</div>
 												<div class="ml-2">9,9</div>
 											</div>
@@ -453,6 +630,26 @@
 												<div class="ml-2">8,6</div>
 											</div>
 										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Расположение</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,5</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Всего</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,7</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -464,24 +661,30 @@
 								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
-							<div class="d-flex justify-content-between mt-4 mb-5">
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										170 м<sup>2</sup>
+							<div class="d-flex mt-4 mb-5">
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											170 м<sup>2</sup>
+										</div>
+										<div>Площадь</div>
 									</div>
-									<div>Площадь</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										4,2
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											4,2
+										</div>
+										<div>Высота потолка</div>
 									</div>
-									<div>Высота потолка</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										2 зала
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											2 зала
+										</div>
+										<div>В студии</div>
 									</div>
-									<div>В студии</div>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between align-items-center pop__item-btns">
@@ -496,12 +699,12 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate" data-popover-content="#pop-popover_5" data-toggle="popover" data-placement="bottom">
+							<div class="pop__item-rate" data-popover-content="#pop-popover_1" data-toggle="popover" data-placement="bottom">
 								<span>Excellent</span>
 								<span>8,6</span>
 							</div>
 							<!--popover cnt-->
-							<div id="pop-popover_5" style="display:none;" class="pop-popover">
+							<div id="pop-popover_1" style="display:none;" class="pop-popover">
 								<div class="popover-body">
 									<div class="d-flex flex-column">
 										<div class="pop-popover__item">
@@ -509,7 +712,7 @@
 											<div class="d-flex align-items-center">
 												<div class="d-flex align-items-center pop-popover__line-wrp">
 													<div class="pop-popover__line-bg"></div>
-													<div class="pop-popover__line-yel" style="width: 70%"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
 												</div>
 												<div class="ml-2">9,9</div>
 											</div>
@@ -544,6 +747,26 @@
 												<div class="ml-2">8,6</div>
 											</div>
 										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Расположение</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,5</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Всего</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,7</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -555,24 +778,30 @@
 								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
-							<div class="d-flex justify-content-between mt-4 mb-5">
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										170 м<sup>2</sup>
+							<div class="d-flex mt-4 mb-5">
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											170 м<sup>2</sup>
+										</div>
+										<div>Площадь</div>
 									</div>
-									<div>Площадь</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										4,2
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											4,2
+										</div>
+										<div>Высота потолка</div>
 									</div>
-									<div>Высота потолка</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										2 зала
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											2 зала
+										</div>
+										<div>В студии</div>
 									</div>
-									<div>В студии</div>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between align-items-center pop__item-btns">
@@ -587,12 +816,12 @@
 				<div class="col-xl-4 col-sm-6 mb-4">
 					<div class="pop__item wow fadeInUp animated" data-wow-duration="0.8s" data-wow-delay=".2s">
 						<div class="pop__item-top" style="background-image: url(img/pop__img.jpg);">
-							<div class="pop__item-rate" data-popover-content="#pop-popover_6" data-toggle="popover" data-placement="bottom">
+							<div class="pop__item-rate" data-popover-content="#pop-popover_1" data-toggle="popover" data-placement="bottom">
 								<span>Excellent</span>
 								<span>8,6</span>
 							</div>
 							<!--popover cnt-->
-							<div id="pop-popover_6" style="display:none;" class="pop-popover">
+							<div id="pop-popover_1" style="display:none;" class="pop-popover">
 								<div class="popover-body">
 									<div class="d-flex flex-column">
 										<div class="pop-popover__item">
@@ -600,7 +829,7 @@
 											<div class="d-flex align-items-center">
 												<div class="d-flex align-items-center pop-popover__line-wrp">
 													<div class="pop-popover__line-bg"></div>
-													<div class="pop-popover__line-yel" style="width: 70%"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
 												</div>
 												<div class="ml-2">9,9</div>
 											</div>
@@ -635,6 +864,26 @@
 												<div class="ml-2">8,6</div>
 											</div>
 										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Расположение</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,5</div>
+											</div>
+										</div>
+										<div class="pop-popover__item">
+											<div class="mb-1">Всего</div>
+											<div class="d-flex align-items-center">
+												<div class="d-flex align-items-center pop-popover__line-wrp">
+													<div class="pop-popover__line-bg"></div>
+													<div class="pop-popover__line-yel" style={{width: 70%}}></div>
+												</div>
+												<div class="ml-2">9,7</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -646,24 +895,30 @@
 								<button class="pop__item-fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
 							<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in</p>
-							<div class="d-flex justify-content-between mt-4 mb-5">
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										170 м<sup>2</sup>
+							<div class="d-flex mt-4 mb-5">
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											170 м<sup>2</sup>
+										</div>
+										<div>Площадь</div>
 									</div>
-									<div>Площадь</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										4,2
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											4,2
+										</div>
+										<div>Высота потолка</div>
 									</div>
-									<div>Высота потолка</div>
 								</div>
-								<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
-									<div class="pop__item-char-ttl">
-										2 зала
+								<div class="pop__item-char-wrp">
+									<div class="d-flex flex-column tac pop__item-char mb-2 mb-sm-0">
+										<div class="pop__item-char-ttl">
+											2 зала
+										</div>
+										<div>В студии</div>
 									</div>
-									<div>В студии</div>
 								</div>
 							</div>
 							<div class="d-flex justify-content-between align-items-center pop__item-btns">
@@ -823,28 +1078,28 @@
 			</div>
 			<div class="ann__in owl-carousel">
 				<div class="ann__item">
-					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_1.jpg);"></div>
-					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-img" style="background-image: url(img/ann__img_1.jpg);"></div>
+					<a href="#" class="ann__item-img">Workshop of Alexander Yermakov in Vox Studios</a>
 					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
 				</div>
 				<div class="ann__item">
-					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_2.jpg);"></div>
-					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-img" style="background-image: url(img/ann__img_2.jpg);"></div>
+					<a href="#" class="ann__item-img">Workshop of Alexander Yermakov in Vox Studios</a>
 					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
 				</div>
 				<div class="ann__item">
-					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_3.jpg);"></div>
-					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-img" style="background-image: url(img/ann__img_3.jpg);"></div>
+					<a href="#" class="ann__item-img">Workshop of Alexander Yermakov in Vox Studios</a>
 					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants. It will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
 				</div>
 				<div class="ann__item">
-					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_4.jpg);"></div>
-					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-img" style="background-image: url(img/ann__img_4.jpg);"></div>
+					<a href="#" class="ann__item-img">Workshop of Alexander Yermakov in Vox Studios</a>
 					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
 				</div>
 				<div class="ann__item">
-					<div class="ann__item-img mb-3" style="background-image: url(img/ann__img_1.jpg);"></div>
-					<a href="#" class="ann__item-ttl mb-3">Workshop of Alexander Yermakov in Vox Studios</a>
+					<div class="ann__item-img" style="background-image: url(img/ann__img_1.jpg);"></div>
+					<a href="#" class="ann__item-img">Workshop of Alexander Yermakov in Vox Studios</a>
 					<div class="ann__item-descr">The workshop will talk about the specifics of the profession, about the preparation, teamwork, as well as in practice, issues of postproduction will be considered and the shooting itself with the model and the main selling light circuits. Also heldportfolio review of participants.</div>
 				</div>
 			</div>

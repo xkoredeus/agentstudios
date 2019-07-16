@@ -14,7 +14,7 @@ $(function() {
 		autoplayHoverPause: true,
 		// autoHeight: true,
 		dotsContainer: '.sel__in-dots',
-		navText: ["<img src='img/slider__arrow_prev-gray.png'>", "<img src='img/slider__arrow_next-gray.png'>"],
+		navText: ["<img src='img/slider__arrow_prev-black.png'>", "<img src='img/slider__arrow_next-black.png'>"],
 	});
 	//scroll by click 'next btn'
 	$('.sel_next').on('click', function(e) {
@@ -36,7 +36,7 @@ $(function() {
 		smartSpeed: 900,
 		autoplay: true,
 		autoplayHoverPause: true,
-		margin: 15,
+		margin: 30,
 		dotsContainer: '.ann__in-dots',
 		navText: ["<img src='img/slider__arrow_prev-gray.png'>", "<img src='img/slider__arrow_next-gray.png'>"],
 		responsive : {
