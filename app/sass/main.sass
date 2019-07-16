@@ -209,6 +209,7 @@ textarea:active
 	transition: unset
 	opacity: 0
 	transition: .3s opacity ease-in-out
+	left: -131px !important
 	&-body
 		color: #fff
 .bs-popover
@@ -268,26 +269,26 @@ textarea:active
 		transform: translateY(0)
 		opacity: 1
 /* KEYFRAMES */
-@keyframes tooltips-vert
-	to
-		opacity: .9
-		transform: translate(-50%, 0)
+// @keyframes tooltips-vert
+// 	to
+// 		opacity: .9
+// 		transform: translate(-50%, 0)
 
 /* FX All The Things */ 
-[tooltip]:not([flow]):hover::before,
-[tooltip]:not([flow]):hover::after,
-[tooltip][flow^="up"]:hover::before,
-[tooltip][flow^="up"]:hover::after,
-[tooltip][flow^="down"]:hover::before,
-[tooltip][flow^="down"]:hover::after
-	animation: tooltips-vert 300ms ease-out forwards
+// [tooltip]:not([flow]):hover::before,
+// [tooltip]:not([flow]):hover::after,
+// [tooltip][flow^="up"]:hover::before,
+// [tooltip][flow^="up"]:hover::after,
+// [tooltip][flow^="down"]:hover::before,
+// [tooltip][flow^="down"]:hover::after
+// 	animation: tooltips-vert 300ms ease-out forwards
 
 
-[tooltip][flow^="left"]:hover::before,
-[tooltip][flow^="left"]:hover::after,
-[tooltip][flow^="right"]:hover::before,
-[tooltip][flow^="right"]:hover::after
-	animation: tooltips-horz 300ms ease-out forwards
+// [tooltip][flow^="left"]:hover::before,
+// [tooltip][flow^="left"]:hover::after,
+// [tooltip][flow^="right"]:hover::before,
+// [tooltip][flow^="right"]:hover::after
+// 	animation: tooltips-horz 300ms ease-out forwards
 
 .list
 	&_circle
@@ -795,8 +796,8 @@ textarea:active
 			width: 100%
 			padding: 20px
 			@include cv
-			// display: flex
-			// justify-content: flex-end
+			display: flex
+			justify-content: flex-end
 			
 		&-rate
 			border-radius: 3px

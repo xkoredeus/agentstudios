@@ -331,6 +331,7 @@ textarea:active {
   -webkit-transition: .3s opacity ease-in-out;
   -o-transition: .3s opacity ease-in-out;
   transition: .3s opacity ease-in-out;
+  left: -131px !important;
 }
 
 .popover-body {
@@ -413,40 +414,7 @@ textarea:active {
 }
 
 /* KEYFRAMES */
-@-webkit-keyframes tooltips-vert {
-  to {
-    opacity: .9;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-}
-@keyframes tooltips-vert {
-  to {
-    opacity: .9;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-}
-
 /* FX All The Things */
-[tooltip]:not([flow]):hover::before,
-[tooltip]:not([flow]):hover::after,
-[tooltip][flow^="up"]:hover::before,
-[tooltip][flow^="up"]:hover::after,
-[tooltip][flow^="down"]:hover::before,
-[tooltip][flow^="down"]:hover::after {
-  -webkit-animation: tooltips-vert 300ms ease-out forwards;
-          animation: tooltips-vert 300ms ease-out forwards;
-}
-
-[tooltip][flow^="left"]:hover::before,
-[tooltip][flow^="left"]:hover::after,
-[tooltip][flow^="right"]:hover::before,
-[tooltip][flow^="right"]:hover::after {
-  -webkit-animation: tooltips-horz 300ms ease-out forwards;
-          animation: tooltips-horz 300ms ease-out forwards;
-}
-
 .list_circle {
   list-style-type: none;
   padding-left: 0;
@@ -1296,6 +1264,14 @@ textarea:active {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .pop__item-rate {
