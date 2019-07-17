@@ -32,6 +32,7 @@ gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'app/libs/jquery/jquery.min.js',
 		'app/libs/bootstrap/popper.min.js',
+		'app/libs/jquery/jquery.ui-slider.js',
 		'app/libs/bootstrap/bootstrap.min.js',
 		'app/libs/fancybox/jquery.fancybox.min.js',
 		'app/libs/owl.carousel/owl.carousel.min.js',
