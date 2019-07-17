@@ -57,6 +57,11 @@ $(function() {
 			}
 		}
 	});
+	$('.ann__item-descr span:nth-child(2)').hide();
+	$('.ann__item-btn').on('click', function(e) {
+		e.preventDefault();
+		$(this).hide().siblings('.ann__item-descr').find('span:nth-child(2)').slideToggle();
+	});
 	// tabs 
 	$(document).ready(function () {
 		$(".tabs__content-item:not(:first-child)").hide();

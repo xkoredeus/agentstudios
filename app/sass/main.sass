@@ -826,6 +826,7 @@ textarea:active
 			font-family: $shev
 			min-width: 150px
 	&-filter
+		display: none
 		&__top
 			font-family: $abold
 			font-size: 16px
@@ -1077,6 +1078,12 @@ textarea:active
 		max-width: 340px
 		margin-left: auto
 		margin-right: auto
+		&-btn
+			font-size: 14px
+			color: $dark
+			// text-align: center
+			// display: block
+			// width: 100%
 		&-img
 			width: 100%
 			height: 440px
@@ -1086,9 +1093,12 @@ textarea:active
 			color: #000
 			font-family: $abold
 			display: block
-		&-descr
 			margin-bottom: 25px
+		&-descr
+			// margin-bottom: 25px
 			line-height: 1.7
+			span
+				// transition: unset
 	&__in
 		&-counter
 			font-family: $abold

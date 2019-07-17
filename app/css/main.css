@@ -1308,6 +1308,10 @@ textarea:active {
   min-width: 150px;
 }
 
+.banner-filter {
+  display: none;
+}
+
 .banner-filter__top {
   font-family: "AkzidenzGroteskPro-BoldEx";
   font-size: 16px;
@@ -1724,6 +1728,11 @@ textarea:active {
   margin-right: auto;
 }
 
+.ann__item-btn {
+  font-size: 14px;
+  color: #1E1E1E;
+}
+
 .ann__item-img {
   width: 100%;
   height: 440px;
@@ -1737,10 +1746,10 @@ textarea:active {
   color: #000;
   font-family: "AkzidenzGroteskPro-BoldEx";
   display: block;
+  margin-bottom: 25px;
 }
 
 .ann__item-descr {
-  margin-bottom: 25px;
   line-height: 1.7;
 }
 
