@@ -1273,7 +1273,7 @@ textarea:active {
   background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%);
   -webkit-box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
           box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.4);
-  width: 126px;
+  width: 136px;
   padding: 14px 10px;
   color: #fff;
   border-radius: 3px;
@@ -1397,35 +1397,6 @@ textarea:active {
   font-size: 16px;
   position: relative;
   width: 100%;
-  cursor: pointer;
-}
-
-.banner-filter__item-ttl::before, .banner-filter__item-ttl::after {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 2px;
-  top: 10px;
-  right: 15px;
-  background-color: #fff;
-}
-
-.banner-filter__item-ttl::after {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.banner-filter__item-ttl.active::after {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.banner-filter__item-in {
-  -webkit-transition: unset;
-  -o-transition: unset;
-  transition: unset;
 }
 
 .banner-filter__item_left {
@@ -1594,6 +1565,39 @@ textarea:active {
 
 .banner__soc-link:hover img {
   opacity: .4;
+}
+
+.acc__item .acc__btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.acc__item .acc__btn::before, .acc__item .acc__btn::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  top: 10px;
+  right: 0px;
+  background-color: #fff;
+}
+
+.acc__item .acc__btn::after {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.acc__item .acc__btn.active::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.acc__item .acc__cnt {
+  -webkit-transition: unset;
+  -o-transition: unset;
+  transition: unset;
 }
 
 .ui-slider {

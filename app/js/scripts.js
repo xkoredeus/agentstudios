@@ -169,12 +169,12 @@ $(function() {
 		}
 		$(".banner-filter__slider").slider("values",1,value2);
 	});
-// .acc__item
-// 	.acc__btn
-// 	.acc__cnt
-	//banner filter accordeon
-	// $('.acc__cnt').hide();
-	$('.banner-filter__item-ttl').on('click', function () {
-		$(this).toggleClass('active').parent().find('.banner-filter__item-in').slideToggle();
+	//accordeon
+	if ( $(window).width() > 768 ) {
+		$('.banner-filter__item').removeClass('acc__item');
+	};
+	$('.acc__item .acc__cnt').hide();
+	$('.acc__item .acc__btn').on('click', function () {
+		$(this).toggleClass('active').parent('.acc__item').siblings('.acc__cnt').slideToggle();
 	});
 });
