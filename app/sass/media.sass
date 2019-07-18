@@ -1,14 +1,32 @@
 @media (min-width: 1320px)
 	.container
 		max-width: 1350px
-// @media (min-width: 1319px)
-// 	.container 
-// 		max-width: 100%
+@media screen and (max-width: 1350px)
+	.container 
+		max-width: 100%
+	.hamburger__wrp
+		right: 15px
+		margin-right: 0
+	.header__menu.active
+		right: 0
+		margin-right: 0
 @media screen and (max-width: 1200px)
 	.owl-carousel .owl-nav button.owl-prev
 		left: 0
 	.owl-carousel .owl-nav button.owl-next
 		right: 0
+@media screen and (max-width: 1000px)
+	.banner__bar
+		flex-wrap: wrap
+		.input__wrp
+			width: 100%
+			margin-bottom: 8px
+		&-submit
+			margin-top: 8px
+			width: 100%
+		&-act-link
+			width: 33%
+
 @media screen and (max-width: 768px)
 	.section__ttl
 		font-size: 25px

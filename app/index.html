@@ -16,15 +16,15 @@
 			<div class="container">
 				<div class="header__top-in d-flex align-items-center justify-content-between">
 					<div class="d-flex align-items-center">
-						<a href="#" class="header__logo mr-5">AgentStudios</a>
-						<div class="header__descr">Studios and location international booking</div>
+						<a href="#" class="header__logo mr-xl-5">AgentStudios</a>
+						<div class="header__descr d-none d-xl-block">Studios and location international booking</div>
 					</div>
 					<div class="d-flex align-items-center">
-						<div class="d-flex align-items-center mr-5">
+						<div class="d-none d-xl-flex align-items-center mr-xl-5">
 							<span>Your location:</span>
 							<a href="#" class="ml-2 dot ss" data-toggle="tooltip" title="change your location">Moscow</a>
 						</div>
-						<a href="#" class="btn header__loc ab mr-5">List your location</a>
+						<a href="#" class="btn header__loc ab mr-xl-5 d-none d-xl-block">List your location</a>
 						<!--login btns-->
 						<div class="d-none d-flex-align-items-center header__sign-wrp mr-5">
 							<a href="#" class="header__sign-link ab">Sign Up</a>
@@ -33,8 +33,8 @@
 						<!--/login btns-->
 						<div class="header__cab mr-5">
 							<a href="#" class="header__cab-top d-flex align-items-center">
-								<img src="img/icon__avatar.svg" alt="icon__avatar.svg" class="mr-3">
-								<span>Roman K.</span>
+								<img src="img/icon__avatar.svg" alt="icon__avatar.svg" class="mr-xl-3 mr-sm-0">
+								<span class="d-none d-xl-block">Roman K.</span>
 							</a>
 							<div class="header__cab-in">
 								<a href="#" class="header__cab-link">Бронирование</a>
@@ -51,106 +51,119 @@
 		<div class="banner">
 			<div class="container">
 				<div class="banner__offer">
-					<div class="banner__ttl wow fadeIn animated " data-wow-duration="2s" data-wow-delay="1s">Find studios and locations for shooting</div>
+					<div class="banner__ttl wow fadeIn animated" data-wow-duration="2s" data-wow-delay="1s">Find studios and locations for shooting</div>
 					<div class="banner__subttl wow fadeIn animated" data-wow-duration="2s" data-wow-delay="1.75s"">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</div>
 					<form class="banner__bar-wrp wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="1.7s">
 						<div class="banner__bar d-flex align-items-center justify-content-between">
 							<div class="input__wrp">
 								<input type="text" placeholder="Where are you shooting?">
 							</div>
-							<div class="d-flex aign-items-center">
-								<div class="d-flex-align-items-center banner__bar-act mr-5">
-									<a href="#" class="banner__bar-act-link">Check In</a>
-									<a href="#" class="banner__bar-act-link">Check Out</a>
-								</div>
-							</div>
-							<a href="#" class="und">Popular filters</a>
-							<input type="submit" class="btn" value="Search">
+							<a href="#" class="banner__bar-act-link tac justify-content-center d-flex align-items-center">
+								<img src="img/icon__check-in.png" alt="icon__check-in.png">
+								<span class="ml-2">Check In</span>
+							</a>
+							<a href="#" class="banner__bar-act-link tac justify-content-center d-flex align-items-center">
+								<img src="img/icon__check-out.png" alt="icon__check-out.png">
+								<span class="ml-2">Check Out</span>
+							</a>
+							<a href="#" class="banner__bar-act-link tac justify-content-center banner__bar-btn">Popular filters</a>
+							<input type="submit" class="btn banner__bar-submit" value="Search">
 						</div>
 						<!--filter-->
-						<div class="banner-filter">
-							<div class="banner-filter__top">
-								<span>Популярные фильтры</span>
-								<div class="banner-filter__top-btn"></div>
-							</div>
-							<div class="banner-filter__bot">
-								<div class="row">
-									<div class="col-xl-4">
-										<div class="banner-filter__item">
-											<div class="banner-filter__item-ttl">Подборки</div>
-										</div>
-										<div class="banner-filter__item-in">
-											<div class="banner-filter__item banner-filter__item_left">
-												<label for="filter__radio_1" class="checkbox">
-													<input type="radio" id="filter__radio_1" name="filter__radio">
-													<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
-												</label>
+						<div class="banner-filter__wrp">
+							<div class="banner-filter">
+								<div class="banner-filter__top">
+									<span>Популярные фильтры</span>
+									<div class="banner-filter__top-btn"></div>
+								</div>
+								<div class="banner-filter__bot">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="banner-filter__item acc__item">
+												<div class="banner-filter__item-ttl acc__btn">Подборки</div>
 											</div>
-											<div class="banner-filter__item banner-filter__item_left">
-												<label for="filter__radio_2" class="checkbox">
-													<input type="radio" id="filter__radio_2" name="filter__radio">
-													<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
-												</label>
-											</div>
-											<div class="banner-filter__item banner-filter__item_left">
-												<label for="filter__radio_3" class="checkbox">
-													<input type="radio" id="filter__radio_3" name="filter__radio">
-													<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
-												</label>
-											</div>
-											<div class="banner-filter__item banner-filter__item_left">
-												<label for="filter__radio_4" class="checkbox">
-													<input type="radio" id="filter__radio_4" name="filter__radio">
-													<span class="checkbox__text"><div>Студии до 1000 руб/час</div></span>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="col-xl-4">
-										<div class="banner-filter__item">
-											<div class="banner-filter__item-ttl">Удобства</div>
-										</div>
-										<div class="banner-filter__item-in">
-											<div class="banner-filter__item">
-												<label for="filter__checkbox_5" class="checkbox">
-													<input type="checkbox" id="filter__checkbox_5">
-													<span class="checkbox__text">Рассветная сторона (55)</span>
-												</label>
-											</div>
-											<div class="banner-filter__item">
-												<label for="filter__checkbox_6" class="checkbox">
-													<input type="checkbox" id="filter__checkbox_6">
-													<span class="checkbox__text">Закатная сторона (55)</span>
-												</label>
-											</div>
-											<div class="banner-filter__item">
-												<label for="filter__checkbox_7" class="checkbox">
-													<input type="checkbox" id="filter__checkbox_7">
-													<span class="checkbox__text">Затемнение окон (55)</span>
-												</label>
-											</div>
-											<div class="banner-filter__item">
-												<label for="filter__checkbox_8" class="checkbox">
-													<input type="checkbox" id="filter__checkbox_8">
-													<span class="checkbox__text">Циклорама (55)</span>
-												</label>
+											<div class="banner-filter__item-in acc__cnt">
+												<div class="banner-filter__item banner-filter__item_left">
+													<label for="filter__radio_1" class="checkbox">
+														<input type="radio" id="filter__radio_1" name="filter__radio">
+														<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
+													</label>
+												</div>
+												<div class="banner-filter__item banner-filter__item_left">
+													<label for="filter__radio_2" class="checkbox">
+														<input type="radio" id="filter__radio_2" name="filter__radio">
+														<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
+													</label>
+												</div>
+												<div class="banner-filter__item banner-filter__item_left">
+													<label for="filter__radio_3" class="checkbox">
+														<input type="radio" id="filter__radio_3" name="filter__radio">
+														<span class="checkbox__text"><div>Для свадебной фотосъемки</div></span>
+													</label>
+												</div>
+												<div class="banner-filter__item banner-filter__item_left">
+													<label for="filter__radio_4" class="checkbox">
+														<input type="radio" id="filter__radio_4" name="filter__radio">
+														<span class="checkbox__text"><div>Студии до 1000 руб/час</div></span>
+													</label>
+												</div>
 											</div>
 										</div>
-									</div>
-									<div class="col-xl-4">
-										<div class="banner-filter__item">
-											<div class="banner-filter__item-ttl">Стоимость 1 часа</div>
-											<div class="d-flex align-items-center">
-												<div>
-													<div class="input__wrp_text">
-														<input type="number" class="banner-filter__input" placeholder="0">
+										<div class="col-sm-4">
+											<div class="banner-filter__item acc__item">
+												<div class="banner-filter__item-ttl acc__btn">Удобства</div>
+											</div>
+											<div class="banner-filter__item-in acc__cnt">
+												<div class="banner-filter__item">
+													<label for="filter__checkbox_5" class="checkbox">
+														<input type="checkbox" id="filter__checkbox_5">
+														<span class="checkbox__text">Рассветная сторона (55)</span>
+													</label>
+												</div>
+												<div class="banner-filter__item">
+													<label for="filter__checkbox_6" class="checkbox">
+														<input type="checkbox" id="filter__checkbox_6">
+														<span class="checkbox__text">Закатная сторона (55)</span>
+													</label>
+												</div>
+												<div class="banner-filter__item">
+													<label for="filter__checkbox_7" class="checkbox">
+														<input type="checkbox" id="filter__checkbox_7">
+														<span class="checkbox__text">Затемнение окон (55)</span>
+													</label>
+												</div>
+												<div class="banner-filter__item">
+													<label for="filter__checkbox_8" class="checkbox">
+														<input type="checkbox" id="filter__checkbox_8">
+														<span class="checkbox__text">Циклорама (55)</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="banner-filter__item acc__item">
+												<div class="banner-filter__item-ttl acc__btn">Стоимость 1 часа</div>
+											</div>
+											<div class="acc__cnt">
+												<div class="banner-filter__right d-flex flex-column align-items-center">
+													<div class="d-flex align-items-center justify-content-between banner-filter__inputs">
+														<div class="d-flex align-items-center">
+															<div class="input__wrp_text">
+																<input type="number" class="banner-filter__input banner-filter__input_min" value="" placeholder="0">
+															</div>
+															<span class="ml-1 mr-1">-</span>
+														</div>
+														<div class="d-flex align-items-center">
+															<div class="input__wrp_text">
+																<input type="number" class="banner-filter__input banner-filter__input_max" value="" placeholder="50000">
+															</div>
+															<span class="ml-1">₽</span>
+														</div>
 													</div>
-												</div> - 
-												<div>
-													<div class="input__wrp_text">
-														<input type="number" class="banner-filter__input" placeholder="50000">
-													</div>
-												</div> ₽
+													<div class="banner-filter__slider"></div>
+													<button type="reset" class="banner-filter__reset und tac">Сбросить фильтр</button>
+													<input type="submit" value="Показать (128)" class="btn banner-filter__submit">
+												</div>
 											</div>
 										</div>
 									</div>

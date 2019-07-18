@@ -4,12 +4,45 @@
   }
 }
 
+@media screen and (max-width: 1350px) {
+  .container {
+    max-width: 100%;
+  }
+  .hamburger__wrp {
+    right: 15px;
+    margin-right: 0;
+  }
+  .header__menu.active {
+    right: 0;
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .owl-carousel .owl-nav button.owl-prev {
     left: 0;
   }
   .owl-carousel .owl-nav button.owl-next {
     right: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .banner__bar {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .banner__bar .input__wrp {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .banner__bar-submit {
+    margin-top: 8px;
+    width: 100%;
+  }
+  .banner__bar-act-link {
+    width: 33%;
   }
 }
 
