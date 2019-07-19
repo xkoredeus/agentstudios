@@ -1,3 +1,18 @@
+$yel: #FFD542
+$lyel: #FFDB5F
+$dark: #1E1E1E
+$gray: #4D4D4D
+$lgray: #a1a1a1
+$tr: transparent
+$sreg: 'SFUIText-Regular'
+$smed: 'SFUIText-Medium'
+$ssem: 'SFUIText-Semibold'
+$shev: 'SFUIText-Heavy'
+$sbold: 'SFUIText-Bold'
+
+$abold: 'AkzidenzGroteskPro-BoldEx'
+$aexbold: 'AkzidenzGroteskPro-BoldEx'
+
 @media (min-width: 1320px)
 	.container
 		max-width: 1350px
@@ -11,29 +26,315 @@
 		right: 0
 		margin-right: 0
 @media screen and (max-width: 1200px)
+	.btn
+		// font-size: 14px
+		padding: 10px 12px
 	.owl-carousel .owl-nav button.owl-prev
 		left: 0
 	.owl-carousel .owl-nav button.owl-next
 		right: 0
-@media screen and (max-width: 1000px)
-	.banner__bar
-		flex-wrap: wrap
-		.input__wrp
+	.header
+		&__top
+			.container
+				z-index: 3
+		&__cab
+			min-width: auto
+			&-top
+				padding-left: 0
+			&-in
+				width: 134px
+				left: 50%
+				margin-left: -67px
+			&::before
+				left: 50%
+				margin-left: -67px
+				width: 134px
+				top: 40px
+				height: 180px
+				background-color: #1e1e1e
+			&::after
+				// display: none
+				content: ''
+				position: absolute
+				top: 22px
+				right: 50%
+				margin-right: -10px
+				border: 10px solid #0000
+				border-bottom: 10px solid #1e1e1e
+				transform: translateY(-4px)
+				opacity: 0
+			&.active
+				&::after
+					transform: translateY(0px)
+					opacity: 1
+		&_main
+			&::before
+				opacity: .55
+			&::after
+				opacity: 1
+		&__menu
 			width: 100%
-			margin-bottom: 8px
-		&-submit
-			margin-top: 8px
+			padding: 60px 15px 25px
+			&-nav
+				border-top: 1px solid #323232
+				&-link
+					margin-bottom: 0
+					padding: 9px 0
+					font-family: $sbold
+					font-size: 14px
+	.hamburger
+		&:hover
+			opacity: 1
+	.banner
+		&__ttl
+			font-size: 24px
+		&__subttl
+			display: none
+		&__bar
+			flex-wrap: wrap
+			margin-top: 25px
+			.input__wrp
+				min-width: unset
+				width: 100%
+				margin-bottom: 8px
+				input
+					padding: 8px 15px 8px 40px
+				&::before
+					left: 17px
+			&-submit
+				margin-top: 8px
+				width: 100%
+				padding: 8px 15px
+			&-act-link
+				width: 49%
+				padding: 8px 15px
+				background-color: #ffffff2b
+				box-shadow: unset
+			&-btn
+				width: 100%
+				margin-top: 8px
+				background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+				box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.4)
+		&__bar
+			&::before
+				background-color: $tr
+		&__bot
+			&-btn
+				span
+					font-size: 11px
+		&__soc
+			&-link
+				&:not(:last-child)
+					margin-right: 20px
+		&-filter
+			&__wrp
+				width: 100%
+				min-height: 100vh
+				margin-top: 0px
+				padding: 0
+				overflow-x: hidden
+				.fancybox-close-small
+					display: none
+			&__top
+				text-align: left
+				padding-left: 50px
+				background-color: #1E1E1E
+				border-bottom: 1px solid #ffffff2e
+				&-btn
+					right: auto
+					left: 15px
+				&::after
+					display: none
+			&__bot
+				background-color: #1E1E1E
+				position: relative
+				padding-bottom: 80px
+			&__act
+				position: fixed
+				bottom: 0
+				left: 0
+				z-index: 3
+				background-color: #1E1E1E
+				padding: 0 15px 15px
+				border-top: 1px solid #ffffff2e
+			&__item
+				&:last-child
+					border-bottom: 1px solid #ffffff2e
+				&-ttl
+					font-size: 14px
+			&__slider
+				margin-left: auto
+				margin-right: auto
+				&-wrp
+					width: 100%
+					padding-bottom: 30px
+					margin-bottom: 20px
+					border-bottom: 1px solid #ffffff2e
+			.input__wrp_text
+				background-color: #282828
+				width: 44%
+				input
+					max-width: unset
+					width: 100%
+			&__inputs
+				max-width: 90%
+				margin-left: auto
+				margin-right: auto
+			// &__act
+			// 	input
+			// 		max-width: 175px
+	.pop
+		&__item
+			&-char-wrp
+				width: 30%
+				&:nth-child(2)
+					width: 40%
+			.btn
+				width: 48%
+			&-top
+				height: 200px
+			&-info
+				font-size: 14px
+			&-ttl
+				font-size: 18px
+	.pop
+		.owl-dots
+			justify-content: center
+			button.owl-dot
+				background-color: #fff
+				border: 2px solid #fff
+				&.active
+					background-color: $yel
+	.footer
+		text-align: center
+		overflow: hidden
+		&__btn
+			font-size: 14px
+			background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+			border: 1px solid rgba(255, 255, 255, 0.4)
+			padding-top: 8px
+			padding-bottom: 8px
+			padding-right: 14px
+			color: #fff
+			padding-left: 14px
 			width: 100%
-		&-act-link
-			width: 33%
+			max-width: 370px
+			margin-left: auto
+			margin-right: auto
+			&:hover
+				color: #fff
+				background-color: $dark
+				border-color: $dark
+		&__link
+			font-family: $sbold
+			&_policy
+				font-family: $sreg
+				font-size: 13px
+				text-align: center
+		&__logo
+			font-family: $abold
+			font-size: 16px
+			text-align: center
+			&-descr
+				font-size: 13px
+				text-align: center
+			&-wrp
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					width: 150%
+					height: 1px
+					left: -50px
+					bottom: -20px
+					background-color: #ffffff2e
 
 @media screen and (max-width: 768px)
-	.section__ttl
-		font-size: 25px
+	.header__logo
+		font-size: 16px
+	.section
+		&__ttl
+			font-size: 16px
+		&__subttl
+			font-size: 15px
+			margin-bottom: 18px
+	.pop__ttl
+		.btn_tr
+			padding-left: 10px
+			padding-right: 10px
+			background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+			border: 1px solid rgba(255, 255, 255, 0.2)
+	.pop
+		.section__ttl
+			font-family: $sbold
+			font-size: 16px
+	.ann
+		&__in
+			&-dots
+				display: none
+		&__item
+			&-ttl
+				line-height: 1.3
+				margin-bottom: 15px
+			&-descr
+				line-height: 1.2
+				font-size: 13px
+	.sel
+		.owl-dots
+			justify-content: center
+		&__in
+			padding-left: 0
+			padding-right: 0
+		&__img
+			max-width: 370px
+			margin: 0 auto
+			height: 235px
+		&__info
+			font-size: 14px
+		&__price
+			font-size: 14px
+		&__btns
+			justify-content: space-between
+			.btn
+				width: 48%
+	.let__in
+		p
+			font-size: 14px
 @media screen and (max-width: 600px)
 	.owl-carousel .owl-nav button.owl-prev
-		left: -9px
-		transform: scale(.7)
+		// left: -9px
+		// transform: scale(.7)
 	.owl-carousel .owl-nav button.owl-next
-		right: -9px
-		transform: scale(.7)
+		// right: -9px
+		// transform: scale(.7)
+	.banner
+		&__ttl
+			font-size: 20px
+			margin-bottom: 10px
+		&__bar
+			margin-top: 15px
+			&-act-link
+				justify-content: flex-start !important
+			&-btn
+				justify-content: center !important
+@media screen and (max-width: 420px)
+	.pop__item-char
+		font-size: 12px
+		&-ttl
+			font-size: 13px
+		&>div:nth-child(2)
+			font-size: 12px
+		&-in
+			align-items: center
+	.sel__btns
+		flex-direction: column
+		.btn
+			width: 100%
+			&:nth-child(1)
+				margin-bottom: 8px
+	.pop__item-btns
+		flex-direction: column
+		.btn
+			width: 100%
+			&:nth-child(1)
+				margin-bottom: 8px

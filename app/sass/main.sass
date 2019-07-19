@@ -39,6 +39,8 @@ body
 	// letter-spacing: .9
 	position: relative
 	-webkit-font-smoothing: antialiased
+	&.fixed
+		overflow-y: hidden
 *,
 *:after,
 *:before
@@ -120,6 +122,8 @@ textarea:active
 	color: #fff !important
 .bl
 	color: #000 !important
+.w100
+	width: 100%
 .dot
 	text-decoration: underline
 	text-decoration-style: dotted
@@ -127,6 +131,12 @@ textarea:active
 	text-decoration: underline
 .tac
 	text-align: center
+.fancybox
+	&-content
+		background-color: #1E1E1E
+		margin-top: 0
+	&-slide--html
+		padding: 0
 .checkbox
 	// min-width: 200px
 	cursor: pointer
@@ -157,7 +167,7 @@ textarea:active
 			height: 20px
 			border-radius: 4px
 			border: 1px solid #fff
-			background-color: #ffffff17
+			background-color: $tr
 		&::after
 			content: ''
 			position: absolute
@@ -344,7 +354,7 @@ textarea:active
 // 		opacity: .9
 // 		transform: translate(-50%, 0)
 
-/* FX All The Things */ 
+/*FX All The Things */ 
 // [tooltip]:not([flow]):hover::before,
 // [tooltip]:not([flow]):hover::after,
 // [tooltip][flow^="up"]:hover::before,
@@ -677,7 +687,28 @@ textarea:active
 		&.active
 			right: 50%
 			margin-right: calc(-1320px/2)
-
+		&-btn
+			font-size: 14px
+			background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+			border: 1px solid rgba(255, 255, 255, 0.4)
+			padding-top: 8px
+			padding-bottom: 8px
+			padding-right: 14px
+			color: #fff
+			padding-left: 14px
+			width: 100%
+			max-width: 370px
+			&:hover
+				color: #fff
+				background-color: $dark
+				border-color: $dark
+		&-loc
+			font-size: 16px
+			color: #9C9C9C
+			padding-bottom: 30px
+			border-bottom: 1px solid #323232
+			&-link
+				color: $yel
 .visuallyHidden 
 	position: absolute
 	overflow: hidden
@@ -688,9 +719,9 @@ textarea:active
 	padding: 0
 	border: 0
 .hamburger
-	// margin-top: -5.5px
+	margin-top: -4px
 	margin-bottom: 0
-	width: 30px
+	width: 28px
 	height: 15px
 	position: relative
 	cursor: pointer
@@ -700,7 +731,7 @@ textarea:active
 		position: absolute
 		z-index: 4
 		right: 50%
-		top: 3.8vh
+		top: 4.1vh
 		margin-right: calc(-1320px/2)
 		&.active
 			position: fixed
@@ -786,6 +817,8 @@ textarea:active
 			.banner__ttl
 				transform: scale(.7)
 				margin-bottom: 0
+			.banner__bar
+				margin-top: 20px
 	&__ttl
 		font-size: 37px
 		font-family: $abold
@@ -946,10 +979,15 @@ textarea:active
 			width: 90%
 			margin-left: 7px
 			margin-right: auto
+		&__act
+			width: 100%
+			transition: unset
+
 	&__bot
 		height: 13vh
 		padding: 15px 0
 		&-btn
+			text-align: center
 			cursor: pointer
 			span
 				font-family: $abold
@@ -985,7 +1023,7 @@ textarea:active
 				img
 					// display: block
 					opacity: .4
-.acc__item
+.acc__item-wrp
 	.acc
 		&__btn
 			position: relative
@@ -1009,6 +1047,7 @@ textarea:active
 					// opacity: 0
 		&__cnt
 			transition: unset
+
 .ui-slider
 	position: relative
 .ui-slider .ui-slider-handle
@@ -1061,6 +1100,18 @@ textarea:active
 		max-width: 420px
 		margin-left: auto
 		margin-right: auto
+		position: relative
+		&-wrp
+			&.hover
+				.pop-popup__top,
+				.pop-popup__in
+					opacity: 1
+					transform: translateY(0)
+				.pop__item-rate
+					opacity: 0
+				.pop-popup__line-yel
+					opacity: 1
+					transform: translateX(0)
 		&-top
 			height: 280px
 			width: 100%
@@ -1068,12 +1119,14 @@ textarea:active
 			@include cv
 			display: flex
 			justify-content: flex-end
-			
+			border-top-left-radius: 4px
+			border-top-right-radius: 4px
 		&-rate
 			border-radius: 3px
 			overflow: hidden
 			display: flex
 			height: 40px
+			cursor: pointer
 			span
 				display: flex
 				align-items: center
@@ -1133,6 +1186,86 @@ textarea:active
 				font-size: 18px
 			&>div:nth-child(2)
 				font-size: 13.5px
+
+	&-popup
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		background-color: #1b1b1bbf
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+		overflow: hidden
+		transition: unset
+		&__top
+			padding: 20px
+			background-color: rgba(27, 27, 27, 0.75)
+			transform: translateY(-10px)
+			opacity: .0
+		&__close
+			width: 17px
+			height: 17px
+			background-image: url('../img/icon__cross.png')
+			@include ct
+			transition: .6s all ease
+			cursor: pointer
+			&:hover
+				transform: rotate(180deg)
+		&__right
+			&>div
+				&:nth-child(1)
+					font-size: 11px
+					font-family: $sbold
+					text-align: center
+					color: #fff
+					padding-right: 8px
+
+					border-top-left-radius: 3px
+					border-bottom-left-radius: 3px
+				&:nth-child(2)
+					font-size: 18px
+					font-family: $abold
+					background-color: $yel
+					color: #000
+					padding: 8px
+					border-top-right-radius: 3px
+					border-bottom-right-radius: 3px
+		&__in
+			padding: 20px 20px
+			transform: translateY(-10px)
+			opacity: .0
+		&__line
+			&-wrp
+				width: 90%
+				max-width: 370px
+				height: 10px
+				border-radius: 4px
+				position: relative
+				display: flex
+				justify-content: space-between
+				align-items: center
+				overflow: hidden
+			&-yel,
+			&-bg
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+				border-radius: 4px
+			&-bg
+				width: 100%
+				background: #fff
+			&-yel
+				transform: translateX(-200px)
+				opacity: 0
+				transition: 2.7s all ease
+				// transition-delay: 1.5s
+				background-color: $yel
+		&__item
+			color: #fff
+			transform: translateY(5px)
+			font-size: 13px
+			
 .sel
 	color: #000
 	.owl-nav
@@ -1172,6 +1305,7 @@ textarea:active
 	@include cv
 	position: relative
 	text-align: center
+	overflow: hidden
 	&::before
 		@include ovl
 		background-color: #000
@@ -1183,12 +1317,18 @@ textarea:active
 	.owl-nav button.owl-
 		&next
 			max-height: 440px
+			background-color: #1e1e1ea8
 			&:hover
 				transform: scale(1)
+				img
+					transform: scale(1.2)
 		&prev
 			max-height: 440px
+			background-color: #1e1e1ea8
 			&:hover
 				transform: scale(1)
+				img
+					transform: scale(1.2)
 	&__item
 		max-width: 340px
 		margin-left: auto
@@ -1219,10 +1359,13 @@ textarea:active
 			font-family: $abold
 .footer
 	color: #fff
-	background-image: url('../img/footer__bg.jpg')
+	background-color: #151515
 	padding: 40px 0
 	&__link
-		font-family: $abold
+		font-size: 14px
+		font-family: $sbold
+		&_policy
+			font-family: $sreg
 	&__let
 		&-ttl
 			font-family: $abold
