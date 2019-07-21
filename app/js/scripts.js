@@ -128,6 +128,14 @@ $(function() {
 	$('.pop-popup__close').on('click', function(){
 		$(this).parents('.pop__item-wrp').toggleClass('hover').find('.pop-popup').slideToggle();
 	});
+
+	$('.room__rate-in').hide();
+	$('.room__rate-top').on('click', function(){
+		$(this).parents('.room__rate').toggleClass('hover').find('.room__rate-in').slideToggle();
+	});
+	$('.pop-popup__close').on('click', function(){
+		$(this).parents('.room__rate').toggleClass('hover').find('.room__rate-in').slideToggle();
+	});
 	// $(document).on('click', function (e) {
 	// 	var container2 = $('.pop-popup');
 	// 	// if the target of the click isn't the container nor a descendant of the container
@@ -167,7 +175,6 @@ $(function() {
 			}
 	 });
 	};
-	$('.pop__item-rate').hover
 	//main offer
 	if ( $(window).width() > 1200 ) {
 		$('.banner__bar-btn').on('click',function(e){
@@ -237,5 +244,162 @@ $(function() {
 	$('.acc__item-wrp .acc__cnt').hide();
 	$('.acc__item-wrp .acc__btn').on('click', function () {
 		$(this).toggleClass('active').parents('.acc__item-wrp').find('.acc__cnt').slideToggle();
+	});
+	$('.res-card__top').owlCarousel({
+		nav: true,
+		items: 1,
+		loop: true,
+		dots: false,
+		margin: 20,
+		smartSpeed: 900,
+		// autoplay: true,
+		// autoplayHoverPause: true,
+		navText: ["<img src='img/slider__arrow_prev-white.png'>", "<img src='img/slider__arrow_next-white.png'>"]
+	});
+
+	$('.res-card__bot-descr span:nth-child(2)').hide();
+	$('.res-card__bot-more').on('click', function(e) {
+		e.preventDefault();
+		$(this).hide().siblings('.res-card__bot-descr').find('span:nth-child(2)').slideToggle();
+	});
+
+	$('.res-card__bot-check').on('click', function(e) {
+		e.preventDefault();
+		$('.res-card').removeClass('checked');
+		$(this).parents('.res-card').addClass('checked');
+	});
+
+	////input type number
+	$( '.quantity' ).on( 'click', '.quantity-minus, .quantity-plus', function () {
+	var input = $( this ).siblings( '.quantity-num' );
+		if ( (input.val() > 1) && ($( this ).hasClass( 'quantity-minus' ) ) ) {
+				input.val( +input.val() - 1 );
+		} else if ( $( this ).hasClass( 'quantity-plus' ) ) {
+			input.val( +input.val() + 1 );
+		};
+	});
+
+	//room slider
+	var sync1 = $('.room__card-slider_top');
+	var sync2 = $('.room__card-slider_bot');
+
+	var thumbnailItemClass = '.owl-item';
+
+	var slides = sync1.owlCarousel({
+		startPosition: 1,
+		items:1,
+		loop:false,
+		margin:10,
+		smartSpeed: 700,
+		autoplay:false,
+		autoplayTimeout:6000,
+		autoplayHoverPause:false,
+		nav: true,
+		navText: ["<img src='img/slider__arrow_prev-white.png'>", "<img src='img/slider__arrow_next-white.png'>"],
+		dots: false
+	}).on('changed.owl.carousel', syncPosition);
+
+	function syncPosition(el) {
+		$owl_slider = $(this).data('owl.carousel');
+		var loop = $owl_slider.options.loop;
+
+		if(loop){
+			var count = el.item.count-1;
+			var current = Math.round(el.item.index - (el.item.count/2) - .5);
+			if(current < 0) {
+					current = count;
+			}
+			if(current > count) {
+					current = 0;
+			}
+		}else{
+			var current = el.item.index;
+		}
+
+		var owl_thumbnail = sync2.data('owl.carousel');
+		var itemClass = "." + owl_thumbnail.options.itemClass;
+
+
+		var thumbnailCurrentItem = sync2
+		.find(itemClass)
+		.removeClass("synced")
+		.eq(current);
+
+		thumbnailCurrentItem.addClass('synced');
+
+		if (!thumbnailCurrentItem.hasClass('active')) {
+			var duration = 300;
+			sync2.trigger('to.owl.carousel',[current, duration, true]);
+		}   
+	}
+	var thumbs = sync2.owlCarousel({
+		startPosition: 1,
+		items:4,
+		loop:false,
+		margin: 10,
+		autoplay:false,
+		nav: false,
+		dots: false,
+
+		// scrollbarType: "progress",
+		scrollbarType: "scroll",
+		mouseDrag: false,
+		responsive : {
+			0   : {
+					items: 1,
+			},
+			380 : {
+					items: 1,
+			},
+			480 : {
+					items: 1,
+			},
+			768 : {
+					items: 3,
+			},
+			1040 : {
+					items: 4,
+			}
+		},
+		onInitialized: function (e) {
+			var thumbnailCurrentItem =  $(e.target).find(thumbnailItemClass).eq(this._current);
+			thumbnailCurrentItem.addClass('synced');
+		},
+	})
+	.on('click', thumbnailItemClass, function(e) {
+			e.preventDefault();
+			var duration = 300;
+			var itemIndex =  $(e.target).parents(thumbnailItemClass).index();
+			sync1.trigger('to.owl.carousel',[itemIndex, duration, true]);
+	}).on("changed.owl.carousel", function (el) {
+		var number = el.item.index;
+		$owl_slider = sync1.data('owl.carousel');
+		$owl_slider.to(number, 100, true);
+	});
+	$('.room__gallery-in').owlCarousel({
+		nav: true,
+		loop: true,
+		smartSpeed: 700,
+		margin: 20,
+		dots: false,
+		mouseDrag: false,
+		navText: ["<img src='img/slider__arrow_prev-white.png'>", "<img src='img/slider__arrow_next-white.png'>"],
+		responsive : {
+			0   : {
+					items: 1
+			},
+			380 : {
+					items: 1
+			},
+			480 : {
+					items: 1
+			},
+			768 : {
+					items: 2
+			},
+			1040 : {
+					items: 3
+			}
+		}
 	});
 });

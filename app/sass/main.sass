@@ -4,6 +4,7 @@ $yel: #FFD542
 $lyel: #FFDB5F
 $dark: #1E1E1E
 $gray: #4D4D4D
+$wgray: #DDDDDD
 $lgray: #a1a1a1
 $tr: transparent
 $sreg: 'SFUIText-Regular'
@@ -78,6 +79,7 @@ select
 	font-family: $sreg
 	font-size: 14px
 	padding: 14px 27px
+	border-radius: 3px
 	background: none
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button 
@@ -120,10 +122,34 @@ textarea:active
 		box-shadow: 0px 16px 32px -9px rgba(0,0,0,0.69)
 .wt
 	color: #fff !important
+a.wt
+	&:hover
+		color: $yel !important
 .bl
 	color: #000 !important
+a.bl
+	&:hover
+		color: $yel !important
+.dgr
+	color: #626262 !important
+a.dgr
+	&:hover
+		color: $yel !important
+.gr
+	color: #A0A0A0 !important
+a.gr
+	&:hover
+		color: $yel !important
+.wgr
+	color: #ddd
 .w100
 	width: 100%
+.fz14
+	font-size: 14px
+.fz12
+	font-size: 12px
+.fz18
+	font-size: 18px
 .dot
 	text-decoration: underline
 	text-decoration-style: dotted
@@ -137,6 +163,65 @@ textarea:active
 		margin-top: 0
 	&-slide--html
 		padding: 0
+.content
+	overflow: hidden
+	.footer
+		&__link
+			color: #C6C6C6
+			&:hover
+				color: $yel
+		&__logo-descr
+			color: #c6c6c6
+		&__let
+			&-ttl
+				color: #C6C6C6
+			.input__wrp
+				background-color: #232323
+				input[type="email"]
+					color: #fff
+				input[type="email"]::placeholder
+					color: #ACACAC
+			.checkbox__text
+				color: #C6C6C6
+				a
+					color: #C6C6C6
+					&:hover
+						color: $yel
+.quantity
+	position: relative
+	max-width: 129px
+	input
+		font-family: $sbold
+		color: #fff
+		width: 100%
+		padding: 5px
+		background-color: #2B2B2B
+	&-num
+		// max-width: 110px
+		text-align: center
+	&-minus,
+	&-plus
+		position: absolute
+		height: 50%
+		top: 50%
+		transform: translate(0,-50%)
+		font-family: $sbold
+		width: 32px
+		height: 32px
+		color: #fff
+		background-color: #000
+		border: none
+		border-radius: 3px
+		display: flex
+		justify-content: center
+		align-items: center
+		line-height: 1
+		&:hover
+			background-color: #ccc
+	&-minus
+		left: 0px
+	&-plus
+		right: 0px
 .checkbox
 	// min-width: 200px
 	cursor: pointer
@@ -192,6 +277,8 @@ textarea:active
 	input[type="checkbox"]:checked + .checkbox__text:before,
 	input[type="radio"]:checked + .checkbox__text:before
 		// background-color: #ffffff17
+.fancybox-container *
+		transition: unset
 .btn
 	font-size: 16px
 	font-family: $shev
@@ -450,57 +537,84 @@ textarea:active
 				a
 					font-size: 12px 
 					color: $yel
-.owl-dots
-	position: relative
-	width: 100%
-	display: flex
-	justify-content: flex-start
-	align-items: center
-	// bottom: 0
-	button.owl-dot
-		width: 10px
-		height: 10px
-		border: 2px solid #000
-		background-color: #000
+.owl
+	&-scrollbar
+		margin-top: 10px
+		border-radius: 10px
+		height: 5px
+		width: 100%
+		background: rgba(49, 49, 49, 0.75)
+		// box-shadow: inset 0 0 10px -9px rgba(30, 30, 30, .4)
+		overflow: hidden
 		position: relative
-		padding: 0 !important
-		// transform: scale(1)
-		&:not(:last-child)
-			margin-right: 10px
-		&.active
-			// transform: scale(.8)
-			// border-color: transparent
-			background-color: $yel
-.owl-carousel
-	.owl-nav
-		button.owl-prev,
-		button.owl-next
+		.owl-scroll-handle
+			height: 6px
+			width: 25px
+			border-radius: 3px
+			display: inline-block
+			background: #4D4D4D
+			position: absolute
+			top: 0px
+			left: -1px
+			&:hover
+				// transform: scale(2)
+				// transition: transform .2s ease-in-out
+		.owl-scroll-progress
+			background: #333
+			height: 6px
+			border-radius: 10px
 			position: absolute
 			top: 0
-			// margin-bottom: -25.5px
-			height: 100%
-			display: flex
-			align-items: center
-			padding: 0 15px !important
-			background-color: $tr
-			// img
-			// 	width: 17px
-			// 	height: auto
-		button.owl-prev:hover,
-		button.owl-next:hover
-			transform: scale(.9)
-			background-color: #1e1e1ea8
-		button.owl-prev.disabled,
-		button.owl-next.disabled,
-		button.owl-prev.disabled:hover,
-		button.owl-next.disabled:hover
-			opacity: 0
-			cursor: default
-			
-		button.owl-prev
 			left: 0
-		button.owl-next
-			right: 0
+	&-dots
+		position: relative
+		width: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		// bottom: 0
+		button.owl-dot
+			width: 10px
+			height: 10px
+			border: 2px solid #000
+			background-color: #000
+			position: relative
+			padding: 0 !important
+			// transform: scale(1)
+			&:not(:last-child)
+				margin-right: 10px
+			&.active
+				// transform: scale(.8)
+				// border-color: transparent
+				background-color: $yel
+	&-carousel
+		.owl-nav
+			button.owl-prev,
+			button.owl-next
+				position: absolute
+				top: 0
+				height: 100%
+				display: flex
+				align-items: center
+				padding: 0 15px !important
+				background-color: #1b1b1b80
+			button.owl-prev:hover,
+			button.owl-next:hover
+				// transform: scale(.9)
+				// background-color: #1e1e1ea8
+				img
+					transform: scale(1.2)
+			button.owl-prev.disabled,
+			button.owl-next.disabled,
+			button.owl-prev.disabled:hover,
+			button.owl-next.disabled:hover
+				opacity: 0
+				cursor: default
+				
+			button.owl-prev
+				left: 0
+			button.owl-next
+				right: 0
 .section
 	&_inner
 		padding: 60px 0
@@ -546,11 +660,24 @@ textarea:active
 		border-radius: 4px
 		background-color: #1E1E1E
 		display: flex
+	&_gray
+		background-color: #363636
+		border-radius: 4px
+		input,
+		textarea
+			padding: 12px 15px
+			color: #fff
+			border-color: $tr
+		*::placeholder
+			color: #A0A0A0 !important
+		&::before
+			display: none
+
 .header
 	background-color: #202020
 	position: relative
-	overflow: hidden
 	&_main
+		overflow: hidden
 		display: flex
 		flex-direction: column
 		// align-items: space-between
@@ -575,16 +702,31 @@ textarea:active
 		.container
 			position: relative
 			z-index: 1
-		.header__top
-			height: 10vh
+		.header
+			&__top
+				padding: 30px 0
+				background-color: $tr
+				height: 10vh
+				z-index: 2
+			&__logo
+				font-size: 22px
+			&__descr
+				color: #fff
+		.hamburger__wrp
+			top: 4.1vh
 	&__top
-		padding: 30px 0
+		padding: 10px 0
+		background-color: #1B1B1B
 		font-size: 14px
+		z-index: 1
+		position: relative
 		&-in
 			padding-right: 30px
 	&__logo
 		font-family: $abold
-		font-size: 22px
+		font-size: 17px
+	&__descr
+		color: #626262
 	&__loc
 		font-size: 14px
 		background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
@@ -612,6 +754,7 @@ textarea:active
 			border-radius: 3px
 			opacity: 0
 			visibility: hidden
+			z-index: 2
 			transform: translateY(-10px)
 		&-top
 			padding-left: 15px
@@ -619,6 +762,7 @@ textarea:active
 			font-family: $smed
 			font-size: 16px
 			position: relative
+			z-index: 2
 		&-in
 			position: absolute
 			width: 100%
@@ -627,6 +771,7 @@ textarea:active
 			// transition: unset
 			opacity: 0
 			visibility: hidden
+			z-index: 2
 			transform: translateY(-10px)
 		&.active
 			&::before
@@ -658,11 +803,12 @@ textarea:active
 					top: 0
 	&__menu
 		position: absolute
+		top: 0
 		width: 327px
 		right: -100%
 		background-color: #1B1B1B
 		height: 100%
-		padding: 110px 40px
+		padding: 150px 40px 20px
 		z-index: 2
 		transition: .7s all cubic-bezier(0.25, 0.46, 0.45, 0.94)
 		&.active
@@ -731,7 +877,7 @@ textarea:active
 		position: absolute
 		z-index: 4
 		right: 50%
-		top: 4.1vh
+		top: 2.7vh
 		margin-right: calc(-1320px/2)
 		&.active
 			position: fixed
@@ -1273,6 +1419,7 @@ textarea:active
 			&.owl-prev,
 			&.owl-next
 				opacity: .3
+				background-color: $tr
 				&:hover
 					opacity: 1
 					background-color: $tr
@@ -1317,18 +1464,8 @@ textarea:active
 	.owl-nav button.owl-
 		&next
 			max-height: 440px
-			background-color: #1e1e1ea8
-			&:hover
-				transform: scale(1)
-				img
-					transform: scale(1.2)
 		&prev
 			max-height: 440px
-			background-color: #1e1e1ea8
-			&:hover
-				transform: scale(1)
-				img
-					transform: scale(1.2)
 	&__item
 		max-width: 340px
 		margin-left: auto
@@ -1374,3 +1511,425 @@ textarea:active
 		font-size: 22px
 		&-descr
 			font-size: 14px
+.main
+	background-color: #262626
+	color: #fff
+	padding: 30px 0
+.res
+	&-step
+		&__top
+			margin-bottom: 25px
+			&-subttl
+				font-family: $sbold
+				color: $yel
+			&-ttl
+				font-size: 24px
+				font-family: $aexbold
+	&-card
+		max-width: 670px
+		margin-left: auto
+		margin-right: auto
+		border-radius: 4px
+		overflow: hidden
+		position: relative
+		.owl-nav
+			button
+				opacity: 0
+		&:hover
+			.owl-nav
+				button
+					opacity: 1
+		&__check
+			background-color: $yel
+			width: 77px
+			height: 77px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%,-50%) scale(0)
+			opacity: 0
+			z-index: 2
+			transition: .5s all cubic-bezier(0.6, -0.28, 0.74, 0.05)
+		&.checked
+			.res-card__check
+				opacity: 1
+				transform: translate(-50%,-50%) scale(1)
+		&__top
+			&-item
+				width: 100%
+				height: 273px
+				@include cv
+		&__bot
+			background-color: #fff
+			padding: 25px
+			&-ttl
+				font-size: 18px
+				font-family: $aexbold
+				margin-bottom: 12px
+				color: #000
+			&-descr
+				color: #4A4A4A
+				line-height: 1.6
+			&-more
+				font-size: 14px
+				color: $dark
+			&-btns
+				.btn
+					width: 49%
+	&__legend
+		font-size: 12px
+		font-family: $smed
+		&-block
+			width: 32px
+			height: 16px
+	&__check
+		font-family: $smed
+		border-radius: 3px
+		padding: 8px 14px
+		background-color: #282828
+		&:not(:last-child)
+			margin-right: 10px
+		&_radio
+			.checkbox__text
+				&::before
+					border-radius: 50%
+				&::after
+					top: 6px
+					left: 5px
+					width: 6px
+					height: 6px
+					background-image: none
+					background-color: #fff
+					border-radius: 50%
+	&__eq
+		background-color: #363636
+		padding: 10px
+		border-radius: 4px
+		position: relative
+		overflow: hidden
+		&:not(:last-child)
+			margin-bottom: 10px
+		&-img
+			width: 127px
+			height: 127px
+			border-radius: 4px
+			@inclunde cv
+		&-top
+			div
+				&:nth-child(1)
+					font-size: 14px
+				&:nth-child(2)
+					width: 150px
+					text-align: right
+		&-descr
+			margin-top: 8px
+			color: #A0A0A0
+			font-size: 12px
+		&-quantity
+			max-width: 99px
+			margin-left: auto
+			&-wrp
+				width: 100%
+				padding: 8px
+				background: rgba(0, 0, 0, 0.65)
+				position: absolute
+				left: 0
+				bottom: 0
+				visibility: hidden
+				opacity: 0
+		&:hover
+			.res__eq-quantity-wrp
+				visibility: visible
+				opacity: 1
+	&__det
+		background-color: #363636
+		border-radius: 3px
+		padding: 30px 25px
+		color: #A0A0A0
+		font-size: 14px
+		&-in
+			max-width: 670px
+			.row
+				margin-bottom: 15px
+				position: relative
+				&:not(:last-child)
+					&::after
+						content: ''
+						position: absolute
+						width: 100%
+						height: 1px
+						border: 1px dashed #4A4848
+						bottom: -8px
+						left: 15px
+		&-total
+			font-size: 18px
+			margin-top: 25px
+	&__login
+		font-size: 14px
+		&-btn
+			font-size: 12px
+			padding: 9px 15px
+	&__pay
+		&-item
+			width: 100%
+			height: 80px
+			background-color: #363636
+			border-radius: 4px
+			display: flex
+			justify-content: center
+			align-items: center
+			.checkbox__text
+				height: 30px
+				@include ct
+				&::before
+					width: 20px
+					height: 20px
+					left: 11px
+					top: -10px
+					transform: scale(0)
+					opacity: 0
+					border-radius: 50%
+				&::after
+					left: 14px
+					top: -6px
+					transform: scale(0)
+					opacity: 0
+			input[type="checkbox"]:checked + .checkbox__text:after,
+			input[type="radio"]:checked + .checkbox__text:after
+				opacity: 1
+				transform: scale(1)
+			input[type="checkbox"]:checked + .checkbox__text:before,
+			input[type="radio"]:checked + .checkbox__text:before
+				opacity: 1
+				transform: scale(1)
+			&:hover
+				opacity: .7
+	&__total
+		&-btn
+			width: 100%
+			span
+				opacity: .3
+				margin-right: 10px
+.room
+	&__top
+		&-ttl
+			font-size: 36px
+			font-family: $aexbold
+	&__fav
+		width: 25px
+		height: 25px
+		@include ct
+		background-image: url('../img/icon__fav_white.png')
+		opacity: .2
+		&.active
+			opacity: 1
+		&:hover
+			transform: scale(.85)
+			opacity: 1
+	&__rate
+		position: relative
+		// background-color: #1b1b1bbf
+		// border-radius: 6px
+		width: 310px
+		// overflow: hidden
+		transition: unset
+		&-top
+			padding: 10px 20px
+			// background-color: rgba(27, 27, 27, 0.75)
+			// transform: translateY(-10px)
+			// opacity: .0
+			cursor: pointer
+			border-top-left-radius: 3px
+			border-top-right-radius: 3px
+		&-close
+			width: 17px
+			height: 17px
+			background-image: url('../img/icon__cross.png')
+			@include ct
+			transition: .6s all ease
+			cursor: pointer
+			transform: scale(0)
+			opacity: 0
+			// &:hover
+			// 	transform: rotate(180deg)
+		&-right
+			&>div
+				&:nth-child(1)
+					font-size: 18px
+					font-family: $sbold
+					text-align: center
+					color: #fff
+					padding-right: 8px
+					a
+						font-family: $sreg
+						font-size: 16px
+						margin-top: -5px
+					// border-top-left-radius: 3px
+					// border-bottom-left-radius: 3px
+				&:nth-child(2)
+					font-size: 19px
+					font-family: $aexbold
+					background-color: $yel
+					color: #000
+					padding: 8px
+					border-radius: 3px
+		&-in
+			position: absolute
+			padding: 10px 20px
+			top: 68px
+			width: 100%
+			background-color: rgba(27, 27, 27, 0.75)
+			z-index: 3
+			border-bottom-left-radius: 3px
+			border-bottom-right-radius: 3px
+			transition: unset
+		&-line
+			&-wrp
+				width: 90%
+				max-width: 370px
+				height: 10px
+				border-radius: 4px
+				position: relative
+				display: flex
+				justify-content: space-between
+				align-items: center
+				overflow: hidden
+			&-yel,
+			&-bg
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+				border-radius: 4px
+			&-bg
+				width: 100%
+				background: #fff
+			&-yel
+				// transform: translateX(-200px)
+				// opacity: 0
+				transition: 2.7s all ease
+				// transition-delay: 1.5s
+				background-color: $yel
+		&-item
+			color: #fff
+			transform: translateY(5px)
+			font-size: 13px
+			&:not(:last-child)
+				margin-bottom: 10px
+		&.hover
+			.room__rate
+				&-top
+					background-color: rgba(27, 27, 27, 0.75)
+				&-close
+					transform: scale(1)
+					opacity: 1
+	&__card
+		&-slider
+			&_top
+				margin-bottom: 10px
+				&-item
+					width: 100%
+					height: 393px
+					@include cv
+			&_bot
+				.synced.owl-item
+					opacity: .7
+				&-item
+					width: 100%
+					height: 84px
+					@include cv
+		&-info
+			// padding-left: 40px
+		&-char
+			&-item
+				width: 33%
+				position: relative
+				padding: 0px 35px
+				&:not(:last-child)
+					&::after
+						content: ''
+						position: absolute
+						width: 1px
+						height: 70%
+						top: 50%
+						transform: translateY(-50%)
+						background-color: #fff
+						// opacity: .1
+						right: 0px
+		&-opt
+			&-item
+				background-color: #313131
+				border-radius: 4px
+				padding: 5px 8px
+				min-height: 30px
+				min-width: 30px
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-bottom: 7px
+				&:not(:last-child)
+					margin-right: 6px
+			img
+				max-width: 20px
+				max-height: 18px
+				height: auto
+		&-btns
+			font-size: 19px
+			.btn
+				font-size: 19px
+	&__ttl
+		font-family: $aexbold
+		font-size: 24px
+		margin-bottom: 28px
+	&__char
+		&-item
+			background: linear-gradient(180deg, #292929 0%, rgba(41, 41, 41, 0) 100%)
+			border: 1px solid #383838
+			padding: 20px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			&-left
+				width: 80%
+			&-ttl
+				font-size: 19px
+				font-family: $ssem
+				margin-bottom: 6px
+			&-descr
+				color: #ADADAD
+				line-height: 1.4
+			&-img
+				width: 35px
+				height: 40px
+				@include ct
+	&__serv
+		&-item
+			display: flex
+			align-items: flex-start
+			&-left
+				width: 80%
+			&-ttl
+				font-size: 19px
+				font-family: $ssem
+				margin-bottom: 6px
+			&-descr
+				color: #ADADAD
+				line-height: 1.4
+			&-img
+				width: 35px
+				height: 40px
+				@include ct
+				margin-right: 25px
+	&__gallery
+		&-item
+			width: 100%
+			height: 450px
+			display: block
+			@include cv
+			&:hover
+				opacity: .7
