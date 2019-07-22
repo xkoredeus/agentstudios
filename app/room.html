@@ -484,6 +484,78 @@
 					</div>
 			</div>
 		</main>
+		<section class="section_inner rev">
+			<div class="container">
+				<div class="d-flex justify-content-between mb-5">
+					<div class="d-flex flex-column">
+						<div class="room__ttl mb-1">Отзывы</div>
+						<div class="fz14">250 гостям здесь понравилось</div>
+					</div>
+					<div class="d-flex align-items-center">
+						<a href="#popup_rev" data-options='{"touch" : false}' data-fancybox class="btn btn_wt rev__btn mr-xl-5">Оставить отзыв</a>
+						<a href="#popup_rev_2" data-options='{"touch" : false}' data-fancybox class="btn btn_wt rev__btn mr-xl-5">Оставить отзыв 2</a>
+						<div class="rev__pag d-flex align-items-center">
+							<a href="#" class="rev__pag-item mr-3"><img src="img/icon__arr_left.png" alt="icon__arr_left.png"></a>
+							<a href="#" class="rev__pag-item mr-2">1</a>
+							<a href="#" class="rev__pag-item mr-2">2</a>
+							<a href="#" class="rev__pag-item mr-2">3</a>
+							<a href="#" class="rev__pag-item rev__pag-item_here">4</a>
+							<a href="#" class="rev__pag-item ml-3"><img src="img/icon__arr_right.png" alt="icon__arr_right.png"></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+						<div class="rev__item">
+							<div class="rev__item-in">
+								<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil</p>
+								<div class="rev__item-date">23.02.19</div>
+							</div>
+							<div class="rev__item-bot d-flex align-items-center">
+								<img src="img/icon__avatar_black.png" alt="icon__avatar_black.png" class="mr-2">
+								<span class="sm fz14">Roman K.</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+						<div class="rev__item">
+							<div class="rev__item-in">
+								<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum.</p>
+								<div class="rev__item-date">23.02.19</div>
+							</div>
+							<div class="rev__item-bot d-flex align-items-center">
+								<img src="img/icon__avatar_black.png" alt="icon__avatar_black.png" class="mr-2">
+								<span class="sm fz14">Roman K.</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+						<div class="rev__item">
+							<div class="rev__item-in">
+								<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure. Temporibus autem quibusdam.</p>
+								<div class="rev__item-date">23.02.19</div>
+							</div>
+							<div class="rev__item-bot d-flex align-items-center">
+								<img src="img/icon__avatar_black.png" alt="icon__avatar_black.png" class="mr-2">
+								<span class="sm fz14">Roman K.</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+						<div class="rev__item">
+							<div class="rev__item-in">
+								<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil</p>
+								<div class="rev__item-date">23.02.19</div>
+							</div>
+							<div class="rev__item-bot d-flex align-items-center">
+								<img src="img/icon__avatar_black.png" alt="icon__avatar_black.png" class="mr-2">
+								<span class="sm fz14">Roman K.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<footer class="footer">
 			<div class="container">
 				<div class="d-block footer__logo-wrp flex-column align-items-center d-xl-none mb-5 pb-xl-0">
@@ -553,26 +625,277 @@
 	<div class="preloader">
 		<div class="preloader__icon"></div>
 	</div>
-	<div id="popup_call" class="popup__container" style="display:none">
-		<div  class="popup__wrp popup_call__wrp">
-			<form action="[[~[[*id]]]]" method="post" class="popup">
-				<h3 class="popup__ttl">Оставьте заявку</h3>
-				<div class="input__wrp input__wrp_name">
-					<input type="text" class="form__input" name="popup_call__name" placeholder="Ваше имя" required="">
+	<!-- rev 1-->
+	<div id="popup_rev" class="popup__container" style="display:none">
+		<div class="popup__wrp popup_rev__wrp">
+			<form action="[[~[[*id]]]]" method="post" class="popup popup_rev">
+				<div class="popup__top">
+					<div class="popup__close"></div>
+					<div class="popup__ttl">Оставить отзыв</div>
 				</div>
-				<div class="input__wrp input__wrp_tel">
-					<input type="tel" class="form__input" name="popup_call__tel" placeholder="Телефон" required="">
-				</div>
-				<div class="input__wrp input__wrp_mail">
-					<input type="email" class="form__input" name="popup_call__email" placeholder="E-mail">
-				</div>
-				<input type="submit" class="btn" value="Search">
-				<div class="popup__policy">
-					Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#" class="form__policy-link">политикой конфиденциальности</a>
+				<div class="popup__cnt">
+					<div class="popup__cnt-ttl">Введите номер брони</div>
+					<p>Номер бронирования указан в email - подтверждении</p>
+					<div class="input__wrp input__wrp_gray mb-3">
+						<input type="text" placeholder="*11***87665">
+					</div>
+					<p>Отзыв может быть размещен только гостем, бронировавшим зал ранее. Благодаря этому правилу мы точно знаем, что все ваши отзывы написаны только настоящими гостями</p>
+					<input type="submit" class="btn mt-2 mb-2" value="Оценить">
 				</div>
 			</form>
 		</div>
 	</div>
+	<!--/ rev 1-->
+	<!-- rev 2-->
+	<div id="popup_rev_2" class="popup__container" style="display:none">
+		<div class="popup__wrp popup_rev__wrp popup_rev_2__wrp">
+			<form action="[[~[[*id]]]]" method="post" class="popup popup_rev">
+				<div class="popup__top">
+					<div class="popup__close"></div>
+					<div class="popup__ttl">Оставить отзыв</div>
+				</div>
+				<div class="popup__cnt">
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Удобство</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_1" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_1" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_2" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_2" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_10" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_10" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Чистота</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_2" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_2" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_2" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_2" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_20" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_20" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Комфорт</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_30" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_30" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Соотношение цена/качество</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_40" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_40" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Расположение</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_50" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_50" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="input__wrp input__wrp_gray mt-3 mb-3">
+						<textarea id="" rows="4" placeholder="Введите текст*" required=""></textarea>
+					</div>
+					<div class="popup_rev__bot">
+						<label for="popup_rev__policy" class="checkbox">
+							<input type="checkbox" id="popup_rev__policy" checked>
+							<span class="checkbox__text">Отправляя свои данные вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></span>
+						</label>
+						<input type="submit" class="btn mt-4 mb-2" value="Отправить отзыв">
+					</div>
+					<p>Отзыв может быть размещен только гостем, бронировавшим зал ранее. Благодаря этому правилу мы точно знаем, что все ваши отзывы написаны только настоящими гостями</p>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--/ rev 2-->
 	<script src="js/libs.min.js"></script>
 	<script src="libs/owl.carousel/scrollbar.js"></script>
 	<script src="js/scripts.js"></script>

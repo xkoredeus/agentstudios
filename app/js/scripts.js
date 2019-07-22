@@ -402,4 +402,7 @@ $(function() {
 			}
 		}
 	});
+	$('.popup__close').on('click', function(){
+		$.fancybox.close();
+	})
 });

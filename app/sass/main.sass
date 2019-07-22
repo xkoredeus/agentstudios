@@ -308,6 +308,14 @@ a.gr
 			&:hover
 				color: #fff
 				background-color: $gray
+	&_wt
+		border: 1px solid #D0D0D0
+		color: #000
+		background-color: #fff
+		&:hover
+			color: #fff
+			background-color: $gray
+			border-color: $gray
 .preloader
 	position: fixed
 	left: 0
@@ -476,7 +484,7 @@ a.gr
 				top: 8px
 				border-radius: 50%
 .popup__container
-	padding: 40px
+	// padding: 40px
 	background-color: transparent
 	.fancybox-close-small
 		top: 40px
@@ -488,55 +496,109 @@ a.gr
 		align-items: center
 		justify-content: center
 		position: relative
-		&::before
-			z-index: 1
-			content: ''
-			position: absolute
-			height: 110%
-			width: 110%
-			top: -5%
-			right: -5%
-			bottom: -5%
-			left: -5%
-			z-index: 1
-			background: #fff
-			opacity: .7
-	.popup_call__wrp
-		max-width: 320px
-		.popup
-			width: 100%
-			height: 100%
-			position: relative
-			z-index: 2
-			display: flex
-			flex-direction: column
-			align-items: center
-			justify-content: flex-start
-			background-color: #fff
-			color: #2D2A2B
-			padding: 20px 25px 30px
+	.popup
+		&_call
+			&__wrp
+				max-width: 320px
+				opacity: .8
+		&_rev
+			&__wrp
+				max-width: 375px
+				opacity: .8
+			&_2
+				&__wrp
+					max-width: 609px
+			&__item
+				border-bottom: 1px solid #363636
+				.checkbox
+					width: 49px
+					height: 49px
+					border-radius: 6px
+					overflow: hidden
+					&__text
+						font-family: $shev
+						font-size: 16px
+						color: #fff
+						height: 100%
+						width: 100%
+						display: flex
+						justify-content: center
+						align-items: center
+						padding-left: 0
+						background-color: #363636
+						div
+							position: relative
+						&::after
+							display: none
+						&::before
+							width: 100%
+							height: 100%
+							border: none
+							background-color: $yel
+							border-radius: 0
+							left: 0
+							top: 0
+							transform: scale(0)
+							border-radius: 6px
+					input[type="checkbox"]:checked + .checkbox__text:before,
+					input[type="radio"]:checked + .checkbox__text:before
+						background-color: $yel
+						transform: scale(1)
+					input[type="radio"]:checked + .checkbox__text div
+						color: #000
+			&__bot
+				max-width: 346px
+				margin-left: auto
+				margin-right: auto
+	.popup
+		width: 100%
+		height: 100%
+		background-color: #fff
+		color: #2D2A2B
+		&__top
+			background-color: #000
+			padding: 20px 10px
+			border-bottom: 1px solid #363636
 			text-align: center
-			&__ttl
-				font-family: $abold
-				text-transform: uppercase
-				font-size: 22px
-				margin-bottom: 30px
-			.form__input
-				color: $gray
-				margin-bottom: 15px
-			input.form__input::placeholder
-				color: #gray
-			.btn
-				width: 100%
-				margin-bottom: 15px
-			&__policy
-				margin-top: 15px
-				max-width: 230px
-				text-align: center
+			position: relative
+		&__close
+			position: absolute
+			left: 15px
+			top: 50%
+			transform: translateY(-50%)
+			width: 17px
+			height: 17px
+			background-image: url('../img/icon__cross.png')
+			@include ct
+			transition: .6s all ease
+			cursor: pointer
+			&:hover
+				transform: translateY(-50%) rotate(180deg) 
+		&__ttl
+			color: #d2d2d2
+			font-family: $aexbold
+			font-size: 16px
+		&__cnt
+			font-size: 14px
+			color: #959595
+			background-color: #181818
+			padding: 20px 15px
+			&-ttl
+				color: #d2d2d2
+				font-family: $shev
+				margin-bottom: 8px
+		.btn
+			width: 100%
+			// margin-bottom: 15px
+		&__policy
+			font-size: 12px
+			text-align: center
+			margin-top: 10px
+			margin-left: auto
+			margin-right: auto
+			a
 				font-size: 12px
-				a
-					font-size: 12px 
-					color: $yel
+				color: $yel
 .owl
 	&-scrollbar
 		margin-top: 10px
@@ -633,6 +695,8 @@ a.gr
 	border-radius: 4px
 	background-color: #fff
 	display: flex
+	textarea
+		width: 100%
 	input,
 	select
 		width: 100%
@@ -1933,3 +1997,54 @@ a.gr
 			@include cv
 			&:hover
 				opacity: .7
+.rev
+	background-color: #F5F5F5
+	color: #000
+	&__pag
+		&-item
+			width: 32px
+			height: 32px
+			border-radius: 3px
+			background-color: #fff
+			color: #000
+			padding: 4px
+			text-align: center
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 1px solid #E6E7EC
+			&:hover
+				color: #000
+				border-color: #C5C4CE
+			&_here
+				background-color: $yel
+				border-color: $yel
+	&__btn
+		border-color: #E6E7EC
+		padding: 8px 19px
+		font-family: $sbold
+	&__item
+		&-in
+			background-color: #fff
+			border-radius: 3px
+			position: relative
+			margin-bottom: 19px
+			padding: 15px 15px 8px
+			&::after
+				content: ''
+				position: absolute
+				left: 15px
+				bottom: -10px
+				width: 0
+				height: 0
+				border-left: 10px solid transparent
+				border-right: 10px solid transparent
+				border-top: 10px solid #fff
+		&-date
+			font-family: $smed
+			font-size: 12px
+			color: #B2B2B2
+			margin-top: 10px
+			text-align: right
+		&:hover
+			transform: translateY(-6px)
