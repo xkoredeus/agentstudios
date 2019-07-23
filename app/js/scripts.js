@@ -103,6 +103,8 @@ $(function() {
 				container.removeClass('active')
 		}
 	});
+
+
 	//hamb
 	$(".hamburger__checkbox").change(function() {
 		$('.header__menu').toggleClass('active');
@@ -123,15 +125,21 @@ $(function() {
 	};
 	$('.pop-popup').hide();
 	$('.pop__item-rate').on('click', function(){
-		$(this).parents('.pop__item-wrp').toggleClass('hover').find('.pop-popup').slideToggle();
+		$(this).parents('.pop__item-wrp').toggleClass('hover').find('.pop-popup').slideToggle(300,function() {
+			$(this).parents('.pop__item-wrp').toggleClass('anim');
+		});
 	});
 	$('.pop-popup__close').on('click', function(){
-		$(this).parents('.pop__item-wrp').toggleClass('hover').find('.pop-popup').slideToggle();
+		$(this).parents('.pop__item-wrp').toggleClass('hover').find('.pop-popup').slideToggle(100,function() {
+			$(this).parents('.pop__item-wrp').toggleClass('anim');
+		});
 	});
 
 	$('.room__rate-in').hide();
 	$('.room__rate-top').on('click', function(){
-		$(this).parents('.room__rate').toggleClass('hover').find('.room__rate-in').slideToggle();
+		$(this).parents('.room__rate').toggleClass('hover').find('.room__rate-in').slideToggle(300,function() {
+			$(this).parents('.room__rate').toggleClass('anim');
+		});
 	});
 	$('.pop-popup__close').on('click', function(){
 		$(this).parents('.room__rate').toggleClass('hover').find('.room__rate-in').slideToggle();
@@ -404,5 +412,14 @@ $(function() {
 	});
 	$('.popup__close').on('click', function(){
 		$.fancybox.close();
-	})
+	});
+	$('[data-fancybox]').fancybox({
+		animationDuration : 600,
+		animationEffect   : 'slide-in-out'
+	});
+	if ( $(window).width() > 1200 ) {
+		$('.banner__bar-act-link').removeAttr("data-fancybox");
+	};
+	//selects
+	$('#res-select_month').selectmenu();
 });

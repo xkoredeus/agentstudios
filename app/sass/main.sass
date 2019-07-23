@@ -104,6 +104,29 @@ textarea:active
 	border-radius: 3px
 	box-shadow: 0px 0px 0px 1px $yel
 	outline: none
+// .select__wrp
+// 	border: 1px solid #BDBDBD
+// 	border-radius: 3px
+// 	position: relative
+// 	min-width: 270px
+// 	background-color: #fff
+// 	&::before
+// 		content: ''
+// 		position: absolute
+// 		width: 10px
+// 		height: 6px
+// 		background: url('../img/icon__arr-bot.png') no-repeat 50% 50% / contain
+// 		top: 50%
+// 		margin-top: -4px
+// 		right: 10px
+// 	select
+// 		width: 100%
+// 		background-color: $tr
+// 		padding: 8px 40px 8px 12px
+// 		position: relative
+// 		appearance: none
+// 		option
+// 			width: 100%
 .sr
 	font-family: $sreg
 .sm
@@ -144,6 +167,8 @@ a.gr
 	color: #ddd
 .w100
 	width: 100%
+.h100
+	height: 100%
 .fz14
 	font-size: 14px
 .fz12
@@ -163,6 +188,15 @@ a.gr
 		margin-top: 0
 	&-slide--html
 		padding: 0
+/* Custom animation */
+.fancybox-fx-slide-in-out.fancybox-slide--previous
+	transform: translateX(-100%)
+
+.fancybox-fx-slide-in-out.fancybox-slide--next
+	transform: translateX(100%)
+
+.fancybox-fx-slide-in-out.fancybox-slide--current
+	transform: translateX(0)
 .content
 	overflow: hidden
 	.footer
@@ -175,18 +209,6 @@ a.gr
 		&__let
 			&-ttl
 				color: #C6C6C6
-			.input__wrp
-				background-color: #232323
-				input[type="email"]
-					color: #fff
-				input[type="email"]::placeholder
-					color: #ACACAC
-			.checkbox__text
-				color: #C6C6C6
-				a
-					color: #C6C6C6
-					&:hover
-						color: $yel
 .quantity
 	position: relative
 	max-width: 129px
@@ -714,7 +736,7 @@ a.gr
 	&_name:before
 		background-image: url(../img/icon__form-name.png)
 	&_mail:before
-		background-image: url(../img/icon__mail.png)
+		background-image: url(../img/icon__mail.svg)
 		// top: 8px
 	&_tel:before
 		background-image: url(../img/icon__form-tel.png)
@@ -782,7 +804,7 @@ a.gr
 		padding: 10px 0
 		background-color: #1B1B1B
 		font-size: 14px
-		z-index: 1
+		z-index: 2
 		position: relative
 		&-in
 			padding-right: 30px
@@ -949,8 +971,8 @@ a.gr
 			margin-bottom: 0
 .hamburger .bar
 	padding: 0
-	width: 30px
-	height: 4px
+	width: 20px
+	height: 3px
 	background-color: #fff
 	display: block
 	border-radius: 0
@@ -968,10 +990,10 @@ a.gr
 
 .bar4
 	bottom: 0
-	top: 0
+	top: 3px
 
 .bar5
-	bottom: 0px
+	bottom: 2px
 
 .hamburger .bar
 	transition: all 0.4s ease-in-out, transform 0.4s ease-in-out 0.4s
@@ -987,13 +1009,13 @@ a.gr
 
 .hamburger__checkbox:checked + label > .hamburger > .bar2
 	left: 0px
-	width: 30px
+	width: 20px
 	transform: rotate(45deg)
 	opacity: 1
 
 .hamburger__checkbox:checked + label > .hamburger > .bar3
 	left: 0
-	width: 30px
+	width: 20px
 	transform: rotate(-45deg)
 	opacity: 1
 
@@ -1066,8 +1088,8 @@ a.gr
 				&.active,
 				&:hover
 					color: #fff
-					background-color: $dark
-					box-shadow: none
+					background-color: $tr
+					box-shadow: inset 0px 0px 1px 1px #E6E7EC
 		.input__wrp
 			min-width: 315px
 			background-color: #ffffff2b
@@ -1192,7 +1214,8 @@ a.gr
 		&__act
 			width: 100%
 			transition: unset
-
+		.ui-widget.ui-widget-content
+			border: none
 	&__bot
 		height: 13vh
 		padding: 15px 0
@@ -1257,7 +1280,81 @@ a.gr
 					// opacity: 0
 		&__cnt
 			transition: unset
-
+.ui-selectmenu-menu
+	transition: unset
+	.ui-widget-content
+		font-family: $smed
+		font-size: 14px
+		color: #fff
+		width: 200px !important
+		background: #1e1e1eb8
+		border: none
+		box-sizing: border-box
+		border-radius: 0
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+	.ui-button.ui-state-active:hover,
+	.ui-button:active,
+	.ui-state-active,
+	.ui-widget-content .ui-state-active,
+	.ui-widget-header .ui-state-active,
+	a.ui-button:active
+		border: none
+	.ui-menu .ui-state-active, .ui-menu .ui-state-focus
+		margin: 0
+		color: $yel
+		background-color: #1B1B1B
+		border-radius: 0
+	.ui-menu .ui-menu-item-wrapper
+		padding: 8px 15px
+.ui-button:focus,
+.ui-button:hover,
+.ui-state-focus,
+.ui-state-hover,
+.ui-widget-content .ui-state-focus,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-focus,
+.ui-widget-header .ui-state-hover
+	color: #fff
+	background: #282828
+	border-color: $yel
+	.ui-icon
+		opacity: 1 !important
+.ui-button .ui-icon,
+.ui-button:focus .ui-icon,
+.ui-button:hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-state-hover .ui-icon
+	background-image: url('../img/icon__arr-bot.png')
+	background-position: 50% 50%
+	background-size: contain
+	margin-top: 4px
+	width: 11px
+	height: 10px
+	opacity: .6
+	// background: #000
+.ui-selectmenu-button
+	font-family: $smed
+	font-size: 14px
+	color: #A0A0A0
+	outline: none
+	background: #282828
+	border: 1px solid #282828
+	box-sizing: border-box
+	border-radius: 3px
+	min-width: 200px
+	padding: 11px 15px
+	&:hover
+		color: #fff
+		background: #282828
+.ui-selectmenu-button-open
+	border-bottom-left-radius: 0px
+	border-bottom-right-radius: 0px
+	background-color: #282828
+	color: #A0A0A0
+	.ui-icon
+		transform: scaleY(-1)
+		opacity: 1 !important
 .ui-slider
 	position: relative
 .ui-slider .ui-slider-handle
@@ -1302,6 +1399,12 @@ a.gr
 .pop
 	background-color: $dark
 	overflow: hidden
+	&__ttl
+		.btn
+			&:hover
+				color: #fff
+				background-color: $tr
+				box-shadow: inset 0px 0px 1px 1px #E6E7EC
 	&__item
 		font-size: 16px
 		color: #000
@@ -1319,8 +1422,9 @@ a.gr
 					transform: translateY(0)
 				.pop__item-rate
 					opacity: 0
+			&.anim
 				.pop-popup__line-yel
-					opacity: 1
+					// opacity: 1
 					transform: translateX(0)
 		&-top
 			height: 280px
@@ -1430,16 +1534,15 @@ a.gr
 					color: #fff
 					padding-right: 8px
 
-					border-top-left-radius: 3px
-					border-bottom-left-radius: 3px
+					// border-top-left-radius: 3px
+					// border-bottom-left-radius: 3px
 				&:nth-child(2)
 					font-size: 18px
 					font-family: $abold
 					background-color: $yel
 					color: #000
 					padding: 8px
-					border-top-right-radius: 3px
-					border-bottom-right-radius: 3px
+					border-radius: 3px
 		&__in
 			padding: 20px 20px
 			transform: translateY(-10px)
@@ -1466,9 +1569,9 @@ a.gr
 				width: 100%
 				background: #fff
 			&-yel
-				transform: translateX(-200px)
-				opacity: 0
-				transition: 2.7s all ease
+				transform: translateX(-300px)
+				// opacity: 0
+				transition: 1.7s all ease
 				// transition-delay: 1.5s
 				background-color: $yel
 		&__item
@@ -1523,6 +1626,22 @@ a.gr
 		opacity: .7
 	.container
 		position: relative
+	.input__wrp
+		background-color: #232323
+		input[type="email"]
+			color: #fff
+		input[type="email"]::placeholder
+			color: #ACACAC
+	.checkbox
+		max-width: 370px
+		&__text
+			color: #dddddde6
+			text-align: left
+			a
+				color: #fff
+				text-decoration-color: $yel
+				&:hover
+					color: $yel
 .ann
 	color: #000
 	.owl-nav button.owl-
@@ -1570,6 +1689,20 @@ a.gr
 	&__let
 		&-ttl
 			font-family: $abold
+		.input__wrp
+			background-color: #232323
+			input[type="email"]
+				color: #fff
+			input[type="email"]::placeholder
+				color: #ACACAC
+		.checkbox__text
+			color: #C6C6C6
+			text-align: left
+			a
+				color: #fff
+				text-decoration-color: $yel
+				&:hover
+					color: $yel
 	&__logo
 		font-family: $abold
 		font-size: 22px
@@ -1679,8 +1812,8 @@ a.gr
 		&:not(:last-child)
 			margin-bottom: 10px
 		&-img
-			width: 127px
-			height: 127px
+			width: 124px
+			height: 124px
 			border-radius: 4px
 			@inclunde cv
 		&-top
@@ -1779,6 +1912,100 @@ a.gr
 			span
 				opacity: .3
 				margin-right: 10px
+	&-tab
+		font-size: 12px
+		font-family: $smed
+		&__left
+			color: #A0A0A0
+			transform: translateY(10px)
+		&__item
+			height: 63px
+			border-bottom: 1px solid #A0A0A0
+			align-items: center
+			// overflow: hidden
+			border-left: 1px solid #A0A0A0
+			width: 100%
+			&_un
+				background-color: #363636
+			&_res
+				background-color: #fff
+			&:last-child
+				border-right: 1px solid #A0A0A0
+			&_left
+				display: flex
+				align-items: flex-end
+				border: none
+				padding-right: 10px
+				border: none !important
+		&__top
+			padding-left: 10px
+			padding-right: 10px
+			border-top-left-radius: 3px
+			border-top-right-radius: 3px
+			border-top: 1px solid #A0A0A0
+			border-right: 1px solid #A0A0A0
+		&__bot
+			.checkbox
+				width: 100%
+				height: 100%
+				&__text
+					font-size: 12px
+					height: 100%
+					padding: 12px 15px
+					display: flex
+					flex-direction: column
+					align-items: center
+					justify-content: center
+					text-align: center
+					div
+						width: 100%
+						// height: 100%
+						display: block
+						position: relative
+						&:last-child
+							transform: translateY(-10px)
+						&:first-child
+							// display: none
+							transform: scale(0)
+							opacity: 0
+					&::after
+						display: none
+					&::before
+						width: 102%
+						height: 102%
+						border: none
+						background-color: #0000
+						border-radius: 0
+						left: -1px
+						top: -0.8px
+						right: -1px
+						bottom: 0px
+				input[type="checkbox"]:checked + .checkbox__text:before,
+				input[type="radio"]:checked + .checkbox__text:before
+					// color: #000
+					background-color: $yel
+				input[type="checkbox"]:checked + .checkbox__text div,
+				input[type="radio"]:checked + .checkbox__text div
+					color: #000
+				input[type="checkbox"]:checked + .checkbox__text div,
+				input[type="radio"]:checked + .checkbox__text div
+					&:last-child
+						transform: translateY(0)
+					&:first-child
+						// display: block
+						transform: scale(1)
+						opacity: 1
+		&__btn
+			background-color: #282828
+			border-radius: 3px
+			width: 32px
+			height: 32px
+			display: flex
+			justify-content: center
+			align-items: center
+			&:hover
+				background-color: #363636
+				cursor: pointer
 .room
 	&__top
 		&-ttl
@@ -1797,10 +2024,7 @@ a.gr
 			opacity: 1
 	&__rate
 		position: relative
-		// background-color: #1b1b1bbf
-		// border-radius: 6px
 		width: 310px
-		// overflow: hidden
 		transition: unset
 		&-top
 			padding: 10px 20px
@@ -1819,8 +2043,6 @@ a.gr
 			cursor: pointer
 			transform: scale(0)
 			opacity: 0
-			// &:hover
-			// 	transform: rotate(180deg)
 		&-right
 			&>div
 				&:nth-child(1)
@@ -1844,7 +2066,7 @@ a.gr
 					border-radius: 3px
 		&-in
 			position: absolute
-			padding: 10px 20px
+			padding: 0px 20px 20px
 			top: 68px
 			width: 100%
 			background-color: rgba(27, 27, 27, 0.75)
@@ -1874,9 +2096,9 @@ a.gr
 				width: 100%
 				background: #fff
 			&-yel
-				// transform: translateX(-200px)
-				// opacity: 0
-				transition: 2.7s all ease
+				transform: translateX(-300px)
+				// opacity: .5
+				transition: 1.2s all ease
 				// transition-delay: 1.5s
 				background-color: $yel
 		&-item
@@ -1892,6 +2114,10 @@ a.gr
 				&-close
 					transform: scale(1)
 					opacity: 1
+		&.anim
+			.room__rate-line-yel
+				transform: translateX(0)
+				// opacity: 1
 	&__card
 		&-slider
 			&_top

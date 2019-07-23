@@ -25,6 +25,9 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 	.header__menu.active
 		right: 0
 		margin-right: 0
+		display: flex
+		flex-direction: column
+		justify-content: space-between
 @media screen and (max-width: 1200px)
 	.btn
 		// font-size: 14px
@@ -72,10 +75,14 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 				opacity: .55
 			&::after
 				opacity: 1
+			.header__top
+				z-index: 3
 		&__menu
 			width: 100%
 			padding: 60px 15px 25px
 			&-nav
+				padding: 10px 0
+				margin-top: 8px
 				border-top: 1px solid #323232
 				&-link
 					margin-bottom: 0
@@ -191,12 +198,16 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 					width: 40%
 			.btn
 				width: 48%
+				font-size: 15px
 			&-top
 				height: 200px
 			&-info
 				font-size: 14px
 			&-ttl
 				font-size: 18px
+	.let__in
+		.btn
+			font-size: 16px
 	.pop
 		.owl-dots
 			justify-content: center
@@ -258,16 +269,18 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 		&__subttl
 			font-size: 15px
 			margin-bottom: 18px
-	.pop__ttl
 		.btn_tr
 			padding-left: 10px
 			padding-right: 10px
 			background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
 			border: 1px solid rgba(255, 255, 255, 0.2)
+			font-family: $sreg
+			font-size: 15px
 	.pop
 		.section__ttl
 			font-family: $sbold
 			font-size: 16px
+			letter-spacing: 0
 	.ann
 		&__in
 			&-dots
@@ -317,6 +330,12 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 				justify-content: flex-start !important
 			&-btn
 				justify-content: center !important
+					color: $lgray
+	.let
+		.checkbox
+			&__text,
+			a
+				font-size: 12px
 @media screen and (max-width: 420px)
 	.pop__item-char
 		font-size: 12px
@@ -326,10 +345,16 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 			font-size: 12px
 		&-in
 			align-items: center
+	// .pop__ttl
+	// 	flex-direction: column
+	// 	.btn
+	// 		width: 100%
+	// 		margin-top: 8px
+	// 		justify-content: center
 	.sel__btns
 		flex-direction: column
 		.btn
-			width: 100%
+			// width: 100%
 			&:nth-child(1)
 				margin-bottom: 8px
 	.pop__item-btns
