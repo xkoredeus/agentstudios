@@ -217,12 +217,16 @@ a.gr:hover {
   height: 100%;
 }
 
+.fz12 {
+  font-size: 12px;
+}
+
 .fz14 {
   font-size: 14px;
 }
 
-.fz12 {
-  font-size: 12px;
+.fz15 {
+  font-size: 15px;
 }
 
 .fz18 {
@@ -467,6 +471,20 @@ a.gr:hover {
 .btn_tr_black:hover {
   color: #fff;
   background-color: #4D4D4D;
+}
+
+.btn_gr {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 250, 250, 0.05)), to(rgba(250, 250, 250, 0)));
+  background: -o-linear-gradient(top, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%);
+  background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn_gr:hover {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #E6E7EC;
 }
 
 .btn_wt {
@@ -3526,6 +3544,51 @@ a.gr:hover {
 
 .room__gallery-item:hover {
   opacity: .7;
+}
+
+.room__in {
+  background-color: rgba(30, 30, 30, 0.96);
+}
+
+.room__in-info {
+  padding-right: 25px;
+}
+
+.room__in-slider-item {
+  width: 100%;
+  height: 783px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.room__in .room__card-char-item {
+  padding-left: 22px;
+  padding-right: 17px;
+}
+
+.room-page .res-card__bot-arr {
+  display: block;
+}
+
+.room-page .res-card__bot-arr:hover {
+  cursor: pointer;
+}
+
+.room-page .res-card__bot-descr {
+  font-size: 14px;
+  min-height: 200px;
+}
+
+.room-page .res-card__bot.active .res-card__bot-arr {
+  -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.room-page .btn:last-child {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .rev {
