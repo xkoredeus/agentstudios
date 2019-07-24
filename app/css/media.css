@@ -11,6 +11,7 @@
   .hamburger__wrp {
     right: 15px;
     margin-right: 0;
+    top: 2.8vh;
   }
   .header__menu.active {
     right: 0;

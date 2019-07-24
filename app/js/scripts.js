@@ -144,15 +144,11 @@ $(function() {
 	$('.pop-popup__close').on('click', function(){
 		$(this).parents('.room__rate').toggleClass('hover').find('.room__rate-in').slideToggle();
 	});
-	// $(document).on('click', function (e) {
-	// 	var container2 = $('.pop-popup');
-	// 	// if the target of the click isn't the container nor a descendant of the container
-	// 	if (!container2.is(e.target) && container2.has(e.target).length === 0) 
-	// 	{
-	// 			container2.hide();
-	// 			$('.pop__item-wrp2').removeClass('hover');
-	// 	}
-	// });
+
+	$('.search__item-bot').hide();
+	$('.search__item-more').on('click', function(){
+		$(this).parents('.search__item').toggleClass('active').find('.search__item-bot').slideToggle();
+	});
 	if ( $(window).width() < 1200 ) {
 		$('.pop__list').removeClass('row').addClass('owl-carousel');
 		$('.pop__item-wrp').removeClass('col-xl-4 col-sm-6');
@@ -346,16 +342,11 @@ $(function() {
 	}
 	var thumbs = sync2.owlCarousel({
 		startPosition: 1,
-		// items:4,
-		singleItem: true,
 		loop:false,
 		margin: 10,
 		autoplay:false,
 		nav: false,
 		dots: false,
-
-		// scrollbarType: "progress",
-		scrollbarType: "scroll",
 		mouseDrag: true,
 		responsive : {
 			0   : {
@@ -430,11 +421,17 @@ $(function() {
 	});
 	$('[data-fancybox]').fancybox({
 		animationDuration : 600,
-		animationEffect   : 'slide-in-out'
+		animationEffect   : 'slide-in-out',
+		touch : false
 	});
 	if ( $(window).width() > 1200 ) {
 		$('.banner__bar-act-link').removeAttr("data-fancybox");
 	};
+	$('.popup__search-btn').on('click', function () {
+		$.fancybox.close();
+	});
 	//selects
-	$('#res-select_month').selectmenu();
+	$('.selectmenu').selectmenu();
+	//datepicker
+	$('.datepicker').datepicker();
 });
