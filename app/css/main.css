@@ -6,8 +6,12 @@ body {
   color: #fff;
   font-size: 16px;
   line-height: 1.6;
+  letter-spacing: 0;
   position: relative;
   -webkit-font-smoothing: antialiased;
+  -webkit-transition: unset;
+  -o-transition: unset;
+  transition: unset;
 }
 
 body.fixed {
@@ -50,7 +54,6 @@ input:focus, input:active, .btn, .btn:after, select:focus, select:active {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  cursor: pointer;
 }
 
 a {
@@ -791,6 +794,20 @@ a.gr:hover {
 
 .popup__container .popup_search__wrp .btn {
   max-width: 346px;
+}
+
+.popup__container .popup_search__wrp .popup__cnt {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.popup__container .popup_search__wrp .popup__cnt-ttl {
+  font-size: 19px;
+}
+
+.popup__container .popup_search__wrp .room__card-opt-item {
+  width: 36px;
+  height: 36px;
 }
 
 .popup__container .popup_rev__wrp {
@@ -3536,7 +3553,7 @@ a.gr:hover {
 .room__card-opt-item {
   background-color: #313131;
   border-radius: 4px;
-  padding: 5px 8px;
+  padding: 8px;
   min-height: 30px;
   min-width: 30px;
   display: -webkit-box;
@@ -3558,7 +3575,7 @@ a.gr:hover {
   margin-right: 6px;
 }
 
-.room__card-opt img {
+.room__card-opt-item img {
   max-width: 20px;
   max-height: 18px;
   height: auto;
@@ -3809,7 +3826,7 @@ a.gr:hover {
 
 .ui-selectmenu-menu .ui-menu::-webkit-scrollbar-thumb {
   width: 10px;
-  background-color: #fff;
+  background-color: #575757;
   border: 2px solid #575757;
   border-radius: 6px;
 }
@@ -3833,7 +3850,7 @@ a.gr:hover {
 
 .search__filter::-webkit-scrollbar-thumb {
   width: 10px;
-  background-color: #fff;
+  background-color: #575757;
   border: 2px solid #575757;
   border-radius: 6px;
 }
@@ -3903,7 +3920,7 @@ a.gr:hover {
 
 .search__res::-webkit-scrollbar-thumb {
   width: 10px;
-  background-color: #fff;
+  background-color: #575757;
   border: 2px solid #575757;
   border-radius: 6px;
 }

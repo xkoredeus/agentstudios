@@ -141,6 +141,15 @@ $(function() {
 			$(this).parents('.room__rate').toggleClass('anim');
 		});
 	});
+
+	//anchors
+	$('.anchor-link').on('click', function(e) {
+		$(this).parents('.room__rate').toggleClass('hover anim').find('.room__rate-in').slideToggle();
+			 e.preventDefault();
+			 var id  = $(this).attr('href'),
+					top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 600);
+	});
 	$('.pop-popup__close').on('click', function(){
 		$(this).parents('.room__rate').toggleClass('hover').find('.room__rate-in').slideToggle();
 	});
@@ -432,6 +441,9 @@ $(function() {
 	});
 	//selects
 	$('.selectmenu').selectmenu();
+	$('.search__filter').on('mousewheel', function(){
+		$(this).find('.selectmenu').selectmenu( 'close' );
+	})
 	//datepicker
 	$('.datepicker').datepicker();
 });

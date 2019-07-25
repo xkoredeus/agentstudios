@@ -37,9 +37,10 @@ body
 	color: #fff
 	font-size: 16px
 	line-height: 1.6
-	// letter-spacing: .9
+	letter-spacing: 0
 	position: relative
 	-webkit-font-smoothing: antialiased
+	transition: unset
 	&.fixed
 		overflow-y: hidden
 *,
@@ -60,7 +61,6 @@ input:focus, input:active, .btn, .btn:after, select:focus, select:active
 	text-decoration: none
 	outline: none
 	transition: all 0.4s ease
-	cursor: pointer
 a
 	color: #fff
 	&:hover
@@ -558,6 +558,14 @@ a.gr
 				opacity: .8
 				.btn
 					max-width: 346px
+				.popup__cnt
+					padding-left: 40px
+					padding-right: 40px
+					&-ttl
+						font-size: 19px
+				.room__card-opt-item
+					width: 36px
+					height: 36px
 		&_rev
 			&__wrp
 				max-width: 375px
@@ -2262,7 +2270,7 @@ a.gr
 			&-item
 				background-color: #313131
 				border-radius: 4px
-				padding: 5px 8px
+				padding: 8px
 				min-height: 30px
 				min-width: 30px
 				display: flex
@@ -2271,10 +2279,10 @@ a.gr
 				margin-bottom: 7px
 				&:not(:last-child)
 					margin-right: 6px
-			img
-				max-width: 20px
-				max-height: 18px
-				height: auto
+				img
+					max-width: 20px
+					max-height: 18px
+					height: auto
 		&-btns
 			font-size: 19px
 			.btn
@@ -2421,7 +2429,7 @@ a.gr
 		background-color: #575757
 	&::-webkit-scrollbar-thumb
 		width: 10px
-		background-color: #fff
+		background-color: #575757
 		border: 2px solid #575757
 		border-radius: 6px
 .search
@@ -2437,7 +2445,7 @@ a.gr
 			background-color: #575757
 		&::-webkit-scrollbar-thumb
 			width: 10px
-			background-color: #fff
+			background-color: #575757
 			border: 2px solid #575757
 			border-radius: 6px
 		button[type="reset"]
@@ -2480,7 +2488,7 @@ a.gr
 			background-color: #575757
 		&::-webkit-scrollbar-thumb
 			width: 10px
-			background-color: #fff
+			background-color: #575757
 			border: 2px solid #575757
 			border-radius: 6px
 	&__item

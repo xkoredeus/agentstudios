@@ -110,7 +110,7 @@
 								<div class="d-flex align-items-center justify-content-between mt-3">
 									<div class="d-flex flex-column">
 										<div class="room__top-ttl mr-4">Merge</div>
-										<div><span class="dgr">Зал студии</span> <span class="wt sb">QweexCampus</span></div>
+										<div><span class="dgr">Зал студии</span> <a href="#" class="wt sb">QweexCampus</a></div>
 									</div>
 									<button class="room__fav" data-toggle="tooltip" title="add to favorites"></button>
 								</div>
@@ -169,7 +169,7 @@
 										</div> -->
 									</div>
 								</div>
-								<a href="#" class="btn btn_gr mb-2 w100">Подробные характеристики</a>
+								<a href="#popup_char" data-fancybox class="btn btn_gr mb-2 w100">Подробные характеристики</a>
 								<a href="#" class="btn mb-2 w100">Забронировать</a>
 							</div>
 						</div>
@@ -365,6 +365,107 @@
 	<div class="preloader">
 		<div class="preloader__icon"></div>
 	</div>
+	<!-- popup char-->
+	<div id="popup_char" class="popup__container" style="display:none">
+		<div class="popup__wrp popup_search__wrp">
+			<form action="[[~[[*id]]]]" method="post" class="popup popup_rev">
+				<div class="popup__top">
+					<div class="popup__close"></div>
+					<div class="popup__ttl">Подробные характеристики</div>
+				</div>
+				<div class="popup__cnt">
+					<div class="mb-4">
+						<div class="popup__cnt-ttl mb-3">Что планируете?</div>
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_1.png" alt="studio__popup-img_1.png"></div>
+									<span class="ml-2">Барный стул</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_2.png" alt="studio__popup-img_2.png"></div>
+									<span class="ml-2">Вешалка (рейл) для одежды</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_3.png" alt="studio__popup-img_3.png"></div>
+									<span class="ml-2">Зеркало</span>
+								</div>
+							</div>
+							<div class="col-xl-6"></div>
+						</div>
+					</div>
+					<div class="mb-4">
+						<div class="popup__cnt-ttl mb-3">Оборудование</div>
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_4.png" alt="studio__popup-img_4.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_4.png" alt="studio__popup-img_4.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_4.png" alt="studio__popup-img_4.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_4.png" alt="studio__popup-img_4.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_4.png" alt="studio__popup-img_4.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_4.png" alt="studio__popup-img_4.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mb-4">
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="popup__cnt-ttl mb-3">Платные услуги</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_5.png" alt="studio__popup-img_5.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_6.png" alt="studio__popup-img_6.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_7.png" alt="studio__popup-img_7.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<div class="popup__cnt-ttl mb-3">Бесплатные услуги</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_8.png" alt="studio__popup-img_8.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_8.png" alt="studio__popup-img_8.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+								<div class="d-flex align-items-center mb-2">
+									<div class="room__card-opt-item mb-0"><img src="img/studio__popup-img_8.png" alt="studio__popup-img_8.png"></div>
+									<span class="ml-2">Оборудование</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--/ popup char-->
 	<script src="js/libs.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
