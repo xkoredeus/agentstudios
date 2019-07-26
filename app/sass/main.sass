@@ -104,29 +104,6 @@ textarea:active
 	border-radius: 3px
 	box-shadow: 0px 0px 0px 1px $yel
 	outline: none
-// .select__wrp
-// 	border: 1px solid #BDBDBD
-// 	border-radius: 3px
-// 	position: relative
-// 	min-width: 270px
-// 	background-color: #fff
-// 	&::before
-// 		content: ''
-// 		position: absolute
-// 		width: 10px
-// 		height: 6px
-// 		background: url('../img/icon__arr-bot.png') no-repeat 50% 50% / contain
-// 		top: 50%
-// 		margin-top: -4px
-// 		right: 10px
-// 	select
-// 		width: 100%
-// 		background-color: $tr
-// 		padding: 8px 40px 8px 12px
-// 		position: relative
-// 		appearance: none
-// 		option
-// 			width: 100%
 .sr
 	font-family: $sreg
 .sm
@@ -136,7 +113,7 @@ textarea:active
 .sh
 	font-family: $shev
 .sb
-	font-family: $sbold
+	font-family: $sbold !important
 .ab
 	font-family: $abold
 .shd,
@@ -148,14 +125,22 @@ textarea:active
 a.wt
 	&:hover
 		color: $yel !important
+.yl
+	color: $yel !important
+a.yl
+	&:hover
+		color: $lyel !important
 .bl
 	color: #000 !important
 a.bl
 	&:hover
 		color: $yel !important
+.wgr
+	color: $wgray !important
 .dgr
 	color: #626262 !important
 a.dgr
+	color: #626262 !important
 	&:hover
 		color: $yel !important
 .gr
@@ -1333,6 +1318,19 @@ a.gr
 				&::after
 					transform: rotate(180deg)
 					// opacity: 0
+			&_arr
+				&::before
+					background: url('../img/icon__arr-bot_gray.svg') no-repeat 50% 50% / contain
+					width: 13px
+					height: 9px
+					top: 50%
+					right: 5px
+					transform: translateY(-50%)
+				&::after
+					display: none
+				&.active
+					&::before
+						transform: translateY(-50%) scaleY(-1)
 		&__cnt
 			transition: unset
 .ui-datepicker
@@ -1723,6 +1721,22 @@ a.gr
 		span
 			&:nth-child(2)
 				color: $lgray
+	&__list
+		.sel
+			&__item
+				background-color: #1F1E1E
+				border-radius: 3px
+				overflow: hidden
+			&__img
+				max-width: unset
+				border-radius: 0
+			&__price
+				font-size: 14px
+				font-family: $abold
+				span
+					&:nth-child(2)
+						color: #fff
+						font-family: $sreg
 .let
 	font-size: 16px
 	color: #fff
@@ -1749,13 +1763,19 @@ a.gr
 	.checkbox
 		max-width: 370px
 		&__text
-			color: #dddddde6
+			color: $wgray
 			text-align: left
 			a
 				color: #fff
 				text-decoration-color: $yel
 				&:hover
 					color: $yel
+.link_dec
+	color: #fff
+	text-decoration: underline
+	text-decoration-color: $yel
+	&:hover
+		color: $yel
 .ann
 	color: #000
 	.owl-nav button.owl-
@@ -2636,3 +2656,247 @@ a.gr
 	&__map
 		height: 100%
 		background: url('../img/search__map.jpg') no-repeat 50% 50% / cover
+.page
+	&__ttl
+		font-size: 36px
+		font-family: $aexbold
+		margin-bottom: 25px
+	&-banner
+		padding: 40px 0
+		@include cv
+		.page__back-link
+			color: rgba(255, 255, 255, 0.3)
+			&:hover
+				color: $yel
+				span
+					color: $yel
+					transition: unset
+		&__in
+			padding: 50px 0 90px
+			text-align: center
+			max-width: 869px
+			margin-left: auto
+			margin-right: auto
+		&__ttl
+			font-family: $aexbold
+			font-size: 36px
+			margin-bottom: 30px
+		&__btn
+			width: 100%
+			max-width: 363px
+	&__section-ttl
+		font-family: $aexbold
+		font-size: 24px
+		margin-bottom: 28px
+.opp
+	&__item
+		background: #1F1E1E
+		padding: 40px 25px
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		height: 100%
+		&:hover
+			background: rgba(9, 8, 8, 0.79)
+		&-ttl
+			font-size: 19px
+			line-height: 1.4
+		&-descr
+			color: #ADADAD
+			line-height: 1.4
+.part
+	&-faq
+		padding-bottom: 40px
+		&__subttl
+			color: $wgray
+		&__item
+			display: flex
+			flex-direction: column
+			height: 100%
+			&-top
+				background-color: #1F1E1E
+				padding: 20px 30px
+				span
+					font-family: $ssem
+					font-size: 19px
+					line-height: 1.4
+			&-info
+				color: #ADADAD
+				padding: 20px 30px
+				background-color: #363636
+				min-height: 90px
+	&-feed
+		background-image: url('../img/part-feed__bg.png')
+		@include cv
+		text-align: center
+		padding: 90px 0
+		position: relative
+		&::before
+			@include ovl
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.48) 40%, rgba(0, 0, 0, 0.47) 100%)
+		.container
+			position: relative
+		&__descr
+			max-width: 520px
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 30px
+		&__in
+			max-width: 884px
+			margin-left: auto
+			margin-right: auto
+		&__item
+			display: flex
+			flex-direction: column
+			align-items: center
+			background: rgba(27, 27, 27, 0.65)
+			border-radius: 3px
+			padding: 30px 14px
+			&-descr
+				font-family: $ssem
+				font-size: 19px
+				margin-top: 13px
+				line-height: 1.4
+.trust
+	background-color: #262626
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 97px
+		background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+		border: 1px solid rgba(255, 255, 255, 0.2)
+		&:hover
+			color: #fff
+			background-color: $tr
+			border: 1px solid #E6E7EC
+.let
+	&_part
+		.btn
+			width: 100%
+			max-width: 257px
+.policy
+	&-page
+		&__date
+			font-family: $sbold
+			font-size: 24px
+			margin-bottom: 10px
+		&__descr
+			color: rgba(221, 221, 221, 0.9)
+.cont
+	&__form
+		color: $wgray
+		&-item
+			color: #fff
+			width: 100%
+			border-bottom: 1px solid $yel
+			input
+				color: #fff
+				width: 100%
+				border-bottom: 2px solid #262626
+				padding-left: 0
+				&:focus
+					border: none
+					box-shadow: none
+					border-bottom: 2px solid $yel
+			*::placeholder
+				color: $wgray !important
+	&__map
+		position: relative
+		height: 666px
+		margin-bottom: 35px
+		&-in
+			position: absolute
+			@include cv
+			width: 100%
+			height: 100%
+			right: 0
+			top: 0
+	&__soc
+		&-item
+			width: 83px
+			height: 83px
+			background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+			border: 1px solid rgba(255, 255, 255, 0.2)
+			position: relative
+			margin-right: 20px
+			transition: .45s all ease
+			&-img
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+				transition: .45s all ease
+				&_2
+					opacity: 0
+					transform: translate(-50%,-50%) scale(.5)
+			&:hover
+				background-color: $yel
+				border-color: $yel
+				.cont__soc-item
+					&-img
+						&_1
+							opacity: 0
+							transform: translate(-50%,-50%) scale(.5)
+						&_2
+							opacity: 1
+							transform: translate(-50%,-50%) scale(1)
+	&-acc__item-wrp
+		.acc
+			&__btn
+				padding: 10px 0
+			&__cnt
+				font-size: 14px
+				padding: 20px
+				background-color: #363636a3
+				color: $wgray
+hr
+	opacity: .1
+.faq
+	&-search
+		background: rgba(30, 30, 30, 0.75)
+		border-radius: 3px
+		padding: 6px
+		max-width: 873px
+		&__bar
+			position: relative
+			background-color: rgba(255, 255, 255, 0.2)
+			border-radius: 5px
+			margin-right: 6px
+			&::before
+				content: ''
+				position: absolute
+				width: 16px
+				height: 16px
+				left: 10px
+				top: 50%
+				transform: translateY(-50%)
+				@include ct
+				background-image: url('../img/icon__loupe.svg')
+			input
+				color: #fff
+				padding-left: 40px
+				width: 100%
+			*::placeholder
+				color: #fff !important
+	&__item
+		height: 100%
+		min-height: 118px
+		font-size: 14px
+		padding: 25px 35px
+		background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+		border: 1px solid rgba(255, 255, 255, 0.2)
+		&:hover
+			color: #fff
+			background-color: $tr
+			border: 1px solid #E6E7EC
+	&__acc-link
+		width: 100%
+		display: block
+		padding: 15px 20px
+		&:not(:last-child)
+			border-bottom: 1px solid #262626
+		&:hover
+			background-color: $yel
+			color: #000

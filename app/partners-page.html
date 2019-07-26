@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#4D4D4D">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>New Project</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<div class="content">
+		<header class="header">
+			<div class="header__top d-flex align-items-center">
+				<div class="container">
+					<div class="header__top-in d-flex align-items-center justify-content-between">
+						<div class="d-flex align-items-center">
+							<a href="#" class="header__logo mr-xl-5">AgentStudios</a>
+							<div class="header__descr d-none d-xl-block">Studios and location international booking</div>
+						</div>
+						<div class="d-flex align-items-center">
+							<div class="d-none d-xl-flex align-items-center mr-xl-5">
+								<span>Your location:</span>
+								<a href="#" class="ml-2 dot ss" data-toggle="tooltip" title="change your location">Moscow</a>
+							</div>
+							<a href="#" class="btn header__loc ab mr-xl-5 d-none d-xl-block">List your location</a>
+							<!--login btns-->
+							<div class="d-none d-flex-align-items-center header__sign-wrp mr-5">
+								<a href="#" class="header__sign-link ab">Sign Up</a>
+								<a href="#" class="header__sign-link ab">Sign In</a>
+							</div>
+							<!--/login btns-->
+							<div class="header__cab mr-5">
+								<a href="#" class="header__cab-top d-flex align-items-center">
+									<img src="img/icon__avatar.svg" alt="icon__avatar.svg" class="mr-xl-3 mr-sm-0">
+									<span class="d-none d-xl-block">Roman K.</span>
+								</a>
+								<div class="header__cab-in">
+									<a href="#" class="header__cab-link">Бронирование</a>
+									<a href="#" class="header__cab-link">Избранное</a>
+									<a href="#" class="header__cab-link">Отзывы</a>
+									<a href="#" class="header__cab-link">Настройки</a>
+									<a href="#" class="header__cab-link">Выйти</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hamburger__wrp">
+				<div class="hamburger">
+					<input type="checkbox" id="hamburger" class="hamburger__checkbox visuallyHidden">
+					<label for="hamburger">
+						<div class="hamburger hamburger4">
+							<span class="bar bar2"></span>
+							<span class="bar bar3"></span>
+							<span class="bar bar4"></span>
+							<span class="bar bar5"></span>
+						</div>
+					</label>
+				</div>
+			</div>
+			<!--Hamb menu-->
+			<div class="header__menu">
+				<div class="header__menu-nav">
+					<a href="#" class="header__menu-nav-link">Главная</a>
+					<a href="#" class="header__menu-nav-link">Все студии</a>
+					<a href="#" class="header__menu-nav-link">Популярные студии</a>
+					<a href="#" class="header__menu-nav-link">Подборки</a>
+					<a href="#" class="header__menu-nav-link">FAQ</a>
+					<a href="#" class="header__menu-nav-link">Партнёрство</a>
+					<a href="#" class="header__menu-nav-link">Контакты</a>
+				</div>
+				<a href="#" class="btn d-xl-none header__menu-btn mt-3">Добавить студию</a>
+				<div class="d-flex d-xl-none align-items-center mt-3 header__menu-loc">
+					<span>Your location:</span>
+					<a href="#" class="ml-2 dot ss header__menu-loc-link">Moscow</a>
+				</div>
+				<div class="d-flex d-xl-none align-items-center justify-content-between mt-3">
+					<div class="d-flex align-items-center">
+						<a href="#" class="banner__soc-link"><img src="img/icon__fb.svg" alt="icon__fb.svg"></a>
+						<a href="#" class="banner__soc-link"><img src="img/icon__in.svg" alt="icon__in.svg"></a>
+						<a href="#" class="banner__soc-link"><img src="img/icon__tg.svg" alt="icon__tg.svg"></a>
+					</div>
+					<div class="d-flex d-xl-none align-items-center justify-content-end banner__bot-lang-wrp">
+						<div class="banner__bot-lang">
+							<a href="#" class="banner__bot-lang-link active">EN</a>
+							<a href="#" class="banner__bot-lang-link" data-toggle="tooltip" title="change language">RU</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/Hamb menu-->
+		</header>
+		<section class="page-banner" style="background-image: url(img/partners__banner-bg.jpg)">
+			<div class="container">
+				<a href="#" class="page__back-link fz14"><span><</span> Главная</a>
+				<div class="page-banner__in">
+					<div class="page-banner__ttl">Вы - студия?</div>
+					<div class="page-banner__descr">Мы придумали абсолютно новый сервис по бронированию студий и локаций для фото- и видеосъемки! Воспользуйтесь удобным личным кабинетом, перейдя по ссылке ниже - наш администратор свяжется с вами и проинструктирует по основным возможностям сервиса.</div>
+					<a href="#" class="btn page-banner__btn mt-5">Добавить студию</a>
+				</div>
+			</div>
+		</section>
+		<main class="main">
+			<div class="container">
+				<section class="opp pt-4 mb-4 mb-xl-5">
+					<div class="page__section-ttl">Возможности сервиса</div>
+					<div class="row no-gutters">
+						<div class="col-xl-4 col-sm-6 mb-2">
+							<div class="opp__item mr-2">
+								<img src="img/opt__img_1.svg" alt="opt__img_1.svg">
+								<div class="opp__item-ttl ss mt-3 mb-2">Сервис</div>
+								<div class="opp__item-descr">Вам больше не нужно беспокоиться о пустующих залах. Мы заполним ваш календарь новыми бронями.</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-sm-6 mb-2">
+							<div class="opp__item mr-2">
+								<img src="img/opt__img_2.svg" alt="opt__img_2.svg">
+								<div class="opp__item-ttl ss mt-3 mb-2">Грамотный маркетинг</div>
+								<div class="opp__item-descr">С помощью профессиональных обзоров и статей мы привлечем еще большее внимание к вашей студии. Нам всегда есть, что рассказать и какие интерьерные особенности подчеркнуть</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-sm-6 mb-2">
+							<div class="opp__item">
+								<img src="img/opt__img_3.svg" alt="opt__img_3.svg">
+								<div class="opp__item-ttl ss mt-3 mb-2">Умная система бронирования</div>
+								<div class="opp__item-descr">Благодаря интеграции с Google - календарем студии, мы всегда знаем какая студия свободна в данный момент и готовы здесь и сейчас записать потенциального клиента на любое доступное время. А благодаря системе уведомлений, вы моментально узнаете о новой брони.</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-sm-6">
+							<div class="opp__item mr-2">
+								<img src="img/opt__img_4.svg" alt="opt__img_4.svg">
+								<div class="opp__item-ttl ss mt-3 mb-2">Никакой абонентской платы!</div>
+								<div class="opp__item-descr">Вы платите только процент с каждого предоплаченного бронирования.</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-sm-6">
+							<div class="opp__item mr-2">
+								<img src="img/opt__img_5.svg" alt="opt__img_5.svg">
+								<div class="opp__item-ttl ss mt-3 mb-2">Размещение информации<br> о вашей студии на сайте</div>
+								<div class="opp__item-descr">С помощью профессиональных обзоров и статей мы привлечем еще большее внимание к вашей студии. Нам всегда есть, что рассказать и какие интерьерные особенности подчеркнуть</div>
+							</div>
+						</div>
+						<div class="col-xl-4 col-sm-6">
+							<div class="opp__item">
+								<img src="img/opt__img_6.svg" alt="opt__img_6.svg">
+								<div class="opp__item-ttl ss mt-3 mb-2">Программа лояльности<br> для ваших клиентов</div>
+								<div class="opp__item-descr">Мы поможем собрать и систематизировать данные загруженности зала и длительности нахождения в нем по часам и дням недели, чтобы Вы могли предложить привилегированные условия для своих клиентов.</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="part-faq">
+					<div class="page__section-ttl mb-2">Раздел "Часто задаваемые вопросы"</div>
+					<div class="part-faq__subttl mb-4">Узнайте, как освоиться на платформе, и прочитайте о доступных сервисах и функциях</div>
+					<div class="row">
+						<div class="col-xl-4 mb-4 mb-xl-0">
+							<div class="part-faq__item">
+								<div class="part-faq__item-top">
+									<div class="d-flex align-items-center">
+										<img src="img/part-faq__img_1.svg" alt="part-faq__img_1.svg" class="mr-3">
+										<span>FAQ - Управление личным кабинетом</span>
+									</div>
+								</div>
+								<div class="part-faq__item-info">Как открыть или закрыть студию или зал?</div>
+							</div>
+						</div>
+						<div class="col-xl-4 mb-4 mb-xl-0">
+							<div class="part-faq__item">
+								<div class="part-faq__item-top">
+									<div class="d-flex align-items-center">
+										<img src="img/part-faq__img_2.svg" alt="part-faq__img_2.svg" class="mr-3">
+										<span>FAQ - Управление фотографиями в AgentStudios</span>
+									</div>
+								</div>
+								<div class="part-faq__item-info">Какие фотографии нужны для моей студии?</div>
+							</div>
+						</div>
+						<div class="col-xl-4 mb-4 mb-xl-0">
+							<div class="part-faq__item">
+								<div class="part-faq__item-top">
+									<div class="d-flex align-items-center">
+										<img src="img/part-faq__img_3.svg" alt="part-faq__img_3.svg" class="mr-3">
+										<span>FAQ - Управление платежами гостей</span>
+									</div>
+								</div>
+								<div class="part-faq__item-info">Как быть, если гости нанесли ущерб объекту размещения?</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<section class="part-feed">
+			<div class="container">
+				<div class="section__ttl">Мы всегда на связи</div>
+				<div class="part-feed__descr">Чтобы вы были уверены в надежности нашего сервиса, мы&nbsp;создали один из лучших отделов поддержки пользователей</div>
+				<div class="part-feed__in">
+					<div class="row">
+						<div class="col-sm-6 mb-3 mb-sm-0">
+							<div class="part-feed__item">
+								<img src="img/part-feed__img_1.svg" alt="part-feed__img_1.svg">
+								<div class="part-feed__item-descr">Наша служба поддержки работает круглосуточно и без выходных.</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="part-feed__item">
+								<img src="img/part-feed__img_2.svg" alt="part-feed__img_22.svg">
+								<div class="part-feed__item-descr">Сотрудники службы поддержки говорят на нескольких иностранных языках.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="trust pt-4 pb-5">
+			<div class="container">
+				<div class="section__ttl tac">Нам доверяют, о нас пишут</div>
+				<div class="row">
+					<div class="col-xl-2 mb-3 mb-xl-0">
+						<div class="trust__item">
+							<img src="img/trust__img_1.svg" alt="trust__img_1.svg">
+						</div>
+					</div>
+					<div class="col-xl-2 mb-3 mb-xl-0">
+						<div class="trust__item">
+							<img src="img/trust__img_2.svg" alt="trust__img_2.svg">
+						</div>
+					</div>
+					<div class="col-xl-2 mb-3 mb-xl-0">
+						<div class="trust__item">
+							<img src="img/trust__img_3.svg" alt="trust__img_3.svg">
+						</div>
+					</div>
+					<div class="col-xl-2 mb-3 mb-xl-0">
+						<div class="trust__item">
+							<img src="img/trust__img_4.svg" alt="trust__img_4.svg">
+						</div>
+					</div>
+					<div class="col-xl-2 mb-3 mb-xl-0">
+						<div class="trust__item">
+							<img src="img/trust__img_5.svg" alt="trust__img_5.svg">
+						</div>
+					</div>
+					<div class="col-xl-2 mb-3 mb-xl-0">
+						<div class="trust__item">
+							<img src="img/trust__img_6.svg" alt="trust__img_6.svg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section_inner let let_part">
+			<div class="container">
+				<div class="let__in">
+					<div class="section__subttl mb-3">Гости ждут! Присоединяйтесь!</div>
+					<p>Добавьте вашу студию сейчас - подключение бесплатно!</p>
+					<a href="#" class="btn mt-5">Добавить студию</a>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="d-block footer__logo-wrp flex-column align-items-center d-xl-none mb-5 pb-xl-0">
+					<div>
+						<a href="#" class="footer__logo">AgentStudios</a>
+					</div>
+					<div>
+						<span class="footer__logo-descr">Studios and location international booking</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-2">
+						<div class="d-flex flex-column">
+							<a href="#" class="footer__link mb-3">Все локации</a>
+							<a href="#" class="footer__link mb-3">Контакты</a>
+							<a href="#" class="footer__link mb-3">FAQ</a>
+						</div>
+					</div>
+					<div class="col-xl-2">
+						<div class="d-flex flex-column mb-3">
+							<a href="#" class="footer__link mb-3">Популярные</a>
+							<a href="#" class="footer__link mb-3">Подборки</a>
+							<a href="#" class="footer__link mb-3">О проекте</a>
+						</div>
+					</div>
+					<div class="offset-xl-3"></div>
+					<div class="col-xl-4">
+						<form class="d-none d-xl-flex flex-column align-items-start footer__let">
+							<div class="footer__let-ttl">Be the first to know about discounts and new locations</div>
+							<div class="d-flex flex-column align-items-start">
+								<div class="d-flex justify-content-center align-items-start mt-3 mb-3 mb-xl-0">
+									<div class="input__wrp input__wrp_mail mr-3">
+										<input type="email" placeholder="Your email">
+									</div>
+									<input type="submit" class="btn" value="Subscribe">
+								</div>
+								<div class="mt-3">
+									<label for="let__checkbox" class="checkbox">
+										<input type="checkbox" id="let__checkbox" checked>
+										<span class="checkbox__text">согласен на <a href="#">обработку персональных данных</a> в соответствии с <a href="#">политикой конфиденциальности</a></span>
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<a href="#" class="btn footer__btn d-block d-xl-none mb-3">Добавить студию</a>
+				<div class="row mt-xl-3 align-items-end">
+					<div class="d-none d-xl-block col-xl-2">
+						<a href="#" class="footer__logo">AgentStudios</a>
+					</div>
+					<div class="d-none d-xl-block col-xl-3">
+						<span class="footer__logo-descr">Studios and location international booking</span>
+					</div>
+
+					<div class="offset-xl-2"></div>
+					<div class="col-xl-4">
+						<div class="d-flex flex-column">
+							<a href="#" class="footer__link footer__link_policy mt-4 mt-xl-0">Политика конфиденциальности</a>
+							<span class="footer__logo-descr">Agentstudios. All right reserved 2019 ©</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="preloader">
+		<div class="preloader__icon"></div>
+	</div>
+	<!-- rev 1-->
+	<div id="popup_rev" class="popup__container" style="display:none">
+		<div class="popup__wrp popup_rev__wrp">
+			<form action="[[~[[*id]]]]" method="post" class="popup popup_rev">
+				<div class="popup__top">
+					<div class="popup__close"></div>
+					<div class="popup__ttl">Оставить отзыв</div>
+				</div>
+				<div class="popup__cnt">
+					<div class="popup__cnt-ttl">Введите номер брони</div>
+					<p>Номер бронирования указан в email - подтверждении</p>
+					<div class="input__wrp input__wrp_gray mb-3">
+						<input type="text" placeholder="*11***87665">
+					</div>
+					<p>Отзыв может быть размещен только гостем, бронировавшим зал ранее. Благодаря этому правилу мы точно знаем, что все ваши отзывы написаны только настоящими гостями</p>
+					<a href="#popup_rev_2" data-fancybox class="btn">Оценить</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--/ rev 1-->
+	<!-- rev 2-->
+	<div id="popup_rev_2" class="popup__container" style="display:none">
+		<div class="popup__wrp popup_rev__wrp popup_rev_2__wrp">
+			<form action="[[~[[*id]]]]" method="post" class="popup popup_rev">
+				<div class="popup__top">
+					<div class="popup__close"></div>
+					<div class="popup__ttl">Оставить отзыв</div>
+				</div>
+				<div class="popup__cnt">
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Удобство</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_1" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_1" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_2" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_2" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_10" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_10" name="popup_rev__checkbox_1">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Чистота</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_2" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_2" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_2" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_2" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_20" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_20" name="popup_rev__checkbox_2">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Комфорт</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_3" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_3" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_30" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_30" name="popup_rev__checkbox_3">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Соотношение цена/качество</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_4" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_4" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_40" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_40" name="popup_rev__checkbox_4">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="popup_rev__item mb-3">
+						<div class="popup__cnt-ttl mb-3">Расположение</div>
+						<div class="d-flex align-items-center justify-content-between mb-3">
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>1</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>2</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>3</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>4</div></span>
+							</label>
+							<label for="popup_rev__checkbox_5" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_5" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>5</div></span>
+							</label>
+							<label for="popup_rev__checkbox_6" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_6" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>6</div></span>
+							</label>
+							<label for="popup_rev__checkbox_7" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_7" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>7</div></span>
+							</label>
+							<label for="popup_rev__checkbox_8" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_8" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>8</div></span>
+							</label>
+							<label for="popup_rev__checkbox_9" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_9" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>9</div></span>
+							</label>
+							<label for="popup_rev__checkbox_50" class="checkbox">
+								<input type="radio" id="popup_rev__checkbox_50" name="popup_rev__checkbox_5">
+								<span class="checkbox__text"><div>10</div></span>
+							</label>
+						</div>
+					</div>
+					<div class="input__wrp input__wrp_gray mt-3 mb-3">
+						<textarea id="" rows="4" placeholder="Введите текст*" required=""></textarea>
+					</div>
+					<div class="popup_rev__bot">
+						<label for="popup_rev__policy" class="checkbox">
+							<input type="checkbox" id="popup_rev__policy" checked>
+							<span class="checkbox__text">Отправляя свои данные вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></span>
+						</label>
+						<input type="submit" class="btn mt-4 mb-2" value="Отправить отзыв">
+					</div>
+					<p>Отзыв может быть размещен только гостем, бронировавшим зал ранее. Благодаря этому правилу мы точно знаем, что все ваши отзывы написаны только настоящими гостями</p>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--/ rev 2-->
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
