@@ -16,19 +16,6 @@
   .header__menu.active {
     right: 0;
     margin-right: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
@@ -41,6 +28,9 @@
   }
   .owl-carousel .owl-nav button.owl-next {
     right: 0;
+  }
+  .header__top {
+    z-index: 4;
   }
   .header__top .container {
     z-index: 3;
@@ -327,6 +317,29 @@
   .room__top-ttl {
     font-size: 18px;
   }
+  .room__top-ttl-wrp {
+    width: 100%;
+    padding: 15px 0;
+    position: relative;
+    border-top: 1px solid #323232;
+    border-bottom: 1px solid #323232;
+  }
+  .room__back-link {
+    font-size: 16px;
+    font-family: "AkzidenzGroteskPro-BoldEx";
+    color: #fff !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .room__back-link span {
+    display: block;
+    -webkit-transform: scale(0.8, 1.4);
+        -ms-transform: scale(0.8, 1.4);
+            transform: scale(0.8, 1.4);
+    margin-right: 5px;
+  }
   .room__ttl {
     font-size: 14px;
     margin-bottom: 20px;
@@ -334,11 +347,44 @@
   .room__descr {
     font-size: 14px;
   }
+  .room__adress {
+    padding: 15px 0;
+    border-bottom: 1px solid #323232;
+  }
+  .room__adress span {
+    font-size: 12px;
+  }
+  .room__rate {
+    margin-left: auto;
+  }
   .room__card-slider_top-item {
     height: 273px;
   }
   .room__card-char-item {
     text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  .room__card-char-item div:nth-child(1) {
+    font-size: 15px;
+  }
+  .room__card-char-item div:nth-child(2) {
+    font-size: 12px;
+  }
+  .room__card-bot {
+    font-size: 16px;
+  }
+  .room__card-bot-descr {
+    font-size: 14px;
+  }
+  .rev__item {
+    font-size: 14px;
+  }
+  .rev .room__ttl {
+    font-size: 16px;
+  }
+  .owl-carousel .owl-nav button.owl-prev img, .owl-carousel .owl-nav button.owl-next img {
+    width: 20px;
   }
 }
 

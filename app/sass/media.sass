@@ -26,9 +26,6 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 	.header__menu.active
 		right: 0
 		margin-right: 0
-		display: flex
-		flex-direction: column
-		justify-content: space-between
 @media screen and (max-width: 1200px)
 	.btn
 		// font-size: 14px
@@ -39,6 +36,7 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 		right: 0
 	.header
 		&__top
+			z-index: 4
 			.container
 				z-index: 3
 		&__cab
@@ -271,11 +269,33 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 		&__top
 			&-ttl
 				font-size: 18px
+				&-wrp
+					width: 100%
+					padding: 15px 0
+					position: relative
+					border-top: 1px solid #323232
+					border-bottom: 1px solid #323232
+		&__back-link
+			font-size: 16px
+			font-family: $aexbold
+			color: #fff !important
+			display: flex
+			span
+				display: block
+				transform: scale(.8,1.4)
+				margin-right: 5px
 		&__ttl
 			font-size: 14px
 			margin-bottom: 20px
 		&__descr
 			font-size: 14px
+		&__adress
+			padding: 15px 0
+			border-bottom: 1px solid #323232
+			span
+				font-size: 12px
+		&__rate
+			margin-left: auto
 		&__card
 			&-slider
 				&_top
@@ -283,6 +303,30 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
 						height: 273px
 			&-char-item
 				text-align: center
+				padding-left: 3px
+				padding-right: 3px
+				div
+					&:nth-child(1)
+						font-size: 15px
+					&:nth-child(2)
+						font-size: 12px
+			&-bot
+				font-size: 16px
+				&-descr
+					font-size: 14px
+	.rev
+		&__item
+			font-size: 14px
+		.room__ttl
+			font-size: 16px
+	.owl-carousel
+		.owl-nav
+			button
+				&.owl
+					&-prev,
+					&-next
+						img
+							width: 20px
 @media screen and (max-width: 768px)
 	.header__logo
 		font-size: 16px

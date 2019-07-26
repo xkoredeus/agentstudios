@@ -1392,7 +1392,7 @@ a.gr:hover {
 }
 
 .header__menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 327px;
   right: -100%;
@@ -1403,10 +1403,19 @@ a.gr:hover {
   -webkit-transition: 0.7s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: 0.7s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: 0.7s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.header__menu.active {
-  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header__menu > * {

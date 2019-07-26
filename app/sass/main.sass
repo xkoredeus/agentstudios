@@ -941,7 +941,8 @@ a.gr
 					right: -19px
 					top: 0
 	&__menu
-		position: absolute
+		// position: absolute
+		position: fixed
 		top: 0
 		width: 327px
 		right: -100%
@@ -950,8 +951,9 @@ a.gr
 		padding: 150px 40px 20px
 		z-index: 2
 		transition: .7s all cubic-bezier(0.25, 0.46, 0.45, 0.94)
-		&.active
-			position: fixed
+		display: flex
+		flex-direction: column
+		justify-content: space-between
 		&>*
 			position: relative
 		&::before

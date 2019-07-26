@@ -96,15 +96,15 @@
 		</header>
 		<main class="main">
 			<div class="container">
-				<div class="room__top mb-5">
-					<a href="#" class="room__back-link dgr fz14">< Назад к поиску</a>
-					<div class="d-flex justify-content-between align-items-center flex-xl-row flex-column">
+				<div class="room__top mb-xl-5">
+					<a href="#" class="room__back-link dgr fz14"><span><</span> Назад к поиску</a>
+					<div class="d-flex justify-content-between align-items-xl-center flex-xl-row flex-column">
 						<div class="d-flex flex-column order-2 order-xl-1">
-							<div class="d-flex align-items-center">
+							<div class="room__top-ttl-wrp d-flex align-items-center justify-content-between justify-content-xl-start">
 								<div class="room__top-ttl mr-4">Qweex.Campus</div>
 								<button class="room__fav" data-toggle="tooltip" title="add to favorites"></button>
 							</div>
-							<div class="d-flex align-items-start align-items-xl-center fz14 flex-column flex-xl-row">
+							<div class="room__adress d-flex align-items-start align-items-xl-center fz14 flex-column flex-xl-row">
 								<a href="#" class="d-flex align-items-center gr mr-4">
 									<img src="img/icon__geo_gray.png" alt="icon__geo_gray.png">
 									<span class="ml-2 dot">Москва, Электрозаводская, 21</span>
@@ -115,7 +115,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="room__rate order-1 order-xl-2">
+						<div class="room__rate order-1 order-xl-2 mt-2 mt-xl-0 mb-2 mb-xl-0">
 							<div class="room__rate-top">
 								<div class="d-flex align-items-center justify-content-between">
 									<div class="room__rate-close"></div>
@@ -247,7 +247,7 @@
 										<div class="fz14 mt-2">В студии</div>
 									</div>
 								</div>
-								<div class="room__card-opt mb-5">
+								<div class="room__card-opt mb-5 d-none d-xl-block">
 									<div class="sm mb-3">Популярные опции:</div>
 									<div class="d-flex flex-wrap align-items-center">
 										<div class="room__card-opt-item">Белая циклорама</div>
@@ -262,7 +262,7 @@
 										<div class="room__card-opt-item">Затемнение окон</div>
 									</div>
 								</div>
-								<div class="room__card-opt mb-5">
+								<div class="room__card-opt mb-5 d-none d-xl-block">
 									<div class="d-flex align-items-xl-start flex-column flex-xl-row justify-content-between">
 										<div class="d-flex flex-column align-items-center tac mb-3 mb-sm-0">
 											<div class="sm mb-2">Бесплатные услуги:</div>
@@ -439,16 +439,16 @@
 									<div class="res-card__bot-ttl">Merge</div>
 									<div class="res-card__bot-descr"><span>Новый зал с циклорамой 5 на 5 м, площадью 80м2, созданный специально для проведения профессиональных фото- и видеосъемок, мастер-классов, воркшопов, кастингов и творческих встреч...</span> <span>Только профессиональное оборудование Profoto, Avenger, Kupo - циклорама 5.</span></div>
 									<a href="#" class="tac und res-card__bot-more mt-1">read more</a>
-									<div class="mt-3 d-flex justify-content-between align-items-center res-card__bot-btns">
-										<a href="#" class="btn btn_tr btn_tr_black">На страницу зала</a>
-										<a href="#" class="btn res-card__bot-check">Забронировать от 1200 р.</a>
+									<div class="mt-3 d-flex flex-column d-sm-row justify-content-between align-items-center">
+										<a href="#" class="btn btn_tr btn_tr_black w100 mb-2 mb-sm-0">На страницу зала</a>
+										<a href="#" class="btn res-card__bot-check w100">Забронировать от 1200 р.</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!--/item-->
 						<!--item-->
-						<div class="col-xl-6 mb-4">
+						<div class="col-xl-6 mb-4 d-none d-xl-block">
 							<div class="res-card">
 								<div class="res-card__check"><img src="img/icon__gal-check.png" alt="icon__gal-check.png"></div>
 								<div class="res-card__top owl-carousel">
@@ -461,14 +461,17 @@
 									<div class="res-card__bot-descr"><span>очень большой и светлый зал площадью 150м2. Интерьер выполнен в светлых тонах, а огромные окна, выходящие на закатную сторону дает очень красивый естественный свет. Зал SET был создан...</span> <span>очень большой и светлый зал площадью 150м2. </span></div>
 
 									<a href="#" class="tac und res-card__bot-more mt-1">read more</a>
-									<div class="mt-3 d-flex justify-content-between align-items-center res-card__bot-btns">
-										<a href="#" class="btn btn_tr btn_tr_black">На страницу зала</a>
-										<a href="#" class="btn res-card__bot-check">Забронировать от 1200 р.</a>
+									<div class="mt-3 d-flex flex-column d-sm-row justify-content-between align-items-center">
+										<a href="#" class="btn btn_tr btn_tr_black w100 mb-2 mb-sm-0">На страницу зала</a>
+										<a href="#" class="btn res-card__bot-check w100">Забронировать от 1200 р.</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!--/item-->
+					</div>
+					<div class="d-flex d-xl-none">
+						<a href="#" class="btn btn_wt w100">Показать еще 1</a>
 					</div>
 				</div>
 				<div class="room__gallery mb-5">
@@ -488,12 +491,12 @@
 		</main>
 		<section class="section_inner rev" id="rev">
 			<div class="container">
-				<div class="d-flex justify-content-between mb-5">
+				<div class="d-flex justify-content-between mb-3 mb-xl-5">
 					<div class="d-flex flex-column">
 						<div class="room__ttl mb-1">Отзывы</div>
 						<div class="fz14">250 гостям здесь понравилось</div>
 					</div>
-					<div class="d-flex align-items-center">
+					<div class="d-none d-xl-flex align-items-center">
 						<a href="#popup_rev" data-fancybox class="btn btn_wt rev__btn mr-xl-5">Оставить отзыв</a>
 						<div class="rev__pag d-flex align-items-center">
 							<a href="#" class="rev__pag-item mr-3"><img src="img/icon__arr_left.png" alt="icon__arr_left.png"></a>
@@ -506,7 +509,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+					<div class="col-xl-3 mb-4 mb-xl-0">
 						<div class="rev__item">
 							<div class="rev__item-in">
 								<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil</p>
@@ -518,7 +521,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+					<div class="col-xl-3 mb-4 mb-xl-0 d-none d-xl-block">
 						<div class="rev__item">
 							<div class="rev__item-in">
 								<p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum.</p>
@@ -530,7 +533,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+					<div class="col-xl-3 mb-4 mb-xl-0 d-none d-xl-block">
 						<div class="rev__item">
 							<div class="rev__item-in">
 								<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure. Temporibus autem quibusdam.</p>
@@ -542,7 +545,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xl-3 col-sm-6 mb-4 mb-xl-0">
+					<div class="col-xl-3 mb-4 mb-xl-0 d-none d-xl-block">
 						<div class="rev__item">
 							<div class="rev__item-in">
 								<p>Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil</p>
@@ -554,6 +557,10 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="d-flex d-xl-none flex-column justify-content-center">
+					<a href="#" class="btn btn_wt w100 mb-2">Показать больше</a>
+					<a href="#popup_rev" data-fancybox class="btn w100">Оставить отзыв</a>
 				</div>
 			</div>
 		</section>
