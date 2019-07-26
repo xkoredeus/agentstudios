@@ -321,6 +321,25 @@
     bottom: -20px;
     background-color: #ffffff2e;
   }
+  .search__filter-in {
+    padding-bottom: 80px;
+  }
+  .room__top-ttl {
+    font-size: 18px;
+  }
+  .room__ttl {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .room__descr {
+    font-size: 14px;
+  }
+  .room__card-slider_top-item {
+    height: 273px;
+  }
+  .room__card-char-item {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 768px) {

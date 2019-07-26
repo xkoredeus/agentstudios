@@ -210,6 +210,13 @@ $(function() {
 		$('.banner-filter input').on('input', function(){
 			$('.banner-filter__act').slideDown();
 		});
+		$('.search__filter-act').hide();
+		$('.search__filter input').on('input', function(){
+			$('.search__filter-act').slideDown();
+		});
+		$('.search__filter select').change(function(){
+			$('.search__filter-act').slideDown();
+		});
 	};
 	//jquery slider
 	$(".banner-filter__slider").slider({
