@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#4D4D4D">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>New Project</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<header class="header header_main">
+		<div class="header__top d-flex align-items-center">
+			<div class="container">
+				<div class="header__top-in d-flex align-items-center justify-content-between">
+					<div class="d-flex align-items-center">
+						<a href="#" class="header__logo mr-xl-5">AgentStudios</a>
+						<div class="header__descr d-none d-xl-block">Studios and location international booking</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="container">
+				<form class="sign__wrp">
+					<div class="sign__ttl">Sign up</div>
+					<div class="input__wrp w100">
+						<input type="email" placeholder="Your email">
+					</div>
+					<div class="input__wrp w100">
+						<input type="text" placeholder="Your name">
+					</div>
+					<div class="input__wrp w100">
+						<input type="password" placeholder="Your password">
+					</div>
+					<div class="input__wrp w100">
+						<input type="password" placeholder="Confirm password">
+					</div>
+					<div class="mt-1 mb-3">
+						<label for="sign__checkbox_1" class="checkbox">
+							<input type="checkbox" id="sign__checkbox_1">
+							<span class="checkbox__text">I wish to receive newsletters, promotions and news from AgentStudios.</span>
+						</label>
+					</div>
+					<input type="submit" value="Sign in" class="btn w100">
+					<div class="mt-2 fz14">Already registered? <a href="#" class="link_dec">Sign in</a></div>
+				</form>
+			</div>
+		</div>
+		<div class="banner__bot">
+			<div class="container">
+					<div class="d-flex align-items-center justify-content-center justify-content-xl-between">
+						<div class="d-none d-xl-flex align-items-center">
+							<a href="#" class="banner__soc-link" data-toggle="tooltip" title="open facebook account"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
+							<a href="#" class="banner__soc-link" data-toggle="tooltip" title="open istagram channel"><img src="img/icon__in.png" alt="icon__in.png"></a>
+							<a href="#" class="banner__soc-link" data-toggle="tooltip" title="write us in telegram"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
+						</div>
+						<div class="d-none d-xl-flex align-items-center justify-content-end banner__bot-lang-wrp">
+							<div class="banner__bot-lang">
+								<a href="#" class="banner__bot-lang-link active">EN</a>
+								<a href="#" class="banner__bot-lang-link" data-toggle="tooltip" title="change language">RU</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="preloader">
+		<div class="preloader__icon"></div>
+	</div>
+	<div id="popup_call" class="popup__container" style="display:none">
+		<div  class="popup__wrp popup_call__wrp">
+			<form action="[[~[[*id]]]]" method="post" class="popup">
+				<h3 class="popup__ttl">Оставьте заявку</h3>
+				<div class="input__wrp input__wrp_name">
+					<input type="text" class="form__input" name="popup_call__name" placeholder="Ваше имя" required="">
+				</div>
+				<div class="input__wrp input__wrp_tel">
+					<input type="tel" class="form__input" name="popup_call__tel" placeholder="Телефон" required="">
+				</div>
+				<div class="input__wrp input__wrp_mail">
+					<input type="email" class="form__input" name="popup_call__email" placeholder="E-mail">
+				</div>
+				<input type="submit" class="btn" value="Search">
+				<div class="popup__policy">
+					Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#" class="form__policy-link">политикой конфиденциальности</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
