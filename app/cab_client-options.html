@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#4D4D4D">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>New Project</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<div class="content">
+		<header class="header">
+			<div class="header__top d-flex align-items-center">
+				<div class="container">
+					<div class="header__top-in d-flex align-items-center justify-content-between">
+						<div class="d-flex align-items-center">
+							<a href="#" class="header__logo mr-xl-5">AgentStudios</a>
+							<div class="header__descr d-none d-xl-block">Studios and location international booking</div>
+						</div>
+						<div class="d-flex align-items-center">
+							<div class="d-none d-xl-flex align-items-center mr-xl-5">
+								<span>Your location:</span>
+								<a href="#" class="ml-2 dot ss" data-toggle="tooltip" title="change your location">Moscow</a>
+							</div>
+							<a href="#" class="btn header__loc ab mr-xl-5 d-none d-xl-block">List your location</a>
+							<!--login btns-->
+							<div class="d-none d-flex-align-items-center header__sign-wrp mr-5">
+								<a href="#" class="header__sign-link ab">Sign Up</a>
+								<a href="#" class="header__sign-link ab">Sign In</a>
+							</div>
+							<!--/login btns-->
+							<div class="header__cab mr-5">
+								<a href="#" class="header__cab-top d-flex align-items-center">
+									<img src="img/icon__avatar.svg" alt="icon__avatar.svg" class="mr-xl-3 mr-sm-0">
+									<span class="d-none d-xl-block">Roman K.</span>
+								</a>
+								<div class="header__cab-in">
+									<a href="#" class="header__cab-link">Бронирование</a>
+									<a href="#" class="header__cab-link">Избранное</a>
+									<a href="#" class="header__cab-link">Отзывы</a>
+									<a href="#" class="header__cab-link">Настройки</a>
+									<a href="#" class="header__cab-link">Выйти</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hamburger__wrp">
+				<div class="hamburger">
+					<input type="checkbox" id="hamburger" class="hamburger__checkbox visuallyHidden">
+					<label for="hamburger">
+						<div class="hamburger hamburger4">
+							<span class="bar bar2"></span>
+							<span class="bar bar3"></span>
+							<span class="bar bar4"></span>
+							<span class="bar bar5"></span>
+						</div>
+					</label>
+				</div>
+			</div>
+			<!--Hamb menu-->
+			<div class="header__menu">
+				<div class="header__menu-nav">
+					<a href="#" class="header__menu-nav-link">Главная</a>
+					<a href="#" class="header__menu-nav-link">Все студии</a>
+					<a href="#" class="header__menu-nav-link">Популярные студии</a>
+					<a href="#" class="header__menu-nav-link">Подборки</a>
+					<a href="#" class="header__menu-nav-link">FAQ</a>
+					<a href="#" class="header__menu-nav-link">Партнёрство</a>
+					<a href="#" class="header__menu-nav-link">Контакты</a>
+				</div>
+				<a href="#" class="btn d-xl-none header__menu-btn mt-3">Добавить студию</a>
+				<div class="d-flex d-xl-none align-items-center mt-3 header__menu-loc">
+					<span>Your location:</span>
+					<a href="#" class="ml-2 dot ss header__menu-loc-link">Moscow</a>
+				</div>
+				<div class="d-flex d-xl-none align-items-center justify-content-between mt-3">
+					<div class="d-flex align-items-center">
+						<a href="#" class="banner__soc-link"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
+						<a href="#" class="banner__soc-link"><img src="img/icon__in.png" alt="icon__in.png"></a>
+						<a href="#" class="banner__soc-link"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
+					</div>
+					<div class="d-flex d-xl-none align-items-center justify-content-end banner__bot-lang-wrp">
+						<div class="banner__bot-lang">
+							<a href="#" class="banner__bot-lang-link active">EN</a>
+							<a href="#" class="banner__bot-lang-link" data-toggle="tooltip" title="change language">RU</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/Hamb menu-->
+		</header>
+		<main class="main">
+			<div class="container">
+				<a href="#" class="page__back-link dgr fz14"><span><</span> Главная</a>
+				<div class="cab__top d-flex justify-content-between align-items-center mt-3">
+					<div class="d-flex align-items-center">
+						<img src="img/icon__options.svg" alt="icon__options.svg">
+						<div class="page__ttl mb-0 ml-3">Настройки</div>
+					</div>
+					<div class="d-flex align-items-center justify-content-end">
+						<a href="#" class="cab__top-link">Мои бронирования</a>
+						<a href="#" class="cab__top-link">Избранное</a>
+						<a href="#" class="cab__top-link">Отзывы</a>
+					</div>
+				</div>
+				<div class="cab__in">
+					<form class="cab__item mb-5 wgr">
+						<div class="row mb-4">
+							<div class="col-xl-2">
+								<div class="cab_opt__avatar-wrp">
+									<div class="cab_opt__avatar" style="background-image: url(img/cab_opt__avatar.png)"></div>
+									<div class="upload__file-wrp btn">
+										<input type="file" name="" id="upload__file_1" class="upload__file" placeholder="Изменить">
+										<label for="upload__file_1" class="filename">Изменить</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column fz15">
+									<div class="row mb-3">
+										<div class="col-5">Фамилия</div>
+										<div class="col-7">
+											<div class="cab_opt__input-wrp">
+												<input type="text" value="Ivanov" class="cab_opt__input">
+											</div>
+										</div>
+									</div>
+									<div class="row mb-3">
+										<div class="col-5">Имя</div>
+										<div class="col-7">
+											<div class="cab_opt__input-wrp">
+												<input type="text" value="Константин" class="cab_opt__input">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-5">Отчество</div>
+										<div class="col-7">
+											<div class="cab_opt__input-wrp">
+												<input type="text" value="Ivanovich" class="cab_opt__input">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="offset-xl-1"></div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column">
+									<div class="cab_opt__input-wrp cab_opt__input-wrp_login mb-3">
+										<input type="text" value="example" class="cab_opt__input">
+									</div>
+									<div class="cab_opt__input-wrp cab_opt__input-wrp_tel">
+										<input type="tel" value="+7 929 664 46 27" class="cab_opt__input">
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column">
+									<div class="cab_opt__input-wrp cab_opt__input-wrp_mail">
+										<input type="email" value="example@gmail.com" class="cab_opt__input">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-4">
+							<div class="col-sm-3">
+								<a href="#" class="btn btn_tr w100">Изменить пароль</a>
+							</div>
+						</div>
+						<div class="row mb-4">
+							<div class="col-sm-5">
+								<div class="row mb-3">
+									<div class="col-5">Текущий пароль</div>
+									<div class="col-7">
+										<div class="cab_opt__input-wrp cab_opt__input-wrp_pass">
+											<input type="password" value="********" class="cab_opt__input">
+										</div>
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col-5">Новый пароль</div>
+									<div class="col-7">
+										<div class="cab_opt__input-wrp cab_opt__input-wrp_pass">
+											<input type="password" value="********" class="cab_opt__input">
+										</div>
+									</div>
+								</div>
+								<div class="row mb-3">
+									<div class="col-5">Повторите пароль</div>
+									<div class="col-7">
+										<div class="cab_opt__input-wrp cab_opt__input-wrp_pass">
+											<input type="password" value="********" class="cab_opt__input">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<a href="#" class="btn w100">Сохранить изменения</a>
+							</div>
+						</div>
+					</form>
+					<div class="cab-bonus pb-3">
+						<div class="row">
+							<div class="col-xl-3">
+								<div class="page__section-ttl mb-4">Бонусная<br>программа</div>
+								<div class="sm mb-1">Ваш бонусный баланс:</div>
+								<div class="page__section-ttl yl mb-4">1 000 баллов</div>
+								<div class="page__section-ttl cab-bonus__eq mb-0">1 балл = 1 Р</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column">
+									<div class="sm yl mb-3">1. Делитесь опытом</div>
+									<div class="mb-2 wgr">Делитесь сервисом с друзьями и знакомыми и получайте бонусы:</div>
+									<div class="mb-2 wgr">100 баллов вам и тому кто завершит первое бронирование!</div>
+									<div class="mb-3 wgr">Ваша реферальная ссылка:</div>
+									<div class="cab-bonus__ref">
+										<span>https://app.moqups.com/...</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column">
+									<div class="sm yl mb-3">2. Получайте CashBack</div>
+									<div class="mb-2 wgr"> Бронируйте студии и получайте CashBack в виде баллов за каждое бронирование</div>
+									<div class="wgr">Чем больше бронирований, тем выше ваш CashBack.</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column">
+									<div class="sm yl mb-3">3. Используйте баллы</div>
+									<div class="mb-2 wgr">Бронируйте студии и оплачивайте баллами!</div>
+									<div class="wgr">Подробную информацию по бонусной программе вы можете прочитать в <a href="#" class="link_dec">Положении о бонусной программе</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="d-block footer__logo-wrp flex-column align-items-center d-xl-none mb-5 pb-xl-0">
+					<div>
+						<a href="#" class="footer__logo">AgentStudios</a>
+					</div>
+					<div>
+						<span class="footer__logo-descr">Studios and location international booking</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-2">
+						<div class="d-flex flex-column">
+							<a href="#" class="footer__link mb-3">Все локации</a>
+							<a href="#" class="footer__link mb-3">Контакты</a>
+							<a href="#" class="footer__link mb-3">FAQ</a>
+						</div>
+					</div>
+					<div class="col-xl-2">
+						<div class="d-flex flex-column mb-3">
+							<a href="#" class="footer__link mb-3">Популярные</a>
+							<a href="#" class="footer__link mb-3">Подборки</a>
+							<a href="#" class="footer__link mb-3">О проекте</a>
+						</div>
+					</div>
+					<div class="offset-xl-3"></div>
+					<div class="col-xl-4">
+						<form class="d-none d-xl-flex flex-column align-items-start footer__let">
+							<div class="footer__let-ttl">Be the first to know about discounts and new locations</div>
+							<div class="d-flex flex-column align-items-start">
+								<div class="d-flex justify-content-center align-items-start mt-3 mb-3 mb-xl-0">
+									<div class="input__wrp input__wrp_mail mr-3">
+										<input type="email" placeholder="Your email">
+									</div>
+									<input type="submit" class="btn" value="Subscribe">
+								</div>
+								<div class="mt-3">
+									<label for="let__checkbox" class="checkbox">
+										<input type="checkbox" id="let__checkbox" checked>
+										<span class="checkbox__text">согласен на <a href="#">обработку персональных данных</a> в соответствии с <a href="#">политикой конфиденциальности</a></span>
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<a href="#" class="btn footer__btn d-block d-xl-none mb-3">Добавить студию</a>
+				<div class="row mt-xl-3 align-items-end">
+					<div class="d-none d-xl-block col-xl-2">
+						<a href="#" class="footer__logo">AgentStudios</a>
+					</div>
+					<div class="d-none d-xl-block col-xl-3">
+						<span class="footer__logo-descr">Studios and location international booking</span>
+					</div>
+
+					<div class="offset-xl-2"></div>
+					<div class="col-xl-4">
+						<div class="d-flex flex-column">
+							<a href="#" class="footer__link footer__link_policy mt-4 mt-xl-0">Политика конфиденциальности</a>
+							<span class="footer__logo-descr">Agentstudios. All right reserved 2019 ©</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="preloader">
+		<div class="preloader__icon"></div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

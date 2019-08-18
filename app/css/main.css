@@ -4749,3 +4749,243 @@ hr {
 .tar {
   text-align: right;
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.upload__file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.upload__file-wrp {
+  cursor: pointer;
+}
+
+.upload__file-wrp label.filename {
+  cursor: pointer;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.cab__top {
+  margin-bottom: 40px;
+}
+
+.cab__top-link {
+  font-family: "AkzidenzGroteskPro-BoldEx";
+  color: #A0A0A0;
+}
+
+.cab__top-link:first-child {
+  color: #FFD542;
+}
+
+.cab__top-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.cab__item {
+  padding: 30px;
+  background-color: rgba(54, 54, 54, 0.6);
+}
+
+.cab_opt__avatar {
+  width: 120px;
+  height: 120px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cab_opt__avatar-wrp {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.cab_opt__avatar-wrp .upload__file-wrp {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+}
+
+.cab_opt__input {
+  font-size: 15px;
+  color: #DDDDDD !important;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  padding: 0;
+  padding-bottom: 4px;
+  width: 100%;
+}
+
+.cab_opt__input:focus, .cab_opt__input:active {
+  border-bottom-color: #FFD542;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  border-radius: 0;
+}
+
+.cab_opt__input::-webkit-input-placeholder {
+  color: #DDDDDD;
+}
+
+.cab_opt__input::-moz-placeholder {
+  color: #DDDDDD;
+}
+
+.cab_opt__input:-ms-input-placeholder {
+  color: #DDDDDD;
+}
+
+.cab_opt__input::-ms-input-placeholder {
+  color: #DDDDDD;
+}
+
+.cab_opt__input::placeholder {
+  color: #DDDDDD;
+}
+
+.cab_opt__input-wrp {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 220px;
+}
+
+.cab_opt__input-wrp_pass {
+  max-width: unset;
+}
+
+.cab_opt__input-wrp_pass::before {
+  display: none;
+}
+
+.cab_opt__input-wrp_pass .cab_opt__input {
+  border-bottom-color: #FFD542;
+}
+
+.cab_opt__input-wrp::before {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: -4px;
+  width: 17px;
+  height: 20px;
+  background-image: url("../img/icon__edit.svg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: .6;
+}
+
+.cab_opt__input-wrp::after {
+  content: '';
+  position: absolute;
+  left: -35px;
+  width: 18px;
+  height: 20px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.cab_opt__input-wrp:hover::before {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.cab_opt__input-wrp_login {
+  margin-left: 35px;
+}
+
+.cab_opt__input-wrp_login::after {
+  top: 1px;
+  background-image: url("../img/icon__login.svg");
+}
+
+.cab_opt__input-wrp_tel {
+  margin-left: 35px;
+}
+
+.cab_opt__input-wrp_tel::after {
+  top: 0px;
+  background-image: url("../img/icon__tel.svg");
+}
+
+.cab_opt__input-wrp_mail {
+  margin-left: 35px;
+}
+
+.cab_opt__input-wrp_mail::after {
+  top: 1px;
+  background-image: url("../img/icon__mail_opt.svg");
+}
+
+.cab-bonus__eq {
+  color: #6b6b6b;
+}
+
+.cab-bonus__ref {
+  padding: 15px 43px 15px 25px;
+  position: relative;
+  background-color: #151515;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.cab-bonus__ref::before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: url("../img/icon__copy.svg");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: .6;
+}
+
+.cab-bonus__ref:hover::before {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.cab-bonus__ref span {
+  color: #fff;
+  font-family: "SFUIText-Medium";
+  text-decoration: underline;
+  -webkit-text-decoration-color: #FFD542;
+          text-decoration-color: #FFD542;
+}

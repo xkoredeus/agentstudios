@@ -2926,3 +2926,142 @@ hr
 		margin-bottom: 25px
 .tar
 	text-align: right
+.img-fluid
+	max-width: 100%
+	height: auto
+
+.upload__file
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+	&-wrp
+		cursor: pointer
+		label.filename
+			cursor: pointer
+			// text-transform: uppercase
+			margin-bottom: 0
+			cursor: pointer
+.cab
+	&__top
+		margin-bottom: 40px
+		&-link
+			font-family: $aexbold
+			color: #A0A0A0
+			&:first-child
+				color: $yel
+			&:not(:last-child)
+				margin-right: 30px
+	&__item
+		padding: 30px
+		background-color: rgba(54, 54, 54, .6)
+	&_opt
+		&__avatar
+			width: 120px
+			height: 120px
+			@include ct
+			&-wrp
+				display: flex
+				justify-content: center
+				position: relative
+				.upload__file-wrp
+					position: absolute
+					left: 50%
+					bottom: 0
+					transform: translateX(-50%)
+					width: 100%
+		&__input
+			font-size: 15px
+			color: $wgray !important
+			border-bottom: 1px solid $tr
+			border-radius: 0
+			padding: 0
+			padding-bottom: 4px
+			width: 100%
+			&:focus,
+			&:active
+				border-bottom-color: $yel
+				box-shadow: unset
+				border-radius: 0
+			&::placeholder
+				color: $wgray
+			&-wrp
+				position: relative
+				display: flex
+				max-width: 220px
+				&_pass
+					max-width: unset
+					&::before
+						display: none
+					.cab_opt__input
+						border-bottom-color: $yel
+				&::before
+					content: ''
+					position: absolute
+					right: 5px
+					top: -4px
+					width: 17px
+					height: 20px
+					background-image: url('../img/icon__edit.svg')
+					@include ct
+					filter: grayscale(100%)
+					opacity: .6
+				&::after
+					content: ''
+					position: absolute
+					left: -35px
+					width: 18px
+					height: 20px
+					@include ct
+				&:hover
+					&::before
+						opacity: 1
+						filter: grayscale(0)
+				&_login
+					margin-left: 35px
+					&::after
+						top: 1px
+						background-image: url('../img/icon__login.svg')
+				&_tel
+					margin-left: 35px
+					&::after
+						top: 0px
+						background-image: url('../img/icon__tel.svg')
+				&_mail
+					margin-left: 35px
+					&::after
+						top: 1px
+						background-image: url('../img/icon__mail_opt.svg')
+	&-bonus
+		&__eq
+			color: #6b6b6b
+		&__ref
+			padding: 15px 43px 15px 25px
+			position: relative
+			background-color: #151515
+			border-radius: 5px
+			position: relative
+			cursor: pointer
+			&::before
+				content: ''
+				position: absolute
+				right: 25px
+				top: 50%
+				width: 20px
+				height: 20px
+				transform: translateY(-50%)
+				background-image: url('../img/icon__copy.svg')
+				@include ct
+				filter: grayscale(100%)
+				opacity: .6
+			&:hover
+				&::before
+					opacity: 1
+					filter: grayscale(0)
+			span
+				color: #fff
+				font-family: $smed
+				text-decoration: underline
+				text-decoration-color: $yel
