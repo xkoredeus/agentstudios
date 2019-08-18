@@ -463,3 +463,47 @@ $(".upload__file").change(function() {
 	$(this).next(".filename").text(filename.join(", "));
 	$(this).parent().next('.upload__file-status').css('display','none');
 });
+
+
+//range cab rev
+$(function() {
+	var sheet = document.createElement('style'),  
+		$rangeInput = $('.cab-rev__range input'),
+		prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
+
+	document.body.appendChild(sheet);
+
+	var getTrackStyle = function (el) {  
+		var curVal = el.value,
+				val = (curVal - 1) * 10,
+				style = '';
+		
+		// Set active label
+		$('.cab-rev__range-labels li').removeClass('active selected');
+		
+		var curLabel = $('.cab-rev__range-labels').find('li:nth-child(' + curVal + ')');
+		
+		curLabel.addClass('active selected');
+		curLabel.prevAll().addClass('selected');
+		
+		// Change background gradient
+		for (var i = 0; i < prefs.length; i++) {
+			style += '.cab-rev__range {background: linear-gradient(to right, #FFDB5F 0%, #FFDB5F ' + val + '%, #fff ' + val + '%, #fff 100%)}';
+			style += '.cab-rev__range input::-' + prefs[i] + '{background: linear-gradient(to right, #FFDB5F 0%, #FFDB5F ' + val + '%, #b2b2b2 ' + val + '%, #b2b2b2 100%)}';
+		}
+
+		return style;
+	}
+
+	$rangeInput.on('input', function () {
+		sheet.textContent = getTrackStyle(this);
+	});
+
+	// Change input value on label click
+	$('.cab-rev__range-labels li').on('click', function () {
+		var index = $(this).index();
+		
+		$rangeInput.val(index + 1).trigger('input');
+		
+	});
+});

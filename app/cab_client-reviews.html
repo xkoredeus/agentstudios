@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#4D4D4D">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>New Project</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<div class="content">
+		<header class="header">
+			<div class="header__top d-flex align-items-center">
+				<div class="container">
+					<div class="header__top-in d-flex align-items-center justify-content-between">
+						<div class="d-flex align-items-center">
+							<a href="#" class="header__logo mr-xl-5">AgentStudios</a>
+							<div class="header__descr d-none d-xl-block">Studios and location international booking</div>
+						</div>
+						<div class="d-flex align-items-center">
+							<div class="d-none d-xl-flex align-items-center mr-xl-5">
+								<span>Your location:</span>
+								<a href="#" class="ml-2 dot ss" data-toggle="tooltip" title="change your location">Moscow</a>
+							</div>
+							<a href="#" class="btn header__loc ab mr-xl-5 d-none d-xl-block">List your location</a>
+							<!--login btns-->
+							<div class="d-none d-flex-align-items-center header__sign-wrp mr-5">
+								<a href="#" class="header__sign-link ab">Sign Up</a>
+								<a href="#" class="header__sign-link ab">Sign In</a>
+							</div>
+							<!--/login btns-->
+							<div class="header__cab mr-5">
+								<a href="#" class="header__cab-top d-flex align-items-center">
+									<img src="img/icon__avatar.svg" alt="icon__avatar.svg" class="mr-xl-3 mr-sm-0">
+									<span class="d-none d-xl-block">Roman K.</span>
+								</a>
+								<div class="header__cab-in">
+									<a href="#" class="header__cab-link">Бронирование</a>
+									<a href="#" class="header__cab-link">Избранное</a>
+									<a href="#" class="header__cab-link">Отзывы</a>
+									<a href="#" class="header__cab-link">Настройки</a>
+									<a href="#" class="header__cab-link">Выйти</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hamburger__wrp">
+				<div class="hamburger">
+					<input type="checkbox" id="hamburger" class="hamburger__checkbox visuallyHidden">
+					<label for="hamburger">
+						<div class="hamburger hamburger4">
+							<span class="bar bar2"></span>
+							<span class="bar bar3"></span>
+							<span class="bar bar4"></span>
+							<span class="bar bar5"></span>
+						</div>
+					</label>
+				</div>
+			</div>
+			<!--Hamb menu-->
+			<div class="header__menu">
+				<div class="header__menu-nav">
+					<a href="#" class="header__menu-nav-link">Главная</a>
+					<a href="#" class="header__menu-nav-link">Все студии</a>
+					<a href="#" class="header__menu-nav-link">Популярные студии</a>
+					<a href="#" class="header__menu-nav-link">Подборки</a>
+					<a href="#" class="header__menu-nav-link">FAQ</a>
+					<a href="#" class="header__menu-nav-link">Партнёрство</a>
+					<a href="#" class="header__menu-nav-link">Контакты</a>
+				</div>
+				<a href="#" class="btn d-xl-none header__menu-btn mt-3">Добавить студию</a>
+				<div class="d-flex d-xl-none align-items-center mt-3 header__menu-loc">
+					<span>Your location:</span>
+					<a href="#" class="ml-2 dot ss header__menu-loc-link">Moscow</a>
+				</div>
+				<div class="d-flex d-xl-none align-items-center justify-content-between mt-3">
+					<div class="d-flex align-items-center">
+						<a href="#" class="banner__soc-link"><img src="img/icon__fb.png" alt="icon__fb.png"></a>
+						<a href="#" class="banner__soc-link"><img src="img/icon__in.png" alt="icon__in.png"></a>
+						<a href="#" class="banner__soc-link"><img src="img/icon__tg.png" alt="icon__tg.png"></a>
+					</div>
+					<div class="d-flex d-xl-none align-items-center justify-content-end banner__bot-lang-wrp">
+						<div class="banner__bot-lang">
+							<a href="#" class="banner__bot-lang-link active">EN</a>
+							<a href="#" class="banner__bot-lang-link" data-toggle="tooltip" title="change language">RU</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/Hamb menu-->
+		</header>
+		<main class="main">
+			<div class="container">
+				<a href="#" class="page__back-link dgr fz14"><span><</span> Главная</a>
+				<div class="cab__top d-flex justify-content-between align-items-center mt-3">
+					<div class="d-flex align-items-center">
+						<div class="d-flex align-items-center">
+							<img src="img/icon__rev.svg" alt="icon__rev.svg">
+							<div class="page__ttl mb-0 ml-3">Отзывы</div>
+						</div>
+						<a href="#" class="btn ml-5">Добавить отзыв</a>
+					</div>
+					<div class="d-flex align-items-center justify-content-end">
+						<a href="#" class="cab__top-link">Мои бронирования</a>
+						<a href="#" class="cab__top-link">Избранное</a>
+						<a href="#" class="cab__top-link">Настройки</a>
+					</div>
+				</div>
+				<div class="cab__in">
+					<!--item-->
+					<div class="cab__item wgr">
+						<div class="row mb-4">
+							<div class="col-xl-3 cab-rev__item-col">
+								<div class="d-flex flex-column">
+									<div class="mb-4">
+										<span>Студия</span> <a href="#" class="link_dec sm">Крафт</a> / <span>Зал</span> <a href="#" class="link_dec sm">Green</a></div>
+									<div class="mb-4">
+										<div class="mb-2">Начало / Завершение</div>
+										<div class="wt sm">
+											<span>7.07.19</span> | <span>10:00</span> - <span>7.07.19</span> | <span>12:00</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-4">Стоимость</div>
+										<div class="col-4">Статус</div>
+									</div>
+									<div class="row mb- sm wt">
+										<div class="col-4">1200 Р</div>
+										<div class="col-4">Завершено</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column justify-content-between h100">
+									<div class="mb-3">
+										<span>Отзыв:</span>
+										<a href="#" class="wt sm">Cтудия Крафт от 15.08.2019</a>
+									</div>
+									<div class="row">
+										<div class="col-10">Соотношение цена/качество</div>
+										<div class="col-2">10</div>
+									</div>
+									<div class="row">
+										<div class="col-10">Состояние оборудования</div>
+										<div class="col-2">10</div>
+									</div>
+									<div class="row">
+										<div class="col-10">Чистота залов и гримерок</div>
+										<div class="col-2">10</div>
+									</div>
+									<div class="row">
+										<div class="col-10">Местоположение</div>
+										<div class="col-2">9</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<div class="mb-4 tar">На модерации</div>
+								<p>Очень приятная студия в центре Москвы. Милый и отзывчивый персонал и отличное пространство для съемок. Было сложно найти вначале. Советую владельцам студии указать на сайте, что вход в здание с Крапивенского переулка...</p>
+								<a href="#" class="link_dec sm">Читать полностью</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<a href="#popup_rev" data-fancybox class="btn btn_tr d-flex justify-content-center align-items-center w100">
+									<img src="img/icon__edit_white.svg" alt="icon__edit_white.svg">
+									<span class="ml-2">Редактировать отзыв</span>
+								</a>
+							</div>
+							<div class="col-sm-3">
+								<a href="#" class="btn btn_tr d-flex justify-content-center align-items-center w100">
+									<img src="img/icon__delete.svg" alt="icon__delete.svg">
+									<span class="ml-2">Удалить отзыв</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!--/item-->
+					<!--item-->
+					<div class="cab__item wgr">
+						<div class="row mb-4">
+							<div class="col-xl-3 cab_rev__item-col">
+								<div class="d-flex flex-column">
+									<div class="mb-4">
+										<span>Студия</span> <a href="#" class="link_dec sm">Крафт</a> / <span>Зал</span> <a href="#" class="link_dec sm">Green</a></div>
+									<div class="mb-4">
+										<div class="mb-2">Начало / Завершение</div>
+										<div class="wt sm">
+											<span>7.07.19</span> | <span>10:00</span> - <span>7.07.19</span> | <span>12:00</span>
+										</div>
+									</div>
+									<div class="row mb-2">
+										<div class="col-4">Стоимость</div>
+										<div class="col-4">Статус</div>
+									</div>
+									<div class="row mb- sm wt">
+										<div class="col-4">1200 Р</div>
+										<div class="col-4">Завершено</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3">
+								<div class="d-flex flex-column justify-content-between h100">
+									<div class="mb-3">
+										<span>Отзыв:</span>
+										<a href="#" class="wt sm">Cтудия Крафт от 15.08.2019</a>
+									</div>
+									<div class="row">
+										<div class="col-10">Соотношение цена/качество</div>
+										<div class="col-2">10</div>
+									</div>
+									<div class="row">
+										<div class="col-10">Состояние оборудования</div>
+										<div class="col-2">10</div>
+									</div>
+									<div class="row">
+										<div class="col-10">Чистота залов и гримерок</div>
+										<div class="col-2">10</div>
+									</div>
+									<div class="row">
+										<div class="col-10">Местоположение</div>
+										<div class="col-2">9</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<div class="mb-4 tar">На модерации</div>
+								<p>Очень приятная студия в центре Москвы. Милый и отзывчивый персонал и отличное пространство для съемок. Было сложно найти вначале. Советую владельцам студии указать на сайте, что вход в здание с Крапивенского переулка...</p>
+								<a href="#" class="link_dec sm">Читать полностью</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-3">
+								<a href="#popup_rev" data-fancybox class="btn btn_tr d-flex justify-content-center align-items-center w100">
+									<img src="img/icon__edit_white.svg" alt="icon__edit_white.svg">
+									<span class="ml-2">Редактировать отзыв</span>
+								</a>
+							</div>
+							<div class="col-sm-3">
+								<a href="#" class="btn btn_tr d-flex justify-content-center align-items-center w100">
+									<img src="img/icon__delete.svg" alt="icon__delete.svg">
+									<span class="ml-2">Удалить отзыв</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!--/item-->
+					<div class="d-flex justify-content-center mt-5 mb-4">
+						<a href="#" class="btn btn_tr">Показать еще</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--popup-->
+		<div id="popup_rev" class="popup__container" style="display: none">
+			<div class="popup__wrp popup_rev__wrp popup_rev_2__wrp popup_rev_2__wrp_cab">
+				<form action="[[~[[*id]]]]" method="post" class="popup popup_rev">
+					<div class="popup__top">
+						<div class="popup__close"></div>
+						<div class="popup__ttl">Редактировать отзыв</div>
+					</div>
+					<div class="popup__cnt">
+						<select class="selectmenu w100">
+							<option value="По рейтингу">По рейтингу</option>
+							<option value="По названию">По названию</option>
+							<option value="По цене">По цене</option>
+						</select>
+						<div class="row mt-4 mb-4 align-items-center">
+							<div class="col-6">Соотношение цена/качество</div>
+							<div class="col-6">
+								<div class="cab-rev__range-wrp">
+									<ul class="cab-rev__range-labels">
+										<li class="active selected">1</li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+										<li>6</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>10</li>
+									</ul>
+									<div class="cab-rev__range">
+										<input type="range" min="1" max="10" steps="1" value="1">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-4 align-items-center">
+							<div class="col-6">Состояние оборудования</div>
+							<div class="col-6">
+								<div class="cab-rev__range-wrp">
+									<ul class="cab-rev__range-labels">
+										<li class="active selected">1</li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+										<li>6</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>10</li>
+									</ul>
+									<div class="cab-rev__range">
+										<input type="range" min="1" max="10" steps="1" value="1">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-4 align-items-center">
+							<div class="col-6">Чистота залов и гримерок</div>
+							<div class="col-6">
+								<div class="cab-rev__range-wrp">
+									<ul class="cab-rev__range-labels">
+										<li class="active selected">1</li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+										<li>6</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>10</li>
+									</ul>
+									<div class="cab-rev__range">
+										<input type="range" min="1" max="10" steps="1" value="1">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-5 align-items-center">
+							<div class="col-6">Местоположение</div>
+							<div class="col-6">
+								<div class="cab-rev__range-wrp">
+									<ul class="cab-rev__range-labels">
+										<li class="active selected">1</li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+										<li>6</li>
+										<li>7</li>
+										<li>8</li>
+										<li>9</li>
+										<li>10</li>
+									</ul>
+									<div class="cab-rev__range">
+										<input type="range" min="1" max="10" steps="1" value="1">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="input__wrp input__wrp_gray mt-4 mb-3">
+							<textarea id="" rows="4" placeholder="Опишите ваши впечаления" required=""></textarea>
+						</div>
+						<div class="popup_rev__bot">
+							<label for="popup_rev__policy" class="checkbox">
+								<input type="checkbox" id="popup_rev__policy" checked>
+								<span class="checkbox__text">Отправляя свои данные вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></span>
+							</label>
+							<input type="submit" class="btn mt-3" value="Отправить на модерацию">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--/popup-->
+		<footer class="footer">
+			<div class="container">
+				<div class="d-block footer__logo-wrp flex-column align-items-center d-xl-none mb-5 pb-xl-0">
+					<div>
+						<a href="#" class="footer__logo">AgentStudios</a>
+					</div>
+					<div>
+						<span class="footer__logo-descr">Studios and location international booking</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-2">
+						<div class="d-flex flex-column">
+							<a href="#" class="footer__link mb-3">Все локации</a>
+							<a href="#" class="footer__link mb-3">Контакты</a>
+							<a href="#" class="footer__link mb-3">FAQ</a>
+						</div>
+					</div>
+					<div class="col-xl-2">
+						<div class="d-flex flex-column mb-3">
+							<a href="#" class="footer__link mb-3">Популярные</a>
+							<a href="#" class="footer__link mb-3">Подборки</a>
+							<a href="#" class="footer__link mb-3">О проекте</a>
+						</div>
+					</div>
+					<div class="offset-xl-3"></div>
+					<div class="col-xl-4">
+						<form class="d-none d-xl-flex flex-column align-items-start footer__let">
+							<div class="footer__let-ttl">Be the first to know about discounts and new locations</div>
+							<div class="d-flex flex-column align-items-start">
+								<div class="d-flex justify-content-center align-items-start mt-3 mb-3 mb-xl-0">
+									<div class="input__wrp input__wrp_mail mr-3">
+										<input type="email" placeholder="Your email">
+									</div>
+									<input type="submit" class="btn" value="Subscribe">
+								</div>
+								<div class="mt-3">
+									<label for="let__checkbox" class="checkbox">
+										<input type="checkbox" id="let__checkbox" checked>
+										<span class="checkbox__text">согласен на <a href="#">обработку персональных данных</a> в соответствии с <a href="#">политикой конфиденциальности</a></span>
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<a href="#" class="btn footer__btn d-block d-xl-none mb-3">Добавить студию</a>
+				<div class="row mt-xl-3 align-items-end">
+					<div class="d-none d-xl-block col-xl-2">
+						<a href="#" class="footer__logo">AgentStudios</a>
+					</div>
+					<div class="d-none d-xl-block col-xl-3">
+						<span class="footer__logo-descr">Studios and location international booking</span>
+					</div>
+
+					<div class="offset-xl-2"></div>
+					<div class="col-xl-4">
+						<div class="d-flex flex-column">
+							<a href="#" class="footer__link footer__link_policy mt-4 mt-xl-0">Политика конфиденциальности</a>
+							<span class="footer__logo-descr">Agentstudios. All right reserved 2019 ©</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div class="preloader">
+		<div class="preloader__icon"></div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>

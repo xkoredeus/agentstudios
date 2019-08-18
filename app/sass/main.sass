@@ -2944,6 +2944,33 @@ hr
 			// text-transform: uppercase
 			margin-bottom: 0
 			cursor: pointer
+.popup_rev_2__wrp_cab
+	opacity: 1
+	.popup__cnt
+		color: #ddd
+		width: 560px
+		margin-left: auto
+		margin-right: auto
+	.ui-selectmenu-button.ui-button
+		width: 100%
+	.ui-selectmenu-button,
+	.ui-selectmenu-button-open,
+	.ui-selectmenu-button:hover
+		font-family: $sreg
+		background: #363636
+@mixin rangeThumb
+	width: 30px
+	height: 30px
+	margin: -10px 0
+	background-image: url('../img/cab-rev__range-thumb.svg')
+	@include ct
+	cursor: pointer
+	border: 0 !important
+@mixin rangeTrack
+	width: 100%
+	height: 2px
+	cursor: pointer
+	background: #fff
 .cab
 	&__top
 		margin-bottom: 40px
@@ -2955,6 +2982,8 @@ hr
 			&:not(:last-child)
 				margin-right: 30px
 	&__item
+		margin-bottom: 2px
+		font-size: 15px
 		padding: 30px
 		background-color: rgba(54, 54, 54, .6)
 	&_opt
@@ -3001,7 +3030,7 @@ hr
 					content: ''
 					position: absolute
 					right: 5px
-					top: -4px
+					top: -2px
 					width: 17px
 					height: 20px
 					background-image: url('../img/icon__edit.svg')
@@ -3035,6 +3064,7 @@ hr
 						top: 1px
 						background-image: url('../img/icon__mail_opt.svg')
 	&-bonus
+		font-size: 15px
 		&__eq
 			color: #6b6b6b
 		&__ref
@@ -3065,3 +3095,74 @@ hr
 				font-family: $smed
 				text-decoration: underline
 				text-decoration-color: $yel
+	&-rev
+		&__item
+			&-col
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					width: 1px
+					height: 100%
+					top: 0
+					right: 15px
+					background-color: #EAEAEA
+		&__range
+			position: relative
+			width: 100%
+			height: 5px
+			border-radius: 4px
+			input
+				width: 100%
+				position: absolute
+				top: 2px
+				padding: 0
+				height: 0
+				-webkit-appearance: none
+				// Thumb
+				&::-webkit-slider-thumb
+					-webkit-appearance: none // needed again for Chrome & Safari
+					@include rangeThumb
+				&::-moz-range-thumb
+					@include rangeThumb
+				&::-ms-thumb
+					@include rangeThumb
+				// Track
+				&::-webkit-slider-runnable-track
+					@include rangeTrack
+				&::-moz-range-track
+					@include rangeTrack
+				&::-ms-track
+					@include rangeTrack
+				&:focus // override outline/background on focus
+					background: none
+					outline: none
+				&::-ms-track // A little somethin' somethin' for IE
+					width: 100%
+					cursor: pointer
+					background: transparent
+					border-color: transparent
+					color: transparent
+			&-wrp
+				position: relative
+			// Labels below slider
+			&-labels
+				display: flex
+				justify-content: space-between
+				padding: 0
+				margin-bottom: 15px
+				list-style: none
+				li
+					position: relative
+					width: 10%
+					text-align: center
+					color: #fff
+					opacity: .4
+					font-size: 14px
+					cursor: pointer
+					&:first-child,
+					&:last-child
+						opacity: .8
+					&.active
+						transform: scale(1.1)
+						opacity: 1 !important
