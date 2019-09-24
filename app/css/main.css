@@ -3189,48 +3189,44 @@ a.gr:hover {
           align-items: center;
 }
 
+.res__pay-item-wrp {
+  min-height: 80px;
+}
+
 .res__pay-item .checkbox__text {
-  height: 30px;
+  min-height: 80px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0;
+  border-radius: 4px;
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .res__pay-item .checkbox__text::before {
-  width: 20px;
-  height: 20px;
-  left: 11px;
-  top: -10px;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  opacity: 0;
-  border-radius: 50%;
+  display: none;
 }
 
 .res__pay-item .checkbox__text::after {
-  left: 14px;
-  top: -6px;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  opacity: 0;
+  display: none;
 }
 
-.res__pay-item input[type="checkbox"]:checked + .checkbox__text:after,
-.res__pay-item input[type="radio"]:checked + .checkbox__text:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-.res__pay-item input[type="checkbox"]:checked + .checkbox__text:before,
-.res__pay-item input[type="radio"]:checked + .checkbox__text:before {
-  opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+.res__pay-item input[type="checkbox"]:checked + .checkbox__text,
+.res__pay-item input[type="radio"]:checked + .checkbox__text {
+  -webkit-box-shadow: 0 0 0 1px #FFD542;
+          box-shadow: 0 0 0 1px #FFD542;
 }
 
 .res__pay-item:hover {
@@ -3415,6 +3411,44 @@ a.gr:hover {
 .res-tab__btn:hover {
   background-color: #363636;
   cursor: pointer;
+}
+
+.reservation__promo {
+  font-family: "AkzidenzGroteskPro-BoldEx";
+  text-align: center;
+  color: #a0a0a0;
+  background-color: #363636;
+  letter-spacing: 1px;
+}
+
+.reservation__promo:focus {
+  color: white;
+}
+
+.reservation__promo::-webkit-input-placeholder {
+  color: #a0a0a0;
+}
+
+.reservation__promo::-moz-placeholder {
+  color: #a0a0a0;
+}
+
+.reservation__promo:-ms-input-placeholder {
+  color: #a0a0a0;
+}
+
+.reservation__promo::-ms-input-placeholder {
+  color: #a0a0a0;
+}
+
+.reservation__promo::placeholder {
+  color: #a0a0a0;
+}
+
+.reservation__promo-ttl {
+  font-size: 13px;
+  line-height: 1.3;
+  color: #a0a0a0;
 }
 
 .room__top-ttl {
