@@ -30,6 +30,10 @@ $aexbold: 'AkzidenzGroteskPro-BoldEx'
   height: 100%
   left: 0
   top: 0
+// media-query "max-width"
+@mixin r($width)
+  @media only screen and (max-width: $width + "px")
+    @content
 body
   scroll-behavior: smooth
   background-color: #fff
@@ -3182,3 +3186,83 @@ hr
           &.active
             transform: scale(1.1)
             opacity: 1 !important
+// payment page
+.paym
+  &__wrp
+    max-width: 460px
+  &__timer
+    &-promo
+      color: #A4A4A4
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      &-val
+        font-family: $aexbold
+        font-size: 36px
+        text-align: center
+        width: 100px
+        height: 80px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 3px
+        background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%)
+      &-ttl
+        font-family: $sbold
+        font-size: 14px
+      &-delim
+        font-family: $aexbold
+        font-size: 20px
+        margin-top: -21px
+  &__form
+    color: #A0A0A0
+    width: 100%
+    padding: 30px 25px
+    background-color: #333333
+    border: 1px solid #595959
+    border-radius: 11px
+    &-img
+      width: 64px
+      height: 27px
+      +ct
+      &:not(:last-child)
+        margin-right: 7px
+    .input__wrp
+      background-color: #373737
+      border: 1px solid #474747
+      position: relative
+      &_cvv
+        max-width: 83px
+        input
+          padding-left: 12px !important
+          padding-right: 12px !important
+      &_card-info
+        max-width: 68px
+        input
+          padding-left: 12px !important
+          padding-right: 12px !important
+      input
+        font-family: $smed
+        font-size: 23px
+        color: #A0A0A0
+        padding: 8px 15px
+        &::placeholder
+          color: #A0A0A0
+    &-del
+      position: absolute
+      right: 10px
+      top: 50%
+      transform: translateY(-50%)
+      svg
+        stroke: #646464
+      &:hover
+        svg
+          stroke: $yel
+    &-cvv
+      &-text
+        line-height: 1.4
+    &-total
+      color: #fff
+      font-size: 20px
+      font-family: $aexbold
