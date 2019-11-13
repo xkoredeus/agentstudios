@@ -109,8 +109,20 @@
               <div class="paym__timer-item-ttl">секунды</div>
             </div>
           </div>
+          <div class="d-xl-none mb-4 w-100">
+            <div class="d-flex flex-column w-100">
+              <div class="sb mb-2 fz14">
+                <span class="gr">Номер заказа: </span>
+                <span class="wt">12345678</span>
+              </div>
+              <div class="sb mb-2 fz14">
+                <span class="gr">Описание: </span>
+                <span class="wt">Оплата студии Studio A6 Qwex</span>
+              </div>
+            </div>
+          </div>
           <form action="">
-            <div class="paym__form mb-5">
+            <div class="paym__form mb-4 mb-xl-5">
               <div class="d-flex flex-column w-100">
                 <div class="d-flex align-items-center justify-content-end mb-4">
                   <div class="paym__form-img" style="background-image: url(img/payment__img_1.svg)"></div>
@@ -127,16 +139,16 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center">
-                    <div class="input__wrp input__wrp_card-info mr-3">
+                    <div class="input__wrp input__wrp_card-info mr-1 mr-xl-3">
                       <input type="number" name="MM" id="month" placeholder="ММ" class="tac">
                     </div>
                     <div>/</div>
-                    <div class="input__wrp input__wrp_card-info ml-3" data-toggle="tooltip" title="Введите дату как на карте">
+                    <div class="input__wrp input__wrp_card-info ml-1 ml-xl-3" data-toggle="tooltip" title="Введите дату как на карте">
                       <input type="number" name="MM" id="year" placeholder="ГГ" class="tac">
                     </div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <div class="sm fz12 tar paym__form-cvv-text mr-3">
+                  <div class="d-flex align-items-center paym__form-cvv-wrp">
+                    <div class="sm fz12 tar paym__form-cvv-text mr-1 mr-xl-3">
                       Три цифры<br>
                       на обороте<br>
                       карты
@@ -148,8 +160,8 @@
                 </div>
               </div>
             </div>
-            <div class="paym__form-bot d-flex justify-content-between align-items-center pl-4 pr-4">
-              <div class="paym__form-total">RUB 5000.00</div>
+            <div class="paym__form-bot d-flex flex-column flex-xl-row justify-content-between align-items-center pl-xl-4 pr-xl-4">
+              <div class="paym__form-total mb-3 mb-xl-0">RUB 5000.00</div>
               <button type="submit" class="btn">Оплатить</button>
             </div>
           </form>
