@@ -36,7 +36,8 @@ gulp.task('scripts', function() {
     'app/libs/bootstrap/bootstrap.min.js',
     'app/libs/fancybox/jquery.fancybox.min.js',
     'app/libs/owl.carousel/owl.carousel.min.js',
-    'app/libs/animate/wow.min.js'
+    'app/libs/animate/wow.min.js',
+    'app/libs/jquery/jquery.maskedinput.min.js'
     ])
     .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
     // .pipe(uglify()) // Сжимаем JS файл

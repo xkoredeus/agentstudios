@@ -5196,6 +5196,12 @@ hr {
   max-width: 460px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .paym__timer {
+    margin-bottom: 30px;
+  }
+}
+
 .paym__timer-promo {
   color: #A4A4A4;
 }
@@ -5240,6 +5246,13 @@ hr {
   background: linear-gradient(180deg, rgba(250, 250, 250, 0.05) 0%, rgba(250, 250, 250, 0) 100%);
 }
 
+@media only screen and (max-width: 370px) {
+  .paym__timer-item-val {
+    width: 80px;
+    font-size: 24px;
+  }
+}
+
 .paym__timer-item-ttl {
   font-family: "SFUIText-Bold";
   font-size: 14px;
@@ -5258,6 +5271,7 @@ hr {
 
 @media only screen and (max-width: 1200px) {
   .paym__details {
+    margin-bottom: 30px;
     font-size: 14px;
     text-align: left;
   }
@@ -5276,6 +5290,10 @@ hr {
   .paym__form {
     padding: 20px 13px;
   }
+}
+
+.paym__form .input__wrp::before {
+  display: none;
 }
 
 .paym__form-img {
@@ -5429,6 +5447,24 @@ hr {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.paym__form-error {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #A9A9A9;
+  border-radius: 3px;
+  padding: 10px 15px;
+  background-color: #ffffff3b;
+  -webkit-transition: unset;
+  -o-transition: unset;
+  transition: unset;
+}
+
+@media only screen and (max-width: 1200px) {
+  .paym__form-error {
+    font-size: 12px;
   }
 }
 

@@ -487,6 +487,13 @@ $(document).ready(function(){
     setInterval(function() { makeTimer(); }, 1000);
 
 });
+$(document).ready(function(){
+  $('.paym__form-card').mask('9999  9999  9999  9999');
+  $('.paym__form-error').hide();
+  $('.paym__form-card').change(function() {
+    $('.paym__form-error').slideDown();
+  })
+});
 //Стилизованный input type file
 $(".upload__file").change(function() {
   var filename = [];
