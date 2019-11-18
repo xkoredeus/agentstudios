@@ -5251,6 +5251,18 @@ hr {
   margin-top: -21px;
 }
 
+.paym__details {
+  font-size: 16px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .paym__details {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
 .paym__form {
   color: #A0A0A0;
   width: 100%;
@@ -5278,39 +5290,68 @@ hr {
   margin-right: 7px;
 }
 
+.paym__form .ui-selectmenu-button {
+  font-family: "SFUIText-Medium";
+  font-size: 23px;
+  color: #A0A0A0;
+  outline: none;
+  background: #363636;
+  border: 1px solid #474747;
+  padding: 14px 15px;
+  width: 65px !important;
+  text-align: center;
+}
+
+.paym__form .ui-selectmenu-text {
+  margin-right: 0;
+}
+
+.paym__form .ui-selectmenu-icon {
+  display: none;
+}
+
 .paym__form .input__wrp {
   background-color: #373737;
   border: 1px solid #474747;
   position: relative;
 }
 
+.paym__form .input__wrp_card-info {
+  font-family: "SFUIText-Medium";
+  font-size: 18px;
+  color: #A0A0A0;
+  width: 51px;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .paym__form .input__wrp_card-info {
+    line-height: 1;
+    height: 52px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+
+.paym__form .input__wrp_card-info option {
+  color: #A0A0A0;
+}
+
 .paym__form .input__wrp_cvv {
   max-width: 83px;
 }
 
-.paym__form .input__wrp_cvv input {
-  padding-left: 12px !important;
-  padding-right: 12px !important;
+@media only screen and (max-width: 1200px) {
+  .paym__form .input__wrp_cvv {
+    max-width: 72px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
   .paym__form .input__wrp_cvv input {
-    padding-left: 6px !important;
-    padding-right: 6px !important;
-  }
-}
-
-.paym__form .input__wrp_card-info {
-  max-width: 68px;
-}
-
-.paym__form .input__wrp_card-info input {
-  padding-left: 12px !important;
-  padding-right: 12px !important;
-}
-
-@media only screen and (max-width: 1200px) {
-  .paym__form .input__wrp_card-info input {
     padding-left: 6px !important;
     padding-right: 6px !important;
   }
@@ -5321,6 +5362,7 @@ hr {
   font-size: 23px;
   color: #A0A0A0;
   padding: 8px 15px;
+  height: 57px;
 }
 
 .paym__form .input__wrp input::-webkit-input-placeholder {
@@ -5348,6 +5390,7 @@ hr {
     font-size: 18px;
     padding-left: 12px;
     padding-right: 12px;
+    height: 50px;
   }
 }
 
@@ -5372,7 +5415,14 @@ hr {
   line-height: 1.4;
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 1200px) {
+  .paym__form-cvv-text {
+    color: #565656;
+    line-height: 1.15;
+  }
+}
+
+@media only screen and (max-width: 345px) {
   .paym__form-cvv-wrp {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5388,9 +5438,29 @@ hr {
   font-family: "AkzidenzGroteskPro-BoldEx";
 }
 
+.paym__form-bot {
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.paym__form-bot::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #3E3E3E;
+}
+
 @media only screen and (max-width: 600px) {
   .paym__form-bot .btn {
     width: 100%;
     max-width: unset;
   }
+}
+
+.paym__secur {
+  font-size: 13px;
+  margin-top: 25px;
 }

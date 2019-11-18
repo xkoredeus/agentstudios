@@ -3215,6 +3215,12 @@ hr
         font-family: $aexbold
         font-size: 20px
         margin-top: -21px
+  &__details
+    font-size: 16px
+    text-align: center
+    +r(1200)
+      font-size: 14px
+      text-align: left
   &__form
     color: #A0A0A0
     width: 100%
@@ -3230,38 +3236,62 @@ hr
       +ct
       &:not(:last-child)
         margin-right: 7px
+    .ui-selectmenu
+      &-button
+        font-family: $smed
+        font-size: 23px
+        color: #A0A0A0
+        outline: none
+        background: #363636
+        border: 1px solid #474747
+        padding: 14px 15px
+        width: 65px !important
+        text-align: center
+      &-text
+        margin-right: 0
+      &-icon
+        display: none
     .input__wrp
       background-color: #373737
       border: 1px solid #474747
       position: relative
+      &_card-info
+        font-family: $smed
+        font-size: 18px
+        color: #A0A0A0
+        width: 51px
+        text-align: center
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+        +r(1200)
+          line-height: 1
+          height: 52px
+          padding-left: 13px
+          padding-right: 13px
+        option
+          color: #A0A0A0
       &_cvv
         max-width: 83px
+        +r(1200)
+          max-width: 72px
         input
-          padding-left: 12px !important
-          padding-right: 12px !important
           +r(1200)
             padding-left: 6px !important
             padding-right: 6px !important
-      &_card-info
-        max-width: 68px
-        input
-          padding-left: 12px !important
-          padding-right: 12px !important
-          +r(1200)
-            padding-left: 6px !important
-            padding-right: 6px !important
-
       input
         font-family: $smed
         font-size: 23px
         color: #A0A0A0
         padding: 8px 15px
+        height: 57px
         &::placeholder
           color: #A0A0A0
         +r(1200)
           font-size: 18px
           padding-left: 12px
           padding-right: 12px
+          height: 50px
     &-del
       position: absolute
       right: 10px
@@ -3275,15 +3305,31 @@ hr
     &-cvv
       &-text
         line-height: 1.4
+        +r(1200)
+          color: #565656
+          line-height: 1.15
       &-wrp
-        +r(370)
+        +r(345)
           flex-direction: column
     &-total
       color: #fff
       font-size: 20px
       font-family: $aexbold
     &-bot
+      padding-bottom: 30px
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 1px
+        left: 0
+        bottom: 0
+        background-color: #3E3E3E
       +r(600)
         .btn
           width: 100%
           max-width: unset
+  &__secur
+    font-size: 13px
+    margin-top: 25px

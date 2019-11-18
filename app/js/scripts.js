@@ -454,7 +454,12 @@ $(function() {
   //datepicker
   $('.datepicker').datepicker();
 });
-$(document).ready(function(){  
+$(document).ready(function(){
+  if ( $(window).width() > 1200 ) {
+    $('.paym__select').selectmenu();
+  };
+});
+$(document).ready(function(){
 
     function makeTimer() {
 
@@ -466,7 +471,7 @@ $(document).ready(function(){
 
     var timeLeft = endTime - now;
 
-    var days = Math.floor(timeLeft / 86400); 
+    var days = Math.floor(timeLeft / 86400);
     var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
     var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
     var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
@@ -481,7 +486,7 @@ $(document).ready(function(){
 
     setInterval(function() { makeTimer(); }, 1000);
 
-  });
+});
 //Стилизованный input type file
 $(".upload__file").change(function() {
   var filename = [];

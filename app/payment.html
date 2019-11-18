@@ -98,7 +98,7 @@
       <div class="container">
         <div class="paym__wrp">
           <div class="fz12 paym__timer-promo tac mb-3">Совершите вашу оплату в течение 10 минут</div>
-          <div class="paym__timer d-flex justify-content-center align-items-center mb-4">
+          <div class="paym__timer d-flex justify-content-center align-items-center mb-3 mb-xl-5">
             <div class="paym__timer-item tac" id="paym__timer-item-min">
               <div class="paym__timer-item-val">09</div>
               <div class="paym__timer-item-ttl">минуты</div>
@@ -109,13 +109,13 @@
               <div class="paym__timer-item-ttl">секунды</div>
             </div>
           </div>
-          <div class="d-xl-none mb-4 w-100">
+          <div class="paym__details mb-3 mb-xl-4 w-100">
             <div class="d-flex flex-column w-100">
-              <div class="sb mb-2 fz14">
+              <div class="mb-2">
                 <span class="gr">Номер заказа: </span>
                 <span class="wt">12345678</span>
               </div>
-              <div class="sb mb-2 fz14">
+              <div class="mb-2">
                 <span class="gr">Описание: </span>
                 <span class="wt">Оплата студии Studio A6 Qwex</span>
               </div>
@@ -129,7 +129,7 @@
                   <div class="paym__form-img" style="background-image: url(img/payment__img_2.svg)"></div>
                   <div class="paym__form-img" style="background-image: url(img/payment__img_3.svg)"></div>
                 </div>
-                <div class="input__wrp mb-3">
+                <div class="input__wrp mb-3 mb-xl-4">
                   <input name="$PAN" id="iPAN" maxlength="19" type="text" autocomplete="off" placeholder="Номер карты" />
                   <button type="button" class="paym__form-del">
                     <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
@@ -139,13 +139,35 @@
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="d-flex align-items-center">
-                    <div class="input__wrp input__wrp_card-info mr-1 mr-xl-3">
-                      <input type="number" name="MM" id="month" placeholder="ММ" class="tac">
-                    </div>
-                    <div>/</div>
-                    <div class="input__wrp input__wrp_card-info ml-1 ml-xl-3" data-toggle="tooltip" title="Введите дату как на карте">
-                      <input type="number" name="MM" id="year" placeholder="ГГ" class="tac">
-                    </div>
+
+                    <select name="MM" id="month" class="input__wrp input__wrp_card-info paym__select">
+                      <option value="01" selected>01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <div class="ml-2 ml-xl-3 mr-2 mr-xl-3">/</div>
+                    <select name="YYYY" id="year" class="input__wrp input__wrp_card-info paym__select">
+                      <option value='2012' selected>12</option>
+                      <option value='2013'>13</option>
+                      <option value='2014'>14</option>
+                      <option value='2015'>15</option>
+                      <option value='2016'>16</option>
+                      <option value='2017'>17</option>
+                      <option value='2018'>18</option>
+                      <option value='2019'>19</option>
+                      <option value='2020'>20</option>
+                      <option value='2021'>21</option>
+                      <option value='2022'>22</option>
+                    </select>
                   </div>
                   <div class="d-flex align-items-center paym__form-cvv-wrp">
                     <div class="sm fz12 tar paym__form-cvv-text mr-1 mr-xl-3">
@@ -160,9 +182,25 @@
                 </div>
               </div>
             </div>
-            <div class="paym__form-bot d-flex flex-column flex-xl-row justify-content-between align-items-center pl-xl-4 pr-xl-4">
-              <div class="paym__form-total mb-3 mb-xl-0">RUB 5000.00</div>
+            <div class="paym__form-bot d-flex flex-column flex-xl-row justify-content-xl-center align-items-center pl-xl-4 pr-xl-4">
+              <div class="paym__form-total mb-3 mb-xl-0 mr-xl-5">RUB 5000.00</div>
               <button type="submit" class="btn">Оплатить</button>
+            </div>
+            <div class="paym__secur">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                  <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.76592 0.0434123C5.91684 -0.0144708 6.08316 -0.0144708 6.23408 0.0434123L11.5674 2.08888C11.8276 2.18868 12 2.44309 12 2.7273V7.50006C12 9.84992 10.4788 11.7276 9.10567 12.9564C8.40508 13.5833 7.70764 14.0734 7.18667 14.4064C6.92548 14.5734 6.70688 14.702 6.55204 14.7896C6.47458 14.8335 6.41296 14.8672 6.36979 14.8903C6.3482 14.9019 6.33122 14.9109 6.31917 14.9172L6.30484 14.9247L6.30053 14.9269L6.29909 14.9277C6.29909 14.9277 6.29814 14.9281 6 14.3183C5.70186 14.9281 5.70145 14.9279 5.70145 14.9279L5.69948 14.9269L5.69516 14.9247L5.68083 14.9172C5.66878 14.9109 5.65181 14.9019 5.63022 14.8903C5.58705 14.8672 5.52542 14.8335 5.44796 14.7896C5.29312 14.702 5.07452 14.5734 4.81333 14.4064C4.29236 14.0734 3.59492 13.5833 2.89433 12.9564C1.52116 11.7276 0 9.84992 0 7.50006V2.7273C0 2.44309 0.172384 2.18868 0.432587 2.08888L5.76592 0.0434123ZM6 14.3183L5.70145 14.9279C5.88913 15.0239 6.11046 15.0241 6.29815 14.9281L6 14.3183ZM6 13.5429C6.12776 13.4688 6.29114 13.3708 6.48 13.25C6.95903 12.9438 7.59492 12.4964 8.22766 11.9302C9.52116 10.7726 10.6667 9.24114 10.6667 7.50006V3.1998L6 1.41001L1.33333 3.1998V7.50006C1.33333 9.24114 2.47884 10.7726 3.77234 11.9302C4.40508 12.4964 5.04097 12.9438 5.52 13.25C5.70887 13.3708 5.87224 13.4688 6 13.5429Z" fill="#8F8F8F"/>
+                    <path d="M4 7.5L5.33333 9L8 6" stroke="#8F8F8F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="ml-2 gr">Платеж безопасен</span>
+                </div>
+                <div class="d-flex align-items-center">
+                  <img src="img/paym__secur_1.svg" alt="img/paym__secur_1.svg" class="mr-2">
+                  <img src="img/paym__secur_2.svg" alt="img/paym__secur_2.svg" class="mr-2">
+                  <img src="img/paym__secur_3.svg" alt="img/paym__secur_3.svg" class="mr-2">
+                </div>
+              </div>
             </div>
           </form>
         </div>
